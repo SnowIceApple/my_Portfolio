@@ -128,7 +128,10 @@ $(document).ready(function(){
 $(window).on('load', function(){
     $('.main_nav_open').addClass('pop_up');
 
-    var randomIndex = Math.floor(Math.random() * 5); 
+    var randomNumStandard = $('.works_list').length;
+    console.log(randomNumStandard);
+
+    var randomIndex = Math.floor(Math.random() * randomNumStandard); 
     var randomNotice = $(".works_list").eq(randomIndex); 
     randomNotice.addClass("wide").removeClass('basic'); 
     randomNotice.siblings().addClass('basic')
