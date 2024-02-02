@@ -1,0 +1,269 @@
+@media all and (max-width: 1680px){
+
+    .skill_desc_box{
+        width: 13.5vw;
+        height: 13.5vw;
+    }
+}
+
+@media all and (max-width: 1440px){
+    .container{
+        padding: 0 15px;
+    }
+}
+
+@media all and (max-width: 1280px){
+
+    .nav_link.type1{
+        height: 25vw;
+    }
+
+    .nav_link.type2{
+        width: 28vw;
+        height: 80vh;
+    }
+
+    .nav_link.type3{
+        height: 20vw;
+    }
+
+    #visual{
+        height: 80vh;
+    }
+
+    .intro_ticker ul li{
+        font-size: 8vw;
+    }
+
+    .intro_tit h2{
+        font-size: 8vw;
+    }
+
+    .skills ul li{
+        font-size: 5vw;
+    }
+
+    .job_desc ul li{
+        font-size: 7vw;
+    }
+
+    .clone_coding_list{
+        gap: 0;
+    }
+
+    .multi_link.active .cc_article_ml_list{
+        opacity: 1;
+    }
+
+    .clone_coding_list::after{
+        display: none;
+    }
+
+    .clone_coding_article{
+        width: calc(50% - 12.5px);
+    }
+
+    .section_header h2{
+        font-size: 54px;
+    }
+}
+
+@media all and (max-width: 1024px){
+
+    #visual{
+        height: 68vh;
+    }
+
+    .job_desc ul li .job_date{
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .cc_article_ml_list ul li a{
+        height: 6.5vw;
+        border-radius: 3.25vw;
+    }
+}
+
+@media all and (max-width: 864px){
+
+    .nav_link.type1{
+        height: 32vh;
+    }
+
+    .nav_link.type1 a strong{
+        font-size: 13vw;
+    }
+
+    .nav_link.type2{
+        width: 28vw;
+        height: 87vh;
+    }
+
+    .nav_link.type2 a strong{
+        font-size: 14vw;
+    }
+
+    .nav_link.type3{
+        width: 72vw;
+        height: 35vh;
+        z-index: 10;
+    }
+
+    .nav_link.type3 a strong{
+        font-size: 17vw;
+    }
+
+    .go_top{
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .skills ul li{
+        width: 100% !important;
+        border-right: 0px;
+        border-top: 2px solid #08141f;
+        font-size: 7.5vw;
+    }
+
+    .works_article_inner > div{
+        width: 100% !important;
+    }
+
+    .works_article_inner .works_img{
+        margin-bottom: 25px;
+    }
+
+    .works_txt{
+        padding: 0px !important;
+    }
+
+    .int_inner{
+        animation-duration: 10s;
+    }
+
+    .cc_article_img{
+        height: 250px;
+    }
+}
+
+@media all and (max-width: 768px){
+
+    .works_swiper .swiper-slide{
+        border-radius: 15px;
+        padding: 45px 25px;
+    }
+
+    .wsb_img{
+    }
+
+    .wsb_desc h3{
+        font-size: 19px;
+    }
+
+    .wks_btn{
+        width: 45px;
+        height: 45px;
+    }
+
+    .wks_btn *{
+        font-size: 22px;
+    }
+
+    .cc_article_desc h2{
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+}
+
+@media all and (max-width: 680px){
+
+    
+    .nav_link.type1{
+        height: 24vh;
+    }
+
+    #visual{
+        height: 60vh;
+    }
+
+    .job_desc ul li .job_date{
+        width: 20vw;
+        height: 20vw;
+        font-size: 16px;
+    }
+
+    .works_slide_control{
+        width: 100%;
+        left: 0;
+        top: calc(100% - 80px);
+        transform: translate(0%, 0);
+        justify-content: center;
+    }
+
+    .wks_btn{
+        width: 65px;
+        height: 65px;
+        margin: 0 10px;
+    }
+
+    .wks_btn *{
+        font-size: 32px;
+    }
+
+    .clone_coding_article{
+        width: 100%;
+    }
+
+    .cc_article_ml_list ul li a{
+        height: 10vw;
+        border-radius: 5vw;
+        font-size: 5vw;
+    }
+
+    .section_header h2{
+        font-size: 44px;
+    }
+
+    .footer h2{
+        font-size: 7vw;
+    }
+
+    .intro_tit h2{
+        font-size: 14vw;
+        margin-bottom: 10px;
+    }
+}
+
+@media all and (max-width: 568px){
+
+    .works_swiper{
+        padding: 60px 15px;
+        width: calc(100% - 30px);
+    }
+
+    .works_swiper .swiper-slide{
+        margin: 0;
+    }
+
+    .works_swiper .swiper-slide.swiper-slide-active{
+        transform: scale(1);
+    }
+
+}
+
+
+@media all and (max-width: 480px){
+    #visual{
+        height: 55vh;
+    }
+
+    .main_nav_close button{
+        width: 120px;
+        height: 120px;
+    }
+
+    .intro_tit h2{
+        font-size: 20vw;
+    }
+}

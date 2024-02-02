@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <!-- <meta name="viewport" content="width=1760, user-scalable=yes, target-densitydpi=400" /> -->
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+
+
+
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="main_nav_open">
+                <button>
+                    <ion-icon name="menu-outline"></ion-icon>
+                </button>
+            </div>
+            <div class="main_nav">
+                <div class="main_nav_close">
+                    <button>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <nav id="nav">
+                    <div class="nav_link type1">
+                        <a href="#visual">
+                            <strong>VISUAL</strong>
+                        </a>
+                    </div>
+                    <div class="nav_link type2">
+                        <a href="#intro">
+                            <strong>INTRO</strong>
+                        </a>
+                    </div>
+                    <div class="nav_link type3">
+                        <a href="#works">
+                            <strong>WORKS</strong>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section id="visual">
+            <div class="visual">
+                <div class="main_desc_txt n1">
+                    <div data-aos="fade-right" data-aos-duration="800">
+                        <strong>내가</strong>
+                        <strong class="eb">ME</strong>
+                    </div>
+                </div>
+                <div class="main_desc_txt n2">
+                    <div data-aos="fade-right" data-aos-delay="150" data-aos-duration="800">
+                        <strong>우리가</strong>
+                        <strong class="eb">US</strong>
+                    </div>
+                </div>
+                <div class="main_desc_txt n3">
+                    <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
+                        <strong>모두가</strong>
+                        <strong class="eb">ALL</strong>
+                    </div>
+                </div>
+                <div class="stair_txt_cont scroll_up">
+                    <div class="stair_txt st1" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+                        <strong data-text="L" class="ns">즐</strong>
+                    </div>
+                    <div class="stair_txt st2" data-aos="fade-up" data-aos-delay="1300" data-aos-duration="1000">
+                        <strong data-text="I" class="ns">겨</strong>
+                    </div>
+                    <div class="stair_txt st3" data-aos="fade-up" data-aos-delay="1600" data-aos-duration="1000">
+                        <strong data-text="K" class="ns">찾</strong>
+                    </div>
+                    <div class="stair_txt st4" data-aos="fade-up" data-aos-delay="1900" data-aos-duration="1000">
+                        <strong data-text="E" class="ns">는</strong>
+                    </div>
+                </div>
+                <div class="main_txt scroll_up2">
+                    <h1 class="eb">Web</h1>
+                    <strong>을 만드는</strong>
+                </div>
+            </div>
+        </section>
+        
+        <div class="go_top">
+            <button>
+                <div class="top_txt">
+                    <span>Hello!</span>
+                </div>
+                <div class="face_inner" id="face_inner">
+                    <div class="eye">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mouth"></div>
+                </div>
+            </button>
+        </div>
+        <script>
+            window.onscroll = function () {
+                scrollRotate();
+            };
+
+            function scrollRotate() {
+                let image = document.getElementById("face_inner");
+                image.style.transform = "rotate(" + window.pageYOffset/10 + "deg)";
+            }
+        </script>
+        <section id="intro">
+            <div class="intro">
+                <div class="intro_ticker" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="int_inner">
+                        <ul>
+                            <li class="eb">hello!</li>
+                            <li class="eb">hello!</li>
+                            <li class="eb">hello!</li>
+                            <li class="eb">hello!</li>
+                            <li class="eb">hello!</li>
+                            <li class="eb">hello!</li>
+                            <li class="eb">hello!</li>
+                            <li class="eb">hello!</li>
+                            <li class="eb">hello!</li>
+                            <li class="eb">hello!</li>
+                            <li class="eb">hello!</li>
+                            <li class="eb">hello!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="intro_tit">
+                    <h2 class="eb">Welcome!</h2>
+                    <p>안녕하세요, 웹퍼블리셔 김태경을 소개합니다!</p>
+                </div>
+                <div class="skills">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JQUERY, JS</li>
+                    </ul>
+                </div>
+                <div class="job_desc">
+                    <ul>
+                        <li class="han" data-aos="fade-right" data-aos-duration="1500">
+                            한커뮤니케이션
+                            <span class="job_date">
+                                2021.11
+                                <br>
+                                2022.11
+                            </span>
+                        </li>
+                        <li class="hac" data-aos="fade-right" data-aos-duration="1500">
+                            해커스어학원
+                            <span class="job_date">
+                                2023.02
+                                <br>
+                                2023.05
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="works">
+            <div class="works">
+                <div class="section_header eb">
+                    <div class="container">
+                        <h2>WORKS</h2>
+                    </div>
+                </div>
+                <div class="works_article">
+                    <div class="works_swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide hk">
+                                <a href="https://ecpa.hackers.com/?r=ecpa&c=event&evt_id=23033000&g_id=29" target="_blank"></a>
+                                <div class="works_slide_box">
+                                    <div class="wsb_img">
+                                        <img src="./img/sl_img.jpg" alt="">
+                                    </div>
+                                    <div class="wsb_desc">
+                                        <span class="wsb_cate">부분 구현</span>
+                                        <h3>해커스 경영아카데미 이달의 특강</h3>
+                                        <p>하단 다중탭 구현, 모바일 페이지 내 강의리스트 레이아웃 수정</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide pb">
+                                <a href="https://precision-bio.com/kr/animal/sub/products/product.php?mode=view&idx=8" target="_blank"></a>
+                                <div class="works_slide_box">
+                                    <div class="wsb_img">
+                                        <img src="./img/pv_img.jpg" alt="">
+                                    </div>
+                                    <div class="wsb_desc">
+                                        <span class="wsb_cate">부분 구현</span>
+                                        <h3>프리시젼바이오 Animal 부분</h3>
+                                        <p>메인(하단 다이어그램 제외), 헤더, 전체메뉴, 푸터, products 퍼블</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide vt">
+                                <a href="https://debates.go.kr/2022_middle_vote/index.php" target="_blank"></a>
+                                <div class="works_slide_box">
+                                    <div class="wsb_img">
+                                        <img src="./img/vote.jpg" alt="">
+                                    </div>
+                                    <div class="wsb_desc">
+                                        <span class="wsb_cate">전체 구현</span>
+                                        <h3>제8회 전국동시지방선거 후보자토론회 다시보기</h3>
+                                        <p>디자인 + 퍼블</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide hs">
+                                <a href="https://hsol.kr/" target="_blank"></a>
+                                <div class="works_slide_box">
+                                    <div class="wsb_img">
+                                        <img src="./img/hsol.jpg" alt="">
+                                    </div>
+                                    <div class="wsb_desc">
+                                        <span class="wsb_cate">전체 구현</span>
+                                        <h3>하우솔루션</h3>
+                                        <p>퍼블</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide ddm">
+                                <a href="https://www.ddmccic.or.kr/new/main/" target="_blank"></a>
+                                <div class="works_slide_box">
+                                    <div class="wsb_img">
+                                        <img src="./img/ddm.jpg" alt="">
+                                    </div>
+                                    <div class="wsb_desc">
+                                        <span class="wsb_cate">리디자인 / 퍼블(개선)</span>
+                                        <h3>동대문구육아종합지원센터 메인 리디자인</h3>
+                                        <p>메인 리디자인 + 퍼블</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="works_slide_control">
+                        <button class="wks_btn prev">
+                            <ion-icon name="arrow-back-outline"></ion-icon>
+                        </button>
+                        <button class="wks_btn next">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="clone_coding">
+            <div class="clone_coding">
+                <div class="section_header eb">
+                    <div class="container">
+                        <h2>CLONE CODING</h2>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="clone_coding_list">
+                        <div class="clone_coding_article">
+                            <article>
+                                <!-- <a href="void(0)" onclick="alert('준비중입니다.'); return false;"></a> -->
+                                <a href="https://snowiceapple.github.io/clonecoding_Mossad/" target="_blank"></a>
+                                <div class="cc_article_inner">
+                                    <div class="cc_article_img type_logo">
+                                        <img src="./img/mossad_logo.png" alt="">
+                                    </div>
+                                    <div class="cc_article_desc">
+                                        <h2>Mossad</h2>
+                                        <p>이스라엘 정보기관 모사드 (제작중)</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="clone_coding_article">
+                            <article>
+                                <a href="https://snowiceapple.github.io/clonecoding_Donald_Trump_Election/" target="_blank"></a>
+                                <div class="cc_article_inner">
+                                    <div class="cc_article_img type_logo">
+                                        <img src="./img/Trump_2024_2022_Campaign_Logo.png" alt="">
+                                    </div>
+                                    <div class="cc_article_desc">
+                                        <h2>Donald J. Trump Official</h2>
+                                        <p>트럼프 전 미국 대통령 웹사이트 메인 페이지 반응형</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="clone_coding_article">
+                            <article>
+                                <a href="https://snowiceapple.github.io/clonecoding_Times_of_Israel/" target="_blank"></a>
+                                <div class="cc_article_inner">
+                                    <div class="cc_article_img type_logo toi">
+                                        <img src="./img/toi_logo_white.svg" alt="">
+                                    </div>
+                                    <div class="cc_article_desc">
+                                        <h2>THE TIMES OF ISRAEL</h2>
+                                        <p>타임즈 오브 이스라엘 PC + 태블릿 반응형(해상도 1024 고정) 메인 페이지</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="clone_coding_article">
+                            <article>
+                                <a href="https://snowiceapple.github.io/clonecoding_Swords_of_Iron/" target="_blank"></a>
+                                <div class="cc_article_inner">
+                                    <div class="cc_article_img">
+                                        <img src="./img/soi_bg.jpg" alt="">
+                                    </div>
+                                    <div class="cc_article_desc">
+                                        <h2>Operation Swords of Iron</h2>
+                                        <p>이스라엘 '철의 검 작전' 메인 페이지 반응형</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="clone_coding_article">
+                            <article>
+                                <a href="https://snowiceapple.github.io/clonecoding_Gyeonggido/" target="_blank"></a>
+                                <div class="cc_article_inner">
+                                    <div class="cc_article_img">
+                                        <img src="./img/ggd_img.jpg" alt="">
+                                    </div>
+                                    <div class="cc_article_desc">
+                                        <h2>경기도청</h2>
+                                        <p>경기도청 메인 PC 페이지</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="clone_coding_article">
+                            <article>
+                                <a href="https://snowiceapple.github.io/clonecoding_KDCA/" target="_blank"></a>
+                                <div class="cc_article_inner">
+                                    <div class="cc_article_img">
+                                        <img src="./img/kdca.png" alt="">
+                                    </div>
+                                    <div class="cc_article_desc">
+                                        <h2>질병관리청</h2>
+                                        <p>질병관리청 메인 PC 페이지</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="footer">
+                <h2>Thanks For Watching!!</h2>
+            </div>
+        </footer>
+    </div>
+</body>
+
+
+</html>
