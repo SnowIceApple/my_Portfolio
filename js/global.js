@@ -129,7 +129,7 @@ $(window).on('load', function(){
     $('.main_nav_open').addClass('pop_up');
 
     var randomNumStandard = $('.works_list').length;
-    console.log(randomNumStandard);
+    // console.log(randomNumStandard);
 
     var randomIndex = Math.floor(Math.random() * randomNumStandard); 
     var randomNotice = $(".works_list").eq(randomIndex); 
