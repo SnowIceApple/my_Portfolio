@@ -131,6 +131,7 @@ $(window).on('load', function(){
     var randomIndex = Math.floor(Math.random() * 5); 
     var randomNotice = $(".works_list").eq(randomIndex); 
     randomNotice.addClass("wide").removeClass('basic'); 
+    randomNotice.siblings().addClass('basic')
   });
 
 
