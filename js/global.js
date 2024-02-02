@@ -120,10 +120,17 @@ $(document).ready(function(){
   alarm_on()
 
 
+
+
 });
+
 
 $(window).on('load', function(){
     $('.main_nav_open').addClass('pop_up');
+
+    var randomIndex = Math.floor(Math.random() * 5); // 0부터 4까지의 랜덤한 인덱스 생성
+    var randomNotice = $(".works_list").eq(randomIndex); // 랜덤한 인덱스에 해당하는 notice 요소 선택
+    randomNotice.addClass("wide").removeClass('basic'); // 선택된 요소에 특정 클래스 추가
   });
 
 
