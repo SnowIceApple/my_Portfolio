@@ -269,17 +269,16 @@ body{
 }
 
 .main_nav_open button{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
     background: #08141f;
     cursor: pointer;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 50px;
+    font-size: 36px;
     transition: all .3s ease;
     box-sizing: border-box;
 }
@@ -1016,7 +1015,7 @@ body{
 }
 
 .section_header h2{
-    font-size: 78px;
+    font-size: 64px;
     font-weight: 900;
     text-align: center;
     cursor: default;
@@ -1307,6 +1306,8 @@ body{
     font-size: 15px;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.5);
+    display: block;
+    padding: 5px 0;
 }
 
 .cc_ori_site a:hover{
