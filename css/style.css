@@ -1307,8 +1307,8 @@ body{
     font-size: 15px;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.5);
-    display: block;
     padding: 5px 0;
+    display: inline-block;
 }
 
 .cc_ori_site a:hover{
