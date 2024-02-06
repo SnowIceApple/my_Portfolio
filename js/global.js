@@ -126,7 +126,15 @@ $(document).ready(function(){
   var randomIndex = Math.floor(Math.random() * randomNumStandard); 
   var randomNotice = $(".works_list").eq(randomIndex); 
   randomNotice.addClass("wide").removeClass('basic'); 
-  randomNotice.siblings().addClass('basic')
+  randomNotice.siblings().addClass('basic');
+
+
+  // var randomNumStandard2 = $('.clone_coding_article').length;
+  // // console.log(randomNumStandard);
+
+  // var randomIndex2 = Math.floor(Math.random() * randomNumStandard2); 
+  // var randomNotice2 = $(".clone_coding_article").eq(randomIndex2); 
+  // randomNotice2.addClass("wide");
 
 
 });
