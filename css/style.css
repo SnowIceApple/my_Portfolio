@@ -510,7 +510,7 @@ body{
     top: 0;
     width: 85vw;
     height: 15vw;
-    background-color: #135EF2;
+    background-color: #BFA288;
 }
 
 .nav_link.type1 a{
@@ -527,7 +527,7 @@ body{
     bottom: 0;
     width: 22vw;
     height: 50vw;
-    background: #0057B7;
+    background: #593527;
 }
 
 .nav_link.type2 a{
@@ -548,7 +548,7 @@ body{
     bottom: 0;
     width: 60vw;
     height: 21vw;
-    background: #FFDD00;
+    background: #1E1E26;
     overflow: hidden;
 }
 
