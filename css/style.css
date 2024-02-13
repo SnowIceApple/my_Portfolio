@@ -960,11 +960,11 @@ body{
     height: 100%;
     object-fit: cover;
     object-position: top;
-    transition: all 1.5s ease;
+    transition: all 0.5s ease;
 }
 
 .works_list:hover .works_list_img img{
-    transform: scale(1.05);
+    transform: scale(1.08);
     transform-origin: center;
 }
 
