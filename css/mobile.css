@@ -56,10 +56,6 @@
         grid-gap: 15px 25px;
     }
 
-    .works_list_box{
-        grid-template-columns: 42% 29% 29%;
-    }
-
     .works_list.wide p{
         word-break: break-all;
     }
