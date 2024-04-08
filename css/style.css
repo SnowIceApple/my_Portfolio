@@ -1198,12 +1198,12 @@ body{
 #footer{
     width: 100%;
     padding: 35px 0;
-    background: rgb(26, 40, 66);
+    background: #000;
 }
 
 .footer h2{
     font-size: 5.5vw;
     color: #fff;
+    font-family: 'Luckiest Guy', cursive;
     text-align: center;
-    font-weight: 900;
 }
