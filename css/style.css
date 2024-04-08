@@ -823,19 +823,19 @@ body{
     transition: all 0.3s ease;
 }
 
-.works_list.green .works_list_img::after{
+.works_list.basic.green .works_list_img::after{
     background: linear-gradient(to top, rgba(46, 148, 110, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1), rgba(46, 148, 110, 0.4));
 }
 
-.works_list.navy .works_list_img::after{
+.works_list.basic.navy .works_list_img::after{
     background: linear-gradient(to top, rgba(26, 40, 66, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1), rgba(26, 40, 66, 0.4));
 }
 
-.works_list.skyblue .works_list_img::after{
+.works_list.basic.skyblue .works_list_img::after{
     background: linear-gradient(to top, rgba(27, 134, 192, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1), rgba(27, 134, 192, 0.4));
 }
 
-.works_list.violet .works_list_img::after{
+.works_list.basic.violet .works_list_img::after{
     background: linear-gradient(to top, rgba(68, 65, 206, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1), rgba(68, 65, 206, 0.4));
 }
 
