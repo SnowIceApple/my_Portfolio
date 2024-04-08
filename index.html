@@ -110,12 +110,11 @@
                 <div class="top_txt">
                     <span>Hello!</span>
                 </div>
-                <div class="face_inner" id="face_inner">
-                    <div class="eye">
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="mouth"></div>
+                <div class="gt_rot">
+                    <div id="gt_rot_div"></div>
+                    <span class="gt_fix_txt">
+                        TOP
+                    </span>
                 </div>
             </button>
         </div>
@@ -125,8 +124,8 @@
             };
 
             function scrollRotate() {
-                let image = document.getElementById("face_inner");
-                image.style.transform = "rotate(" + window.pageYOffset/10 + "deg)";
+                let gt_rot = document.getElementById("gt_rot_div");
+                gt_rot.style.transform = "rotate(" + window.pageYOffset/5 + "deg)";
             }
         </script>
         <!-- <section id="intro">

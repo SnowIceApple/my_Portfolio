@@ -580,8 +580,8 @@ body{
 
 .go_top{
     position: fixed;
-    right: 40px;
-    bottom: 30px;
+    right: 20px;
+    bottom: 20px;
     z-index: 200;
     border-radius: 50%;
 }
@@ -595,7 +595,7 @@ body{
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     background: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .go_top .top_txt span{
@@ -604,78 +604,36 @@ body{
     color: rgba(0, 0, 0, 0.6);
 }
 
-.go_top .face_inner{
+.gt_rot{
     position: relative;
-    left: 0;
-    top: 0;
     width: 70px;
     height: 70px;
-    pointer-events: none;
-    border-radius: 50%;
-    background: rgb(255,201,98);
-}
-
-.go_top .face_inner .eye{
-    position: absolute;
-    left: 50%;
-    top: 15px;
-    transform: translateX(-50%);
-    width: 40px;
     display: flex;
-    justify-content: space-between;
-    z-index: 3;
+    align-items: center;
+    justify-content: center;
 }
 
-.go_top .face_inner .eye span{
-    position: relative;
-    width: 13px;
-    height: 22px;
-    background: #000;
-    border-radius: 50%;
+#gt_rot_div{
+    position: absolute;
+    margin: 7%;
+    width: 86%;
+    height: 86%;
+    background: #2e4ea4;
     transform-origin: center;
-    transition: transform 0.2s;
+    border: 2px solid #fff;
+    transition: all .3s ease;
 }
 
-.go_top:hover .face_inner .eye span{
-    transform: scale(0.85);
+.go_top:hover #gt_rot_div{
+    background: #2a2c34;
 }
 
-.go_top .face_inner .mouth{
-    position: absolute;
-    bottom: 11px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 42px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid #000;
-    box-sizing: border-box;
+.gt_fix_txt{
+    font-size: 17px;
+    color: #fff;
+    position: relative;
+    font-weight: 600;
     z-index: 2;
-}
-
-.go_top:hover .face_inner .mouth{
-    width: 16px;
-    height: 16px;
-}
-
-.go_top .face_inner .mouth::before{
-    display: block;
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: -30%;
-    transform: translateX(-50%);
-    width: 120%;
-    height: 80%;
-    background: rgb(255,201,98);
-}
-
-.go_top:hover .face_inner .mouth::before{
-    display: none;
-}
-
-.go_top button{
-    cursor: pointer;
 }
 
 /* intro */
