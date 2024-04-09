@@ -1,11 +1,15 @@
 html{
-    scroll-behavior: smooth;
 }
 
 body{
     scroll-behavior: smooth;
     font-family: 'Pretendard', sans-serif;
     overflow-x: hidden;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
 
 :root{
@@ -263,33 +267,11 @@ body{
 
 .main_nav_open{
     position: fixed;
-    left: 50%;
-    top: -50px;
-    transform: translateX(-50%) scale(0.3);
+    left: calc((100vw - 1460px) / 2);
+    bottom: 20px;
     z-index: 200;
     /* transition: top .6s ease, opacity .6s ease; */
     transition-delay: 0.1s;
-}
-
-.main_nav_open::before{
-    display: block;
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    width: calc(100% + 20ßpx);
-    height: calc(100% + 20px);
-    background: rgba(246,233,119,0.9);
-    border-radius: 50%;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
-    transition: all .3s;
-    transform-origin: center;
-    overflow: hidden;
-}
-
-.main_nav_open:hover::before{
-    transform: translate(-50%, -50%) scale(1);
 }
 
 /* .main_nav_open.pop_up{
@@ -301,79 +283,25 @@ body{
 
 }
 
-.main_nav_open.pop_up{
-    animation: main_nav_ani linear forwards 1.2s;
-    animation-delay: 0.8s;
-}
-
-.main_nav_open.pop_up button ion-icon{
-    animation: main_nav_ico_ani linear forwards 1.2s;
-    animation-delay: 0.8s;
-}
-
-@keyframes main_nav_ico_ani{
-    0%{
-        display: none;
-        opacity: 0;
-    }
-
-    80%{
-        display: none;
-        opacity: 0;
-    }
-
-    81%{
-        display: block;
-        opacity: 1;
-    }
-
-    100%{
-        display: block;
-        opacity: 1;
-    }
-}
-
-@keyframes main_nav_ani{
-    0%{
-        top: -50px;
-        transform: translateX(-50%) scale(0.3);
-        pointer-events: none;
-    }
-
-    80%{
-        top: 25px;
-        transform: translateX(-50%) scale(0.3);
-        pointer-events: none;
-    }
-
-    100%{
-        top: 25px;
-        transform: translateX(-50%) scale(1);
-        pointer-events: all;
-    }
-}
-
 .main_nav_open button{
     position: relative;
     width: 70px;
     height: 70px;
-    background: #08141f;
     cursor: pointer;
     border: 1px solid #fff;
     color: #fff;
+    background: #122090;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 42px;
     box-sizing: border-box;
-    border-radius: 50%;
     z-index: 2;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .main_nav_open button:hover{
-    background: #fff;
-    color: #1a1a1a;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
 }
 
 .main_nav{
@@ -622,6 +550,7 @@ body{
     transform-origin: center;
     border: 2px solid #fff;
     transition: all .3s ease;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.9);
 }
 
 .go_top:hover #gt_rot_div{

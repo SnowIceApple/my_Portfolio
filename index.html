@@ -32,38 +32,36 @@
 </head>
 <body>
     <div id="wrap">
-        <header id="header">
-            <div class="main_nav_open">
+        <div class="main_nav_open">
+            <button>
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="main_nav">
+            <div class="main_nav_close">
                 <button>
-                    <ion-icon name="menu-outline"></ion-icon>
+                    <span></span>
+                    <span></span>
                 </button>
             </div>
-            <div class="main_nav">
-                <div class="main_nav_close">
-                    <button>
-                        <span></span>
-                        <span></span>
-                    </button>
+            <nav id="nav">
+                <div class="nav_link type1">
+                    <a href="#intro" class="it">
+                        <strong>INTRO</strong>
+                    </a>
                 </div>
-                <nav id="nav">
-                    <div class="nav_link type1">
-                        <a href="#intro" class="it">
-                            <strong>INTRO</strong>
-                        </a>
-                    </div>
-                    <div class="nav_link type2">
-                        <a href="#works" class="it">
-                            <strong>WORKS</strong>
-                        </a>
-                    </div>
-                    <div class="nav_link type3">
-                        <a href="#clone_coding" class="it">
-                            <strong>CLONE</strong>
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </header>
+                <div class="nav_link type2">
+                    <a href="#works" class="it">
+                        <strong>WORKS</strong>
+                    </a>
+                </div>
+                <div class="nav_link type3">
+                    <a href="#clone_coding" class="it">
+                        <strong>CLONE</strong>
+                    </a>
+                </div>
+            </nav>
+        </div>
         <section id="visual">
             <div class="visual">
                 <div class="main_desc_txt n1">
@@ -142,7 +140,7 @@
                 </div>
                 <div class="wide_container"> 
                     <div class="works_list_box">
-                        <div class="works_list wide brown" data-aos="fade-up" data-aos-duration="800">
+                        <div class="works_list wide brown" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                             <a href="https://ecpa.hackers.com/?r=ecpa&c=event&evt_id=23033000&g_id=29" target="_blank"></a>
                             <div class="works_list_img">
                                 <img src="./img/sl_img.jpg" alt="">
@@ -153,7 +151,7 @@
                                 <p>하단 다중탭 구현, 모바일 페이지 내 강의리스트 레이아웃 수정</p>
                             </div>
                         </div>
-                        <div class="works_list basic navy" data-aos="fade-up" data-aos-duration="800">
+                        <div class="works_list basic navy" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                             <a href="https://precision-bio.com/kr/animal/sub/products/product.php?mode=view&idx=8" target="_blank"></a>
                             <div class="works_list_img">
                                 <img src="./img/pv_img.jpg" alt="">
@@ -164,7 +162,7 @@
                                 <p>메인(하단 다이어그램 제외), 헤더, 전체메뉴, 푸터, products 퍼블</p>
                             </div>
                         </div>
-                        <div class="works_list basic skyblue" data-aos="fade-up" data-aos-duration="800">
+                        <div class="works_list basic skyblue" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                             <a href="javascript:alert('페이지가 변경되어 링크를 비활성화하였습니다.');"></a>
                             <div class="works_list_img">
                                 <img src="./img/vote.jpg" alt="">
@@ -175,7 +173,7 @@
                                 <p>디자인 + 퍼블</p>
                             </div>
                         </div>
-                        <div class="works_list basic violet" data-aos="fade-up" data-aos-duration="800">
+                        <div class="works_list basic violet" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                             <a href="http://hsol.kr/" target="_blank"></a>
                             <div class="works_list_img">
                                 <img src="./img/hsol.jpg" alt="">
@@ -186,7 +184,7 @@
                                 <p>퍼블</p>
                             </div>
                         </div>
-                        <div class="works_list basic green" data-aos="fade-up" data-aos-duration="800">
+                        <div class="works_list basic green" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                             <a href="https://www.ddmccic.or.kr/new/main/" target="_blank"></a>
                             <div class="works_list_img">
                                 <img src="./img/ddm.jpg" alt="">
@@ -330,7 +328,7 @@
         </section>
         <footer id="footer">
             <div class="footer">
-                <h2>Thanks For Watching!!</h2>
+                <h2>Thanks for Watching!</h2>
             </div>
         </footer>
     </div>
