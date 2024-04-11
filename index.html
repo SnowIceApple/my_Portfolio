@@ -32,35 +32,27 @@
 </head>
 <body>
     <div id="wrap">
-        <div class="main_nav_open">
-            <button>
-                <ion-icon name="menu-outline"></ion-icon>
-            </button>
-        </div>
-        <div class="main_nav">
-            <div class="main_nav_close">
-                <button>
+        <div class="main_nav_box">
+            <div class="main_nav_button_box">
+                <button class="main_nav_open">
+                    <span></span>
                     <span></span>
                     <span></span>
                 </button>
+                <!-- <button class="main_nav_notice">
+
+                </button> -->
             </div>
-            <nav id="nav">
-                <div class="nav_link type1">
-                    <a href="#intro" class="it">
-                        <strong>INTRO</strong>
-                    </a>
-                </div>
-                <div class="nav_link type2">
-                    <a href="#works" class="it">
-                        <strong>WORKS</strong>
-                    </a>
-                </div>
-                <div class="nav_link type3">
-                    <a href="#clone_coding" class="it">
-                        <strong>CLONE</strong>
-                    </a>
-                </div>
-            </nav>
+            <div class="main_nav">
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#visual">Main</a></li>
+                        <li><a href="#intro">Introduce</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#clone_coding">Clone coding</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <section id="visual">
             <div class="visual">
@@ -126,16 +118,20 @@
                 gt_rot.style.transform = "rotate(" + window.pageYOffset/5 + "deg)";
             }
         </script>
-        <!-- <section id="intro">
+        <section id="intro">
             <div class="intro">
-                
+                <div class="section_header" data-aos="zoom-in">
+                    <div class="container">
+                        <h2>introduce</h2>
+                    </div>
+                </div>
             </div>
-        </section> -->
+        </section>
         <section id="works">
             <div class="works">
                 <div class="section_header" data-aos="zoom-in">
                     <div class="container">
-                        <h2>Own works</h2>
+                        <h2>works</h2>
                     </div>
                 </div>
                 <div class="wide_container"> 
