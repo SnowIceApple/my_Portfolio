@@ -112,6 +112,64 @@ body{
     height: 100%;
 }
 
+.vss_door_img{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+    transition: all 2.5s cubic-bezier(.57,.21,.69,1.25);
+    transition-delay: 1s;
+}
+
+.visual_swiper.active .vss_door_img{
+    transition-delay: 2.5s;
+}
+
+.vss_door_img img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vss_door_img.left{
+    left: -50%;
+}
+
+.swiper-slide-active .vss_door_img.left{
+    left: -100%;
+    transition: all 2.5s cubic-bezier(.57,.21,.69,1.25);
+    transition-delay: 1s;
+}
+
+.visual_swiper.active .swiper-slide-active .vss_door_img.left{
+    transition-delay: 2s;
+}
+
+.vss_door_img.left img{
+    left: 50%;
+}
+
+.vss_door_img.right{
+    right: -50%;
+}
+
+.swiper-slide-active .vss_door_img.right{
+    right: -100%;
+    transition: all 2.5s cubic-bezier(.57,.21,.69,1.25);
+    transition-delay: 1s;
+}
+
+.visual_swiper.active .swiper-slide-active .vss_door_img.right{
+    transition-delay: 2s;
+}
+
+.vss_door_img.right img{
+    right: 50%;
+}
+
 .vss_img{
     width: 100%;
     height: 100%;
@@ -140,7 +198,6 @@ body{
     text-align: center;
 }
 
-
 .vss_txt *{
     color: rgba(0, 0, 0, 0.8);
 }
@@ -156,8 +213,8 @@ body{
     text-align: center;
     border-bottom: 1.5px solid rgba(0, 0, 0, 0.4);
     letter-spacing: -0.2vw;
-    margin-bottom: 1.3vw;
-    filter: blur(30px);
+    margin-bottom: 1.5vw;
+    filter: blur(45px);
     transition: all 2.5s ease;
     transition-delay: 0.3s;
 }
@@ -173,8 +230,8 @@ body{
 }
 
 .vss_txt span{
-    font-size: 4vw;
-    font-weight: 200;
+    font-size: 2.5vw;
+    font-weight: 300;
     letter-spacing: -1vw;
     transition: all 2.5s ease;
     transition-delay: 0.5s;
@@ -189,7 +246,7 @@ body{
 }
 
 .vss_txt.wht span{
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     mix-blend-mode: multiply;
 }
 

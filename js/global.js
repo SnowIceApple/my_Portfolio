@@ -75,6 +75,11 @@ $(document).ready(function(){
 
 });
 
+$(window).on('load', function(){
+  setTimeout(() => {
+    $('.visual_swiper').addClass('active');
+  }, 100);
+});
 
 
 
