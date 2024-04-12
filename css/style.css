@@ -499,7 +499,7 @@ body{
 
 .job_list ul li{
     position: relative;
-    width: calc(50% - 40px);
+    width: 48%;
 }
 
 .job_list ul li::after{
@@ -517,7 +517,7 @@ body{
 
 .jl_box{
     box-sizing: border-box;
-    padding: 70px 35px 45px 35px;
+    padding: 5vw 2.3vw 2.8vw 2.3vw;
     clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
     background: #f3f3f3;
 }
@@ -525,7 +525,7 @@ body{
 .jl_deco{
     position: absolute;
     left: 7%;
-    top: -15%;
+    top: -11%;
     display: flex;
     flex-wrap: wrap;
     gap: 0 0.9vw;
@@ -537,19 +537,23 @@ body{
     display: block;
     width: 1.3vw;
     height: 3.5vw;
-    background: #89D9A5;
+    background: #86C8FD;
 }
 
 .jl_box h3{
-    font-size: 3vw;
+    font-size: max(3vw, 18px);
+    font-weight: 500;
+    color: #1a1a1a;
     font-weight: 500;
 }
 
 .jl_box span{
     display: block;
-    font-size: 1.7vw;
+    font-size: max(1.6vw, 15px);
     margin-top: 1vw;
     text-align: right;
+    color: #1a1a1a;
+    font-weight: 400;
 }
 
 .period{
@@ -557,8 +561,10 @@ body{
     right: 0;
     top: 107%;
     display: block;
-    font-size: 1.4vw;
+    font-size: max(1.3vw, 14px);
     letter-spacing: -0.05vw;
+    color: #666;
+    font-weight: 100;
 }
 
 /* works */
@@ -991,12 +997,11 @@ body{
     display: inline-block;
     line-height: 33px;
     border-radius: 0;
-    transition: all .3s ease;
+    transition: all .5s ease;
 }
 
 .cc_ori_site a:hover{
     background-color: #1b204a;
-    border-radius: 16.5px;
 }
 
 /* wide */
