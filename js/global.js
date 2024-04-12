@@ -5,31 +5,21 @@ $(document).ready(function(){
   
   AOS.init();
 
-    const swiper1 = new Swiper('.works_swiper', {
+    const swiper1 = new Swiper('.visual_swiper', {
     direction: 'horizontal',
       loop: true,
-      speed: 1000,
+      speed: 3000,
       slidesPerView: 1,
-      centeredSlides: true,
       keyboard: {
         enabled: true,
         onlyInViewport: true
       },
-    //   autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false
-    //   },
-
-      navigation: {
-        nextEl: '.wks_btn.next',
-        prevEl: '.wks_btn.prev',
+      effect: 'fade',
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
       },
 
-      breakpoints:{
-        568: {
-            slidesPerView: 'auto',
-        },
-      },
 
     });  
 
@@ -75,28 +65,13 @@ $(document).ready(function(){
 
   $('.main_nav_open').on('click', function(){
     $('.main_nav_box').toggleClass('on');
+    $('#nav ul li').removeClass('on');
   });
 
-  $('.multi_link').on('click', function(e){
-    $(this).toggleClass('active');
+  $('#nav ul li').on('click', function(){
+    $(this).addClass('on').siblings().removeClass('on');
   });
 
-  $(window).on('resize', function(){
-    if($(window).innerWidth() > 1280){
-        $('.multi_link').removeClass('active');
-    }
-  });
-
-  $('.main_contact ul li').on('mouseenter', function(){
-    $(this).removeClass('alarm_active');
-  });
-
-  $(document).on('mouseup', function(e){
-    var main_contact_pop = $('.main_contact ul li');
-    if(main_contact_pop.has(e.target).length === 0){
-        main_contact_pop.removeClass('alarm_active');
-    }
-  });
 
 });
 
