@@ -192,7 +192,7 @@ body{
 .vss_txt{
     position: absolute;
     left: 50%;
-    top: 17%;
+    top: 18%;
     width: 100%;
     transform: translateX(-50%);
     text-align: center;
@@ -225,6 +225,10 @@ body{
     transition-delay: 0.3s;
 }
 
+.visual_swiper.active .swiper-slide-active .vss_txt h1{
+    transition-delay: 1.2s;
+}
+
 .vss_txt.wht h1{
     border-bottom-color: rgba(255, 255, 255, 0.4);
 }
@@ -254,9 +258,9 @@ body{
 
 .main_nav_box{
     position: fixed;
-    left: calc((100vw - 1445px) / 2);
+    left: calc((100vw - 1440px) / 2);
     bottom: 0px;
-    z-index: 200;
+    z-index: 9999;
     /* transition: top .6s ease, opacity .6s ease; */
     transition-delay: 0.1s;
     box-shadow: 0px 0px 50px rgba(18, 32, 144, 0.5);
@@ -481,6 +485,82 @@ body{
     padding-top: 140px;
 }
 
+.job_list{
+    width: 100%;
+    padding: 60px 0;
+}
+
+.job_list ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.job_list ul li{
+    position: relative;
+    width: calc(50% - 40px);
+}
+
+.job_list ul li::after{
+    display: block;
+    content: "";
+    position: absolute;
+    right: 37%;
+    bottom: -4%;
+    transform: skewY(13deg) skewX(25deg);
+    width: 8.5vw;
+    height: 2.5vw;
+    background: #f3f3f3;
+    z-index: -1;
+}
+
+.jl_box{
+    box-sizing: border-box;
+    padding: 70px 35px 45px 35px;
+    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
+    background: #f3f3f3;
+}
+
+.jl_deco{
+    position: absolute;
+    left: 7%;
+    top: -15%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.9vw;
+    z-index: 10;
+    transform: skewX(-10deg);
+}
+
+.jl_deco span{
+    display: block;
+    width: 1.3vw;
+    height: 3.5vw;
+    background: #89D9A5;
+}
+
+.jl_box h3{
+    font-size: 3vw;
+    font-weight: 500;
+}
+
+.jl_box span{
+    display: block;
+    font-size: 1.7vw;
+    margin-top: 1vw;
+    text-align: right;
+}
+
+.period{
+    position: absolute;
+    right: 0;
+    top: 107%;
+    display: block;
+    font-size: 1.4vw;
+    letter-spacing: -0.05vw;
+}
+
 /* works */
 
 .section_header{
@@ -528,7 +608,7 @@ body{
 }
 
 .works_list.basic{
-    height: 21vw;
+    height: 23vw;
     order: 1;
 }
 

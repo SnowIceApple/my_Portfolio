@@ -68,6 +68,15 @@ $(document).ready(function(){
     $('#nav ul li').removeClass('on');
   });
 
+  $(document).on('mouseup', function(e){
+    var navBox = $('.main_nav_box');
+    if(navBox.has(e.target).length === 0){
+      navBox.removeClass('on');
+      $('#nav ul li').removeClass('on');
+    }
+  });
+
+
   $('#nav ul li').on('click', function(){
     $(this).addClass('on').siblings().removeClass('on');
   });
