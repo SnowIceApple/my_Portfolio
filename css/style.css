@@ -237,7 +237,7 @@ body{
     font-size: 2.5vw;
     font-weight: 300;
     letter-spacing: -1vw;
-    transition: all 2.5s ease;
+    transition: letter-spacing 2.5s ease, opacity 2.5s ease;
     transition-delay: 0.5s;
     opacity: 0;
 }
@@ -531,6 +531,11 @@ body{
     gap: 0 0.9vw;
     z-index: 10;
     transform: skewX(-10deg);
+    transition: top 0.3s ease;
+}
+
+.job_list ul li:hover .jl_deco{
+    top: -17%;
 }
 
 .jl_deco span{
@@ -763,7 +768,7 @@ body{
 
 .works_list_txt h3{
     display: inline;
-    font-size: max(2vw, 13px);
+    font-size: max(2vw, 20px);
     font-weight: 800;
     letter-spacing: -0.3px;
     line-height: 1.5;
@@ -840,7 +845,7 @@ body{
 }
 
 .works_list.wide p{
-    font-size: 1.6vw;
+    font-size: max(1.6vw, 15px);
 }
 
 /* clone */
@@ -1071,9 +1076,12 @@ body{
 
 #footer{
     width: 100%;
-    padding: 35px 0;
-    background: #12123b;
     overflow: hidden;
+}
+
+.footer{
+    background: #12123b;
+    padding: 35px 0;
 }
 
 .footer h2{
