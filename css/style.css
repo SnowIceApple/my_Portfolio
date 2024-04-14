@@ -296,6 +296,10 @@ body{
     z-index: 2;
 }
 
+.main_nav_box button{
+    transition: all .3s ease;
+}
+
 .main_nav_box.on button,
 .main_nav_open:hover{
     background: #122090;
