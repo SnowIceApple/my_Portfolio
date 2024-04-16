@@ -572,7 +572,7 @@ body{
     display: block;
     font-size: max(1.3vw, 14px);
     letter-spacing: -0.05vw;
-    color: #666;
+    color: #999;
     font-weight: 100;
 }
 
