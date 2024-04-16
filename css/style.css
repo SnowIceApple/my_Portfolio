@@ -521,7 +521,7 @@ body{
 
 .jl_box{
     box-sizing: border-box;
-    padding: 5vw 2.3vw 2.8vw 2.3vw;
+    padding: 4.5vw 2.3vw 2.8vw 2.3vw;
     clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
     background: #f3f3f3;
 }
