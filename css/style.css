@@ -599,6 +599,7 @@ body{
     letter-spacing: -1px;
     text-transform: uppercase;
     padding: 5px 20px;
+    color: #1a1a1a;
 }
 
 #works{
@@ -1000,17 +1001,21 @@ body{
     z-index: 3;
     font-size: 15px;
     font-weight: 400;
-    background-color: #002c8a;
-    color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #002c8a;
+    background-color: #fff;
+    color: #111;
     padding: 0px 17px;
     display: inline-block;
     line-height: 33px;
     border-radius: 0;
-    transition: all .5s ease;
+    transition: all .3s ease;
+    letter-spacing: -0.5px;
 }
 
 .cc_ori_site a:hover{
-    background-color: #1b204a;
+    background-color: #002c8a;
+    color: #fff;
 }
 
 /* wide */
