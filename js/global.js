@@ -48,12 +48,28 @@ $(document).ready(function(){
     });
   },
     {
+      threshold: 0.25
+    }
+  );
+
+  let observer2 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle('view', entry.isIntersecting);
+    });
+  },
+    {
       threshold: 0.1
     }
   );
-  sections.forEach((view) => {
-    observer1.observe(view);
+  sections.forEach((view, index) => {
+    if(index == 3){
+      observer2.observe(view);
+    }
+    else{
+      observer1.observe(view);
+    }
   });
+
 
   
   var controller = new ScrollMagic.Controller();
