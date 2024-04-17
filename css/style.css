@@ -616,6 +616,7 @@ body{
     opacity: 0;
     transform: translateY(-30%);
     transition: all .5s ease;
+    display: inline-block;
 }
 
 .view .section_header h2 span{
