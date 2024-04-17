@@ -258,7 +258,10 @@ body{
     position: absolute;
     left: 0;
     bottom: 0%;
-    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
 }
 
 /* main_nav_box */
@@ -603,10 +606,22 @@ body{
     cursor: default;
     user-select: none;
     display: inline-block;
-    letter-spacing: -1px;
     text-transform: uppercase;
     padding: 5px 20px;
     color: #1a1a1a;
+}
+
+.section_header h2 span{
+    position: relative;
+    opacity: 0;
+    transform: translateY(-30%);
+    transition: all .5s ease;
+}
+
+.view .section_header h2 span{
+    opacity: 1;
+    transform: translateY(0%);
+    transition-delay: var(--delay);
 }
 
 #works{
@@ -916,6 +931,7 @@ body{
 .view .clone_coding_article::before{
     transform: scaleX(1);
     opacity: 1;
+    transition-delay: 0.2s;
 }
 
 .clone_coding_article article{
