@@ -23,42 +23,6 @@ $(document).ready(function(){
 
     });  
 
-
-
-//   $(window).scroll(function(){
-
-//     function mainScrollEffect(){
-//         const scroll = $(this).scrollTop();
-//         const {scrollHeight,clientHeight,scrollTop} = document.documentElement;
-//         const scroll2 = scrollTop / (scrollHeight-clientHeight);
-//         const upScroll = -scroll/4;
-//         const upScroll2 = -scroll/3;
-//         const upScroll3 = -scroll/20;
-//         const upScroll4 = -scroll2 * 130;
-    
-//         $('.scroll_up').css({'transform' : 'translate3d(0,'+ upScroll +'px,0)'});
-//         $('.scroll_up2').css({'transform' : 'translate3d(0,'+ upScroll2 +'px,0)'});
-//         $('.scroll_up3').css({'transform' : 'translate3d(0,'+ upScroll3 +'px,0)'});
-//         $('.scroll_up4').css({'transform' : 'translate3d(0,'+ upScroll4 +'px,0)'});
-    
-//         console.log(upScroll);
-//     }
-
-//     if($(window).scrollTop() < $('#intro').offset().top){
-//         mainScrollEffect();
-//     }
-
-//     var span_txt_anchor = $('#visual').innerHeight() / 2;
-
-//     if($(window).scrollTop() > span_txt_anchor){
-//       $('.top_txt span').text('Top');
-//     }
-//     else{
-//       $('.top_txt span').text('Hello!');
-//     }
-// });
-
-
   $('.go_top').click(function(){
     $('html, body').animate({ scrollTop: 0 }, 600);
   });
@@ -75,6 +39,39 @@ $(document).ready(function(){
       $('#nav ul li').removeClass('on');
     }
   });
+
+  const sections = document.querySelectorAll('section');
+
+  let observer1 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle('view', entry.isIntersecting);
+    });
+  },
+    {
+      threshold: 0.25
+    }
+  );
+  sections.forEach((view) => {
+    observer1.observe(view);
+  });
+
+  
+  var controller = new ScrollMagic.Controller();
+
+  var tween1 = TweenMax.to('#visual', 1, {
+    opacity: 0,
+    ease: "power2.out",
+  });
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: ".trigger1",
+    triggerHook: 0.5,
+    duration: "50%",
+  })
+
+  .setTween(tween1)
+  // .addIndicators({name: "visualOpacity"})
+  .addTo(controller);
 
 
   $('#nav ul li').on('click', function(){

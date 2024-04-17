@@ -254,6 +254,13 @@ body{
     mix-blend-mode: multiply;
 }
 
+.trigger1{
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    visibility: hidden;
+}
+
 /* main_nav_box */
 
 .main_nav_box{
@@ -621,6 +628,8 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    transform-origin: center;
+    transition: all .1s ease;
 }
 
 .works_list.basic{
@@ -886,9 +895,28 @@ body{
     overflow: hidden;
     transition: all .3s ease;
     align-self: stretch;
-    border-top: 1px solid #000;
 }
 
+.clone_coding_article::before{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background: #000;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: 3;
+    transition: all .8s ease;
+}
+
+.view .clone_coding_article::before{
+    transform: scaleX(1);
+    opacity: 1;
+}
 
 .clone_coding_article article{
     width: 100%;
@@ -896,6 +924,7 @@ body{
 }
 
 .clone_coding_article:hover{
+    border-color: transparent;
 }
 
 .clone_coding_article article > a{
