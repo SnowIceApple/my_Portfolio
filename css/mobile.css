@@ -69,6 +69,11 @@
         display: none;
     }
 
+    .clone_coding_article a{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
 
     .section_header h2{
         font-size: 54px;
