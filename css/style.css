@@ -625,6 +625,21 @@ body{
     transition-delay: var(--delay);
 }
 
+.view .section_header h2 span:last-child{
+    animation: dotMoving 1.5s alternate ease infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes dotMoving{
+    70% {transform:translateY(0%); }
+    80% {transform:translateY(-15%); }
+    90% {transform:translateY(0%); }
+    95% {transform:translateY(-7%); }
+    97% {transform:translateY(0%); }
+    99% {transform:translateY(-3%); }
+    100% {transform:translateY(0); }
+}
+
 #works{
     width: 100%;
     padding-top: 140px;

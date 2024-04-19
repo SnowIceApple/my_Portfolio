@@ -351,6 +351,10 @@
         grid-column: 1 / 3;
     }
 
+    .works_list.basic{
+        height: 55vw;
+    }
+
     .clone_coding_article{
         grid-column: 1 / 3;
     }
