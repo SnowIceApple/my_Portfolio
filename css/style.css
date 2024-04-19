@@ -626,18 +626,18 @@ body{
 }
 
 .view .section_header h2 span:last-child{
-    animation: dotMoving 1.5s alternate ease infinite;
+    animation: dotPulse 2.3s alternate ease infinite;
     animation-delay: var(--delay);
 }
 
-@keyframes dotMoving{
-    70% {transform:translateY(0%); }
-    80% {transform:translateY(-15%); }
-    90% {transform:translateY(0%); }
-    95% {transform:translateY(-7%); }
-    97% {transform:translateY(0%); }
-    99% {transform:translateY(-3%); }
-    100% {transform:translateY(0); }
+@keyframes dotPulse{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
 }
 
 #works{
