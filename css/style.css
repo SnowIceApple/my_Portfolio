@@ -737,6 +737,7 @@ body{
     }
 }
 
+.ssl_circle:active,
 .ssl_circle:hover{
     background: #fff;
     color: #1d1f22;
