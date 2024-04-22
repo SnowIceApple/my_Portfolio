@@ -48,7 +48,7 @@ $(document).ready(function(){
     });
   },
     {
-      threshold: 0.25
+      threshold: 0.4
     }
   );
 
