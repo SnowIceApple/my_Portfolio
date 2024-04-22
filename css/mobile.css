@@ -24,33 +24,23 @@
 
 @media all and (max-width: 1280px){
 
-    .nav_link.type1{
-        height: 25vw;
-    }
-
-    .nav_link.type2{
-        width: 28vw;
-        height: 80vh;
-    }
-
-    .nav_link.type3{
-        height: 20vw;
-    }
-
     #visual{
         height: 80vh;
     }
 
-    .intro_ticker ul li{
-        font-size: 8vw;
+    .skillset_tit{
+        box-sizing: border-box;
+        padding-right: 20px;
     }
 
-    .intro_tit h2{
-        font-size: 8vw;
+    .skillset_list ul li{
+        width: 33.3333%;
+        margin-right: 0px;
+        margin-bottom: max(3vw, 30px);
     }
 
-    .skills ul li{
-        font-size: 5vw;
+    .skillset_list ul li:last-child{
+        margin-bottom: max(3vw, 30px);
     }
 
     .job_desc ul li{
@@ -73,7 +63,6 @@
         transform: translateX(0);
         opacity: 1;
     }
-
 
     .section_header h2{
         font-size: 54px;
@@ -231,6 +220,15 @@
         font-size: 32px;
     }
 
+    .skillset_list ul li{
+        width: 50%;
+    }
+
+    .ssl_circle{
+        width: 140px;
+        height: 140px;
+    }
+
     .works_list.wide{
         grid-column: 1 / 3;
         height: 350px;
@@ -385,6 +383,11 @@
     .main_nav_close button{
         width: 120px;
         height: 120px;
+    }
+
+    .ssl_circle{
+        width: 110px;
+        height: 110px;
     }
 
     .intro_tit h2{
