@@ -28,6 +28,10 @@
         height: 80vh;
     }
 
+    #appeal{
+        height: 70vh;
+    }
+
     .skillset_tit{
         box-sizing: border-box;
         padding-right: 20px;
@@ -156,6 +160,10 @@
     .go_top{
         right: 15px;
         bottom: 15px;
+    }
+
+    #appeal{
+        height: 45vh;
     }
 
     .job_list{
@@ -353,6 +361,14 @@
 
 @media all and (max-width: 568px){
 
+    #appeal{
+        height: 42vh;
+    }
+
+    .aab_box div{
+        width: 55%;
+    }
+
     .works_list{
         grid-column: 1 / 3;
     }
@@ -384,6 +400,14 @@
     .main_nav_close button{
         width: 120px;
         height: 120px;
+    }
+
+    #appeal{
+        height: 35vh;
+    }
+
+    .ah_txt_ani span{
+        line-height: 1.3;
     }
 
     .ssl_circle{

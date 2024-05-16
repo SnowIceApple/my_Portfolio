@@ -52,18 +52,33 @@ $(document).ready(function(){
     }
   );
 
+
   let observer2 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       entry.target.classList.toggle('view', entry.isIntersecting);
     });
   },
     {
-      threshold: 0.1
+      threshold: 0.15
     }
   );
+
+  let observer3 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle('view', entry.isIntersecting);
+    });
+  },
+    {
+      threshold: 0.6
+    }
+  );
+
   sections.forEach((view, index) => {
-    if(index == 3){
+    if(index == 4){
       observer2.observe(view);
+    }
+    if(index == 1){
+      observer3.observe(view);
     }
     else{
       observer1.observe(view);
