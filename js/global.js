@@ -85,6 +85,25 @@ $(document).ready(function(){
     }
   });
 
+  $('.works_list a').on('click', function(e){
+    e.preventDefault();
+    var tg = $(this).parent();
+    var idx = tg.index();
+    console.log(idx);
+    $('.works_detail_tab_list').eq(idx).addClass('active').siblings().removeClass('active');
+  });
+
+
+  $(document).on('mouseup', function(e){
+    var works_list = $('.works_list');
+    var works_detail = $('.works_detail_tab_list');
+    var detail_tabBox = $('.detail_tabBox_inner');
+    if(detail_tabBox.has(e.target).length === 0){
+      works_list.removeClass('active');
+      works_detail.removeClass('active');
+    }
+  });
+
 
   
   var controller = new ScrollMagic.Controller();

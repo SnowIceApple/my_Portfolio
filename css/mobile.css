@@ -29,7 +29,7 @@
     }
 
     #appeal{
-        height: 70vh;
+        height: 65vw;
     }
 
     .skillset_tit{
@@ -163,7 +163,7 @@
     }
 
     #appeal{
-        height: 45vh;
+        height: 66vw;
     }
 
     .job_list{
@@ -361,10 +361,6 @@
 
 @media all and (max-width: 568px){
 
-    #appeal{
-        height: 42vh;
-    }
-
     .aab_box div{
         width: 55%;
     }
@@ -400,10 +396,6 @@
     .main_nav_close button{
         width: 120px;
         height: 120px;
-    }
-
-    #appeal{
-        height: 35vh;
     }
 
     .ah_txt_ani span{
