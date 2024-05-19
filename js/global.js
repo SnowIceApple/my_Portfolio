@@ -73,12 +73,25 @@ $(document).ready(function(){
     }
   );
 
+  let observer4 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle('view', entry.isIntersecting);
+    });
+  },
+    {
+      threshold: 0.1
+    }
+  );
+
   sections.forEach((view, index) => {
+    if(index == 1){
+      observer3.observe(view);
+    }
     if(index == 4){
       observer2.observe(view);
     }
-    if(index == 1){
-      observer3.observe(view);
+    if(index == 5){
+      observer4.observe(view);
     }
     else{
       observer1.observe(view);
@@ -91,6 +104,7 @@ $(document).ready(function(){
     var idx = tg.index();
     console.log(idx);
     $('.works_detail_tab_list').eq(idx).addClass('active').siblings().removeClass('active');
+    $('.works_detail_tab').addClass('active');
   });
 
 
@@ -101,6 +115,7 @@ $(document).ready(function(){
     if(detail_tabBox.has(e.target).length === 0){
       works_list.removeClass('active');
       works_detail.removeClass('active');
+      $('.works_detail_tab').removeClass('active');
     }
   });
 
