@@ -428,6 +428,7 @@
     }
 
     .detail_tabBox{
+        width: calc(100vw - 30px);
     }
 
     .dt_tit h3{
