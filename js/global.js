@@ -111,7 +111,7 @@ $(document).ready(function(){
   $(document).on('mouseup', function(e){
     var works_list = $('.works_list');
     var works_detail = $('.works_detail_tab_list');
-    var detail_tabBox = $('.detail_tabBox_inner');
+    var detail_tabBox = $('.detail_tabBox');
     if(detail_tabBox.has(e.target).length === 0){
       works_list.removeClass('active');
       works_detail.removeClass('active');
