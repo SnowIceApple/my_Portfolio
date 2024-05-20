@@ -105,6 +105,7 @@ $(document).ready(function(){
     console.log(idx);
     $('.works_detail_tab_list').eq(idx).addClass('active').siblings().removeClass('active');
     $('.works_detail_tab').addClass('active');
+    $('body').addClass('fixed');
   });
 
 
@@ -116,6 +117,7 @@ $(document).ready(function(){
       works_list.removeClass('active');
       works_detail.removeClass('active');
       $('.works_detail_tab').removeClass('active');
+      $('body').removeClass('fixed');
     }
   });
 
