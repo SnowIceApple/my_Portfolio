@@ -13,7 +13,7 @@
     }
 
     .main_nav_box{
-        left: 15px;
+        left: 10px;
     }
 }
 
@@ -425,6 +425,10 @@
     .ssl_circle{
         width: 110px;
         height: 110px;
+    }
+
+    #appeal{
+        height: 85vw;
     }
 
     .detail_tabBox{
