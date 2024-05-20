@@ -108,6 +108,12 @@ $(document).ready(function(){
     $('body').addClass('fixed');
   });
 
+  $('.dt_close').on('click', function(){
+    $('.works_detail_tab').removeClass('active');
+    $('.works_detail_tab_list').removeClass('active');
+    $('body').removeClass('fixed');
+  });
+
 
   $(document).on('mouseup', function(e){
     var works_list = $('.works_list');
