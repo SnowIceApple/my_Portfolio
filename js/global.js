@@ -8,15 +8,14 @@ $(document).ready(function(){
     const swiper1 = new Swiper('.visual_swiper', {
     direction: 'horizontal',
       loop: true,
-      speed: 3000,
+      speed: 700,
       slidesPerView: 1,
       keyboard: {
         enabled: true,
         onlyInViewport: true
       },
-      effect: 'fade',
       autoplay: {
-        delay: 6000,
+        delay: 7000,
         disableOnInteraction: false,
       },
 
@@ -129,22 +128,22 @@ $(document).ready(function(){
 
 
   
-  var controller = new ScrollMagic.Controller();
+  // var controller = new ScrollMagic.Controller();
 
-  var tween1 = TweenMax.to('#visual', 1, {
-    opacity: 0,
-    ease: "power2.out",
-  });
+  // var tween1 = TweenMax.to('#visual', 1, {
+  //   opacity: 0,
+  //   ease: "power2.out",
+  // });
 
-  var scene = new ScrollMagic.Scene({
-    triggerElement: ".trigger1",
-    triggerHook: 0.5,
-    duration: "50%",
-  })
+  // var scene = new ScrollMagic.Scene({
+  //   triggerElement: ".trigger1",
+  //   triggerHook: 0.5,
+  //   duration: "50%",
+  // })
 
-  .setTween(tween1)
-  // .addIndicators({name: "visualOpacity"})
-  .addTo(controller);
+  // .setTween(tween1)
+  // // .addIndicators({name: "visualOpacity"})
+  // .addTo(controller);
 
 
   $('#nav ul li').on('click', function(){

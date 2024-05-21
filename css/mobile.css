@@ -24,8 +24,8 @@
 
 @media all and (max-width: 1280px){
 
-    #visual{
-        height: 80vh;
+    .vis_txt_box{
+        padding: 85px 5vw;
     }
 
     #appeal{
@@ -75,10 +75,6 @@
 }
 
 @media all and (max-width: 1024px){
-
-    #visual{
-        height: 68vh;
-    }
 
     .job_desc ul li .job_date{
         width: 15vw;
@@ -148,6 +144,10 @@
         font-size: 4vw;
         display: block;
         margin-top: 3vw;
+    }
+
+    .vis_txt_box h1{
+        font-size: 5.8vw;
     }
 
     .nav_link.type1{
@@ -240,6 +240,10 @@
 
 @media all and (max-width: 768px){
 
+    .vis_txt_box{
+        
+    }
+
     .section_header{
         margin-bottom: 25px;
     }
@@ -328,17 +332,14 @@
     .clone_coding_article.wide .cc_article_desc p{
         font-size: 17px;
     }
+
+
 }
 
 @media all and (max-width: 680px){
 
-    
     .nav_link.type1{
         height: 24vh;
-    }
-
-    #visual{
-        height: 60vh;
     }
 
     .job_desc ul li .job_date{
@@ -346,7 +347,6 @@
         height: 20vw;
         font-size: 16px;
     }
-
 
     .works_detail{
     }
@@ -381,6 +381,10 @@
 
 @media all and (max-width: 568px){
 
+    .vis_txt_box h1{
+        font-size: 7.5vw;
+    }
+
     .aab_box div{
         width: 55%;
     }
@@ -409,9 +413,6 @@
 
 
 @media all and (max-width: 480px){
-    #visual{
-        height: 55vh;
-    }
 
     .main_nav_close button{
         width: 120px;
