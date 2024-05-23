@@ -10,6 +10,10 @@ $(document).ready(function(){
       loop: true,
       speed: 700,
       slidesPerView: 1,
+      pagination: {
+        el: '.main-swiper-pagination',
+        clickable: true,
+      },
       keyboard: {
         enabled: true,
         onlyInViewport: true

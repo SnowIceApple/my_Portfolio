@@ -162,7 +162,7 @@ body{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    padding: 6vw 5vw;
+    padding: 6.5vw 5vw;
     z-index: 2;
     display: flex;
     justify-content: flex-end;
@@ -204,6 +204,29 @@ body{
     width: 0;
     transition: all 1s ease;
     transition-delay: 0.65s;
+}
+
+.main-swiper-pagination{
+    position: absolute;
+    left: 50% !important;
+    bottom: 20px !important;
+    transform: translateX(-50%);
+    z-index: 3;
+    text-align: center;
+    transform-origin: left;
+}
+
+.main-swiper-pagination .swiper-pagination-bullet{
+    background: #fff !important;
+    margin: 6px !important
+}
+
+.main-swiper-pagination .swiper-pagination-bullet-active{
+    background: #fff !important;
+    width: 40px;
+    border-radius: 4px !important;
+    transition: width .4s ease-in-out;
+    transform-origin: left;
 }
 
 /* 
