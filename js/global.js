@@ -87,8 +87,8 @@ $(document).ready(function(){
   );
 
   sections.forEach((view, index) => {
-    if(index == 1){
-      observer3.observe(view);
+    if(index == 3){
+      observer4.observe(view);
     }
     if(index == 4){
       observer2.observe(view);
