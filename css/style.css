@@ -691,10 +691,10 @@ body{
     justify-content: center;
 }
 
-.ad_box{
+.apd_box{
+    width: 23vw;
     display: flex;
     flex-wrap: wrap;
-    width: 23vw;
 }
 
 .ad_circle{
