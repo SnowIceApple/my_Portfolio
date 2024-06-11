@@ -306,8 +306,8 @@
     }
 
     .works_list_box{
-        grid-template-columns: calc(50% - 15px) calc(50% - 15px);
-    }
+        grid-template-columns: 50% calc(50% - 15px);
+        grid-gap: 15px;
 
     .works_list.wide{
         height: 50vw;
