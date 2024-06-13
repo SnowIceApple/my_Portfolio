@@ -308,6 +308,7 @@
     .works_list_box{
         grid-template-columns: 50% calc(50% - 15px);
         grid-gap: 15px;
+    }
 
     .works_list.wide{
         height: 50vw;
@@ -561,4 +562,5 @@
     .intro_tit h2{
         font-size: 20vw;
     }
+
 }
