@@ -529,6 +529,11 @@
         width: 100%;
         height: auto;
         max-height: 9999px;
+        margin-bottom: 10px;
+    }
+
+    .clone_coding_article:last-child{
+        margin-bottom: 0px;
     }
 
     .clone_coding_article.wide2{
