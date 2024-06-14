@@ -899,9 +899,8 @@ body{
 
 .jl_box h3{
     font-size: max(3vw, 18px);
-    font-weight: 500;
+    font-weight: 800;
     color: #1a1a1a;
-    font-weight: 500;
 }
 
 .jl_box span{
