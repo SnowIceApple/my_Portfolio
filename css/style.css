@@ -1416,8 +1416,7 @@ body{
     box-sizing: border-box;
     padding: 12px 8px 20px 8px;
     opacity: 0;
-    /* transform: translateY(50px); */
-    margin-top: 50px;
+    transform: translateY(50px);
 }
 
 .works_detail_tab_list.active .detail_tabBox{
@@ -1425,6 +1424,7 @@ body{
     margin-top: 0px;
     transition-delay: 0.5s;
     transition: all 0.8s ease;
+    transform: translateY(0px);
 }
 
 .dt_close{

@@ -475,8 +475,8 @@
     }
 
     .dt_close{
-        left: calc(100% - 60px);
-        top: 15px;
+        left: calc(100% - 45px);
+        top: -60px;
     }
 
     .detail_tabBox{
