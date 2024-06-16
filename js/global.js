@@ -35,6 +35,8 @@ $(document).ready(function(){
     $('#nav ul li').removeClass('on');
   });
 
+  $(".dt_img_inner").mCustomScrollbar({theme:"inset-dark"});
+
   $(document).on('mouseup', function(e){
     var navBox = $('.main_nav_box');
     if(navBox.has(e.target).length === 0){
