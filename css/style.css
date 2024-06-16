@@ -919,7 +919,7 @@ body{
     display: block;
     font-size: max(1.3vw, 14px);
     letter-spacing: -0.05vw;
-    color: #999;
+    color: rgba(0, 0, 0, 0.35);
     font-weight: 100;
 }
 
@@ -1416,12 +1416,13 @@ body{
     box-sizing: border-box;
     padding: 12px 8px 20px 8px;
     opacity: 0;
-    transform: translateY(50px);
+    /* transform: translateY(50px); */
+    margin-top: 50px;
 }
 
 .works_detail_tab_list.active .detail_tabBox{
     opacity: 1;
-    transform: translateY(0);
+    margin-top: 0px;
     transition-delay: 0.5s;
     transition: all 0.8s ease;
 }
