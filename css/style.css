@@ -987,7 +987,7 @@ body{
 .skillset_tit h2{
     font-size: max(3.5vw, 22px);
     color: #fff;
-    font-weight: 200;
+    font-weight: 800;
     text-transform: uppercase;
 }
 
@@ -1406,6 +1406,7 @@ body{
     z-index: 300;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    overflow: hidden;
 }
 
 .detail_tabBox{
@@ -1414,6 +1415,15 @@ body{
     background: #fff;
     box-sizing: border-box;
     padding: 12px 8px 20px 8px;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.works_detail_tab_list.active .detail_tabBox{
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+    transition: all 0.8s ease;
 }
 
 .dt_close{
