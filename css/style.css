@@ -139,6 +139,8 @@ body{
     will-change: transfrom;
     backface-visibility: hidden;
     transition-delay: 0.65s;
+    pointer-events: none;
+    user-select: none;
 }
 
 .swiper-slide-active .vis_video_bg{
