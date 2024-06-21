@@ -9,6 +9,7 @@
 @media all and (max-width: 1440px){
 
     .container{
+        width: 100%;
         padding: 0 10px;
     }
 
@@ -68,6 +69,23 @@
         font-size: 15px;
         height: 40px;
     }
+
+    .job_introImg{
+        width: 450px;
+    }
+
+    .job_list{
+        width: calc(100% - 450px);
+        padding-top: 40px;
+    }
+
+    .job_list .jl_floor1 > li h3{
+        font-size: 42px;
+    }
+
+    .job_list .jl_floor2 > li{
+        font-size: 14px;
+    }
     
     .skillset_tit{
         box-sizing: border-box;
@@ -113,9 +131,16 @@
 
 @media all and (max-width: 1024px){
 
-    .job_desc ul li .job_date{
-        width: 15vw;
-        height: 15vw;
+    .job_introImg{
+        width: 100%;
+    }
+
+    .job_introImg_box{
+        height: 350px;
+    }
+
+    .job_list{
+        width: 100%;
     }
 
     .works_list_txt h3{
@@ -158,7 +183,7 @@
 
 @media all and (max-width: 864px){
 
-    section:not(#visual),
+    section:not(#visual, #skill_set),
     footer{
         padding: 10vw 0 0 0 !important; 
     }
@@ -293,16 +318,17 @@
         margin: 8px 7px;
     }
 
-    .job_list{
-        padding: 0 0 10vw 0 !important;
+    .job_intro_advt strong{
+        font-size: 24px;
     }
 
-    .job_list ul li{
-        width: 100%;
+    .job_list .jl_floor1 > li h3{
+        font-size: 28px;
+        padding-bottom: 10px;
     }
 
-    .job_list ul li:first-child{
-        margin-bottom: max(7vw, 30px);
+    .job_list .jl_floor1 > li:first-child{
+        margin-bottom: 30px;
     }
 
     .works_list_box{
@@ -465,10 +491,14 @@
         padding: 10px 25px;
     }
 
-    .job_desc ul li .job_date{
-        width: 20vw;
-        height: 20vw;
-        font-size: 16px;
+    .job_list{
+        padding: 30px 15px 0px 15px;
+    }
+
+    .job_list .jl_floor2{
+        width: 100%;
+        float: none;
+        margin-top: 45px;
     }
 
     .works_detail{

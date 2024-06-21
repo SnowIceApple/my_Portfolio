@@ -75,7 +75,7 @@ body{
 }
 
 .container{
-    max-width: 1440px;
+    width: 1440px;
     margin: 0 auto;
     height: 100%;
     box-sizing: border-box;
@@ -891,90 +891,128 @@ body{
     padding-top: 140px;
 }
 
-.job_list{
+.job_area{
     width: 100%;
     padding: 60px 0;
+    background: #f7f9fc;
+
 }
 
-.job_list ul{
-    width: 100%;
+.job_area_box{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    overflow: visible;
 }
 
-.job_list ul li{
+.job_introImg{
+    width: 550px;
+}
+
+.job_introImg_box{
+    height: 550px;
+    overflow: hidden;
+}
+
+.job_introImg_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.job_intro_advt{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 35px 25px;
+    background: #d8dce3;
+}
+
+.job_intro_advt span{
+    display: block;
+    font-size: 15px;
+    letter-spacing: -0.3px;
+    margin-bottom: 15px;
+}
+
+.job_intro_advt strong{
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.job_list{
+    width: calc(100% - 550px);
+    box-sizing: border-box;
+    padding: 100px 0px 0px 50px;
+    cursor: default;
+    user-select: none;
+}
+
+.job_list .jl_floor1 > li{
+    width: 100%;
+}
+
+.job_list .jl_floor1 > li{
+    width: 100%;
+    overflow: hidden;
+}
+
+.job_list .jl_floor1 > li:first-child{
+    margin-bottom: 60px;
+}
+
+.job_list .jl_floor1 > li h3{
     position: relative;
-    width: 48%;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    padding-bottom: 30px;
+    color: #333;
+    line-height: 1.5;
 }
 
-.job_list ul li::after{
+.job_list .jl_floor1 > li h3 span{
+    font-weight: 100;
+    letter-spacing: -1px;
+}
+
+.job_list .jl_floor1 > li span.job_date{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 200px;
+    text-align: right;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+    padding-right: 20px;
+    color: #999;
+}
+
+.job_list .jl_floor2{
+    float: left;
+    width: calc(100% - 200px);
+}
+
+.job_list .jl_floor2 > li{
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    line-height: 1.3;
+}
+
+.job_list .jl_floor2 > li::before{
     display: block;
     content: "";
     position: absolute;
-    right: 37%;
-    bottom: -4%;
-    transform: skewY(13deg) skewX(25deg);
-    width: 8.5vw;
-    height: 2.5vw;
-    background: #f3f3f3;
-    z-index: -1;
-}
-
-.jl_box{
-    box-sizing: border-box;
-    padding: 4.5vw 2.3vw 2.8vw 2.3vw;
-    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
-    background: #f3f3f3;
-}
-
-.jl_deco{
-    position: absolute;
-    left: 7%;
-    top: -11%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 0.9vw;
-    z-index: 10;
-    transform: skewX(-10deg);
-    transition: top 0.3s ease;
-}
-
-.job_list ul li:hover .jl_deco{
-    top: -17%;
-}
-
-.jl_deco span{
-    display: block;
-    width: 1.3vw;
-    height: 3.5vw;
-    background: #86C8FD;
-}
-
-.jl_box h3{
-    font-size: max(3vw, 18px);
-    font-weight: 800;
-    color: #1a1a1a;
-}
-
-.jl_box span{
-    display: block;
-    font-size: max(1.6vw, 15px);
-    margin-top: 1vw;
-    text-align: right;
-    color: #1a1a1a;
-    font-weight: 400;
-}
-
-.period{
-    position: absolute;
-    right: 0;
-    top: 107%;
-    display: block;
-    font-size: max(1.3vw, 14px);
-    letter-spacing: -0.05vw;
-    color: rgba(0, 0, 0, 0.35);
-    font-weight: 100;
+    left: 5px;
+    top: 9px;
+    width: 8px;
+    height: 1px;
+    background: #333;
 }
 
 /* skills */
@@ -983,7 +1021,6 @@ body{
     position: relative;
     width: 100%;
     padding: 7vw 0;
-    margin-top: max(5vw, 50px);
 }
 
 .skillset_bg{
