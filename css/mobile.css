@@ -86,6 +86,10 @@
     .job_list .jl_floor2 > li{
         font-size: 14px;
     }
+
+    .job_list .jl_floor1 > li span.job_date{
+        font-size: 15px;
+    }
     
     .skillset_tit{
         box-sizing: border-box;

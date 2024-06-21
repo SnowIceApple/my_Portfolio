@@ -1773,6 +1773,7 @@ body{
     border-bottom: 1px solid transparent;
     transition: all .3s ease;
     line-height: 1.05;
+    color: #333;
 }
 
 .clone_coding_article:hover .cc_article_desc h2{
