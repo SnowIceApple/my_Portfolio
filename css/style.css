@@ -827,7 +827,7 @@ body{
 
 .app_txt h2{
     font-size: 4.5vw;
-    font-weight: 700;
+    font-weight: 900;
     margin-bottom: 4vw;
     height: auto;
     line-height: 1.1;
@@ -921,6 +921,7 @@ body{
 }
 
 .job_intro_advt{
+    position: relative;
     width: 100%;
     background: #d8dce3;
 }
@@ -948,9 +949,22 @@ body{
 .job_list{
     width: calc(100% - 550px);
     box-sizing: border-box;
-    padding: 100px 0px 0px 50px;
+    padding: 60px 0px 0px 50px;
     cursor: default;
     user-select: none;
+}
+
+.job_list h2{
+    font-size: 60px;
+    color: #101f91;
+    font-weight: 900;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    background: #fff;
+    padding: 10px 10px 10px 20px;
+    line-height: 1.3;
+    box-sizing: border-box;
+    border-left: 10px solid #101f91;
 }
 
 .job_list .jl_floor1 > li{
