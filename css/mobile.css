@@ -499,10 +499,30 @@
         padding: 30px 15px 0px 15px;
     }
 
-    .job_list .jl_floor2{
+    .jl_floor2_open{
+        display: block;
+    }
+
+    .jl_floor2_open.hide{
+        display: none;
+    }
+
+    .job_list .jl_floor2_box{
         width: 100%;
         float: none;
         margin-top: 45px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    .job_list .jl_floor2{
+        max-height: 0px;
+        overflow: hidden;
+    }
+
+    .jl_floor2.active{
+        max-height: 9999px;
     }
 
     .works_detail{
@@ -540,6 +560,10 @@
 
     .vis_txt_box h1{
         font-size: 7.5vw;
+    }
+
+    .job_list .jl_floor1 > li h3{
+        font-size: 24px;
     }
 
     .aab_box div{

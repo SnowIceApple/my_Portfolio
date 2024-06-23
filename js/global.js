@@ -35,6 +35,18 @@ $(document).ready(function(){
     $('#nav ul li').removeClass('on');
   });
 
+  $('.jl_floor2_open').on('click', function(){
+    $(this).addClass('hide');
+    $(this).siblings('.jl_floor2').addClass('active');
+  });
+
+  $(window).on('resize', function(){
+    if($(window).outerWidth() > 680){
+      $('.jl_floor2_open').removeClass('hide');
+      $('.jl_floor2').removeClass('active');
+    }
+  });
+
   $(".dt_img_inner").mCustomScrollbar({theme:"inset-dark"});
 
   $(document).on('mouseup', function(e){
