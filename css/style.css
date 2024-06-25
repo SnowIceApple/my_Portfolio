@@ -867,7 +867,6 @@ body{
 .app_txt ul li{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-content: space-between;
     width: 33.3333%;
     height: 15vw;
