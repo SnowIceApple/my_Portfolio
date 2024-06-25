@@ -820,6 +820,8 @@ body{
 
 .app_ad{
     width: 60%;
+    box-sizing: border-box;
+    padding-right: 3vw;
 }
 
 .app_txt{
@@ -828,7 +830,7 @@ body{
 .app_txt h2{
     font-size: 4.5vw;
     font-weight: 900;
-    margin-bottom: 4vw;
+    margin-bottom: 3vw;
     height: auto;
     line-height: 1.1;
     transform: translateX(-10%);
@@ -848,41 +850,133 @@ body{
     flex-wrap: wrap;
     opacity: 0;
     transform: translateY(15%);
-    transition: all 0.8s ease;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    background: #fbfbfb;
 }
 
 .view .app_txt ul{
     transition-delay: 2.4s;
     transform: translateY(0);
     opacity: 1;
-    transition: all 2s ease;
+    transition: transform 2s ease, opacity 2s ease;
     transition-delay: 2s !important;
+    box-sizing: border-box;
+    border: 1px solid #e9e9e9;
 }
 
 .app_txt ul li{
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    font-size: 18px;
-    height: 46px;
-    padding: 0 25px;
-    margin: 8px 17px 11px 0px;
-    border-radius: 23px;
-    line-height: 1.3;
-    font-weight: 300;
-    background: #fff;
-    color: #000;
-    user-select: none;
-    background: rgba( 255, 255, 255, 0.5 );
-    box-shadow: 0 0px 10px 0 rgba( 31, 38, 135, 0.3 );
-    backdrop-filter: blur( 13.5px );
-    -webkit-backdrop-filter: blur( 13.5px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    align-content: space-between;
+    width: 33.3333%;
+    height: 15vw;
+    padding: 20px 8px 8px 13px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+
+}
+
+.app_txt ul li span{
+    display: block;
+    line-height: 1.4;
+    font-size: 17px;
+    font-weight: 500;
+    word-break: keep-all; 
+    color: #333;
+    letter-spacing: -0.5px;
+}
+
+.app_txt ul li .at_img{
+    width: 100%;
+    height: 55%;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+}
+
+.app_txt ul li .at_img.at1{
+    background-image: url('../img/young-people-3575167_1920.jpg');
+    background-position: center;
+}
+
+.app_txt ul li .at_img.at2{
+    background-image: url('../img/startup-3267505_1920.jpg');
+    background-position: center;
+}
+
+.app_txt ul li .at_img.at3{
+    background-image: url('../img/man-3556090_1920.jpg');
+    background-position: top 15% left 0;
+}
+
+.app_txt ul li .at_img.type1{
+}
+
+.app_txt ul li:nth-last-child(-n+2){
+    border-bottom: 0px;
+}
+
+.app_txt ul li:nth-child(3n){
+    border-right: 0px;
 }
 
 .app_txt ul li:nth-child(2n){
 
 }
+
+.app_txt ul li.at_list_img{
+    position: relative;
+    background: url('../img/explore-4841170_1920.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.app_txt ul li.at_list_img a{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: all .5s ease;
+}
+
+.app_txt ul li.at_list_img a span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .3s ease;
+    transition-delay: 0.1s;
+}
+
+.app_txt ul li.at_list_img a span ion-icon{
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 38px;
+    letter-spacing: -0.5px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.app_txt ul li.at_list_img:hover a{
+    background-color: rgba(58, 74, 252, 0.6);
+}
+
+.app_txt ul li.at_list_img:hover a span{
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.3s;
+    transition: all .3s ease;
+}
+
 
 /* intro */
 
@@ -933,17 +1027,21 @@ body{
     padding: 35px 25px;
 }
 
-.job_intro_advt span{
+.job_intro_advt a > span{
     display: block;
     font-size: 15px;
     letter-spacing: -0.3px;
     margin-bottom: 15px;
 }
 
-.job_intro_advt strong{
+.job_intro_advt a > strong{
     font-size: 40px;
     font-weight: 900;
     line-height: 1.2;
+}
+
+.job_intro_advt_arrow{
+
 }
 
 .job_list{
@@ -1533,10 +1631,10 @@ body{
     flex-wrap: wrap;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(247, 249, 255, 0.8);
     z-index: 300;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     overflow: hidden;
 }
 
@@ -1548,6 +1646,7 @@ body{
     padding: 12px 8px 20px 8px;
     opacity: 0;
     transform: translateY(50px);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
 }
 
 .works_detail_tab_list.active .detail_tabBox{
@@ -1565,11 +1664,19 @@ body{
 }
 
 .dt_close button{
+    background: #3a4afc;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .dt_close button ion-icon{
     font-size: 44px;
     color: #fff;
+    line-height: 1;
 }
 
 .detail_tabBox_inner{
