@@ -347,7 +347,11 @@
         height: 250px;
     }
 
-    .job_intro_advt strong{
+    .job_intro_advt a{
+        padding: 25px 15px;
+    }
+
+    .job_intro_advt a strong{
         font-size: 24px;
     }
 
