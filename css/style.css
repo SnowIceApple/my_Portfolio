@@ -157,6 +157,7 @@ body{
     height: 100%;
     object-fit: cover;
     object-position: top;
+    pointer-events: none;
 }
 
 .vis_txt_box{
