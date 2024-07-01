@@ -1110,7 +1110,7 @@ body{
     letter-spacing: -0.5px;
     box-sizing: border-box;
     padding-right: 20px;
-    color: rgba(9, 0, 0, 0.8);
+    color: rgba(9, 0, 0, 0.5);
 }
 
 .job_list .jl_floor2_box{
@@ -1319,15 +1319,15 @@ body{
 
 .section_header h2{
     font-size: 72px;
-    font-weight: 800;
+    font-weight: 900;
     text-align: center;
     cursor: default;
     user-select: none;
     display: inline-block;
     text-transform: uppercase;
     padding: 5px 20px;
-    color: #131944;
-    letter-spacing: -7px;
+    color: #444;
+    letter-spacing: -8px;
 }
 
 .section_header h2 span{
@@ -1789,8 +1789,15 @@ body{
     height: 45px;
     background: #00205C;
     color: #fff;
-    font-size: 17px;
+    font-size: 15px;
 }
+
+/* block_quote */
+
+#block_quote{
+    margin-top: 140px;
+}
+
 
 /* clone */
 
