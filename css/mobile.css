@@ -131,7 +131,11 @@
     }
 
     .clone_coding_list{
-        grid-gap: 15px 25px;
+        padding: 0 10px;
+    }
+
+    .clone_coding_article{
+        width: calc(33.3333% - 15px);
     }
 
     .works_list.wide p{
@@ -194,6 +198,14 @@
         font-size: 15px;
     }
 
+    .clone_coding_article{
+        width: calc(50% - 16px);
+    }
+
+    .cc_article_img{
+        height: 250px;
+    }
+
     .cc_article_desc h2{
         font-size: 19px;
         line-height: 1.2;
@@ -201,6 +213,10 @@
 
     .cc_article_desc p{
         font-size: 15px;
+    }
+
+    .cc_ori_site a{
+        font-size: 16px;
     }
 
 }
@@ -466,7 +482,6 @@
     }
     
     .clone_coding_article{
-        max-height: 520px;
     }
 
     .clone_coding_article.wide{
