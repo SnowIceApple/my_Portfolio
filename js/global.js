@@ -4,6 +4,8 @@
 $(document).ready(function(){
   
   AOS.init();
+  
+  gsap.registerPlugin(ScrollTrigger);
 
     const swiper1 = new Swiper('.visual_swiper', {
     direction: 'horizontal',
@@ -191,6 +193,25 @@ $('.clone_coding_article article > a').on('mouseleave', function(){
   ccCursor.removeClass('clonecoding_cursor');
 });
 
+gsap.to('.app_ani_pic', {
+});
+
+// ScrollTrigger.defaults({
+//   markers: true
+// });
+
+gsap.to(".app_ani_pic", {
+  scrollTrigger: {
+    scrub: 1,
+    trigger: '.appeal',
+    start: 'top 100%',
+    end: 'bottom',
+    markers: true,
+  }, 
+  y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+  ease: "power1.inOut",
+});
+
 });
 
 $(window).on('load', function(){
@@ -198,11 +219,6 @@ $(window).on('load', function(){
     $('.visual_swiper').addClass('active');
   }, 100);
 });
-
-
-
-
-
 
 
 
