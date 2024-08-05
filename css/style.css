@@ -741,83 +741,63 @@ body{
     background: #84B8D9;
 }
 
-.app_diagram{
+.app_keywords{
     width: 40%;
+    box-sizing: border-box;
     justify-content: center;
+    align-items: center;
 }
 
-.apd_box{
-    width: 23vw;
+.apk_box{
     display: flex;
     flex-wrap: wrap;
+    width: 80%;
+    height: 80%;
 }
 
-.ad_circle{
-    border-radius: 50%;
-    color: rgba(255, 255, 255, 0.9);
+.apk_box ul{
+    width: 100%;
+    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: 500;
-    transform: scale(0);
-    transition: transform .5s ease-in-out;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 
-.view .ad_circle{
-    transform: scale(1);
+.apk_box ul li{
+    width: 100%;
+    position: relative;
+    transform: skewX(-18deg);
+    box-sizing: border-box;
+    padding: 1.2vw 2.5vw;
 }
 
-.ad_circle.n1{
-    background-color: #00305a;
-    width: 8vw;
-    height: 8vw;
-    margin: 0.4vw 5vw;
+.apk_box ul li:first-child{
+    background: #3D46F2;
 }
 
-.ad_circle.n2{
-    background-color: #004b8d;
-    width: 13vw;
-    height: 13vw;
+.apk_box ul li:nth-child(2){
+    background: #636AF2;
 }
 
-.view .ad_circle.n2{
-    transition-delay: 0.4s;
+.apk_box ul li:nth-child(3){
+    background: #8D92F2;
 }
 
-.ad_circle.n3{
-    background-color: #0074d9;
-    width: 7.5vw;
-    height: 7.5vw;
-    margin: 0.7vw;
-    margin-top: -0.7vw;
+.apk_box ul li:nth-child(4){
+    background: #D5D7F2;
 }
 
-.view .ad_circle.n3{
-    transition-delay: 0.8s;
+.apk_box ul li:last-child{
+    background: #F2AE30;
 }
 
-.ad_circle.n4{
-    background-color: #4192d9;
-    width: 10vw;
-    height: 10vw;
-    margin-left: -6vw;
+.apk_box ul li span{
+    font-size: 5vw;
+    font-weight: 100;
+    letter-spacing: -0.5vw;
+    color: #fff;
 }
 
-.view .ad_circle.n4{
-    transition-delay: 1.2s;
-}
-
-.ad_circle.n5{
-    background-color: #7abaf2;
-    width: 15vw;
-    height: 15vw;
-    margin: 0.3vw;
-}
-
-.view .ad_circle.n5{
-    transition-delay: 1.6s;
-}
 
 .app_ad{
     position: relative;
@@ -838,7 +818,7 @@ body{
 }
 
 .app_txt h2{
-    font-size: 4.5vw;
+    font-size: 5vw;
     font-weight: 900;
     line-height: 1.1;
     text-align: center;
@@ -2038,7 +2018,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform .4s ease-in, opacity 0.2s;
+    transition: transform .3s ease-in, opacity 0.2s;
     color: #fff;
     font-size: 36px;
     font-weight: 400;

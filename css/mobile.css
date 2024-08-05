@@ -30,7 +30,7 @@
     }
 
     #appeal{
-        height: auto;
+        height: 60vw;
     }
 
     .app_diagram{
@@ -62,7 +62,6 @@
     }
 
     .app_txt{
-        padding-top: 8vw;
     }
 
     .app_txt ul li{
@@ -285,6 +284,7 @@
     }
 
     #appeal{
+        height: auto;
     }
 
     .appeal > div:not(.app_deco){
@@ -293,7 +293,7 @@
 
     .app_ad{
         padding: 0px;
-        height: calc(100vh - 18vw) !important;
+        height: 60vw !important;
     }
 
     .apd_box{
@@ -346,22 +346,29 @@
         background: #00305a;
     }
 
+    .apk_box{
+        height: auto;
+    }
+
     .app_txt{
-        padding: 50px 15px;
+        padding: 0;
+        top: 45%;
     }
 
     .app_txt h2{
         text-align: center;
-        font-size: max(6vw, 24px);
-        margin-bottom: 30px;
+        font-size: max(7.5vw, 25px);
     }
 
-    .app_txt ul{
-        justify-content: center;
+    .app_ani_pic.type2{
+        width: 40vw;
+        height: 28vw;
     }
 
-    .app_txt ul li{
-        height: 250px;
+    .app_ani_pic.type4{
+        width: 45vw;
+        height: 55vw;
+        top: 29%;
     }
 
     .job_intro_advt a{

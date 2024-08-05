@@ -206,7 +206,7 @@ gsap.to(".app_ani_pic", {
     trigger: '.appeal',
     start: 'top 100%',
     end: 'bottom',
-    markers: true,
+    // markers: true,
   }, 
   y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
   ease: "power1.inOut",
