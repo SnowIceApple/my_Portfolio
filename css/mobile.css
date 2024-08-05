@@ -615,8 +615,16 @@
         font-size: 7.5vw;
     }
 
-    .app_txt ul li{
-        height: 200px;
+    .apk_box{
+        width: 90%;
+    }
+
+    .apk_box ul li span{
+        font-size: 5.5vw;
+    }
+
+    .app_ad{
+        height: 80vw !important;
     }
 
     .job_list .jl_floor1 > li h3{
@@ -670,7 +678,6 @@
     }
 
     .app_txt{
-        padding: 50px 10px;
     }
 
     .app_txt ul li{
