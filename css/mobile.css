@@ -129,6 +129,15 @@
         font-size: 7vw;
     }
 
+    .dt_img::before{
+        width: 100%;
+    }
+
+    .dt_tit{
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
     .clone_coding_list{
         padding: 0 10px;
     }
@@ -178,23 +187,18 @@
     }
 
     .detail_tabBox{
-        width: 540px;
     }
 
     .dt_img{
-        height: 320px;
     }
 
     .dt_tit{
-        padding: 0 25px;
     }
 
     .dt_tit h3{
-        font-size: 32px;
     }
 
     .dt_desc p{
-        font-size: 15px;
     }
 
     .clone_coding_article{
@@ -479,6 +483,10 @@
         font-size: 22px;
     }
 
+    .dt_tit{
+        width: calc(100% - 25px);
+    }
+
     .cc_article_desc h2{
         font-size: 22px;
         margin-bottom: 15px;
@@ -581,14 +589,7 @@
     .works_detail{
     }
 
-    .dt_close{
-        left: calc(100% - 45px);
-        top: -60px;
-    }
-
     .detail_tabBox{
-        width: calc(100vw - 60px);
-        position: static;
     }
 
     .dt_tit h3{
@@ -641,6 +642,14 @@
 
     .works_list.basic{
         height: 55vw;
+    }
+
+    .dt_tit{
+        padding: 15px 20px;
+    }
+
+    .dt_desc p{
+        font-size: 16px;
     }
 
     .clone_coding_list{
@@ -699,7 +708,6 @@
     }
 
     .detail_tabBox{
-        width: calc(100vw - 30px);
     }
 
     .dt_tit h3{

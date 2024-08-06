@@ -1418,7 +1418,7 @@ body{
     letter-spacing: -0.3px;
     line-height: 1.5;
     color: #2a2a2a;
-    word-break: keep-all;
+    word-break: break-all;
     transition: all .2s ease-in-out;
 }
 
@@ -1517,7 +1517,7 @@ body{
     left: 0;
     top: 0;
     display: flex;
-    align-items: center;
+    align-content: flex-end;
     justify-content: center;
     flex-wrap: wrap;
     width: 100vw;
@@ -1531,13 +1531,15 @@ body{
 
 .detail_tabBox{
     position: relative;
-    width: 800px;
-    background: #fff;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
-    padding: 12px 8px 20px 8px;
     opacity: 0;
     transform: translateY(50px);
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    background: #fff;
 }
 
 .works_detail_tab_list.active .detail_tabBox{
@@ -1550,36 +1552,54 @@ body{
 
 .dt_close{
     position: absolute;
-    left: calc(100% + 10px);
-    top: 0;
+    top: 30px;
+    right: 30px;
+    width: 80px;
+    height: 80px; 
+    z-index: 5;
 }
 
 .dt_close button{
-    background: #3a4afc;
-    width: 50px;
-    height: 50px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-radius: 50%;
 }
 
-.dt_close button ion-icon{
-    font-size: 44px;
-    color: #fff;
+.dt_close button span{
+    font-size: 64px;
+    color: #f3f3f3;
     line-height: 1;
 }
 
+.dt_close button span.material-symbols-outlined{
+    font-variation-settings: 'wght' 100;
+}
+
+.detail_tabBox.active .dt_close button{
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
 .detail_tabBox_inner{
+    display: flex;
+    flex-direction: column;
     overflow: auto;
-    max-height: calc(100vh - 280px);
-    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
 }
 
 .dt_img{
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 100%;
 }
 
 .dt_img_inner{
@@ -1587,15 +1607,59 @@ body{
     height: 100%;
     overflow-y: scroll;
     overscroll-behavior: none;
+    -ms-overflow-style: auto !important;
+}
+
+.dt_img_inner::-webkit-scrollbar{
+    display: block;
+    background: #000;
+    width: 7px;
+}
+
+.dt_img_inner::-webkit-scrollbar-thumb{
+    position: relative;
+    z-index: 10;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #000;
 }
 
 .dt_img_inner .mCSB_container{
-    margin-right: 22px !important;
+    margin-right: 0px !important;
 }
 
 .dt_img_inner .mCSB_draggerContainer{
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
+    z-index: 10;
+}
+
+.dt_img_inner .mCSB_scrollTools .mCSB_dragger{
+    z-index: 10;
+}
+
+.dt_img_inner .mCSB_dragger .mCSB_dragger_bar{
+    background-color: #fff !important;
+}
+
+.dt_img::before{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% - 7px);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.83);
+    z-index: 2;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+
+.detail_tabBox.active .dt_img::before{
+    background-color: rgba(0, 0, 0, 0);
+    visibility: hidden;
+    transition: all .3s ease;
 }
 
 .dt_img::after{
@@ -1604,10 +1668,13 @@ body{
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: calc(100% - 7px);
     height: 60px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%,rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 1) 100%);
     pointer-events: none;
+}
+
+.detail_tabBox.active .dt_img::after{
 }
 
 .dt_img img{
@@ -1615,11 +1682,35 @@ body{
 }
 
 .dt_tit{
-    margin: 25px 0;
+    position: absolute;
+    left: 50px;
+    bottom: 15%;
+    width: 700px;
     box-sizing: border-box;
-    padding: 0px 40px 0px 100px;
+    padding: 25px 40px;
     user-select: none;
     cursor: default;
+    /* background: rgba(255, 255, 255, 0.97); */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    overflow: hidden;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: 3;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.detail_tabBox.active .dt_tit{
+    background: #fff;
+}
+
+.dt_tit *{
+    color: #fff;
+}
+
+.detail_tabBox.active .dt_tit *,
+.detail_tabBox.active .dt_desc * {
+    color: #000;
 }
 
 .dt_tit span{
@@ -1639,11 +1730,11 @@ body{
     text-align: left;
     line-height: 1.15;
     word-break: keep-all;
+    margin-bottom: 25px;
 }
 
 .dt_desc{
     box-sizing: border-box;
-    padding: 0 30px;
     cursor: default;
 }
 
@@ -1651,25 +1742,55 @@ body{
     line-height: 1.5;
     font-size: 18px;
     font-weight: 300;
-    color: #2a2a2a;
+    color: #fff;
     word-break: keep-all;
 }
 
 .dt_link{
-    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
+    z-index: 5;
 }
 
 .dt_link a{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 190px;
-    height: 45px;
-    background: #00205C;
+    padding: 0 10px 0 28px;
+    height: 55px;
+    background: rgba(70, 70, 69, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     color: #fff;
-    font-size: 15px;
+    font-weight: 600;
+    font-size: 17px;
+    border-radius: 27.5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.detail_tabBox.active .dt_link a{
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+.dt_link_icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #00E676;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 13px;
+}
+
+.dt_link_icon span{
+    font-size: 18px;
+    color: #fff;
 }
 
 /* block_quote */

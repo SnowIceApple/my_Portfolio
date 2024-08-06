@@ -35,7 +35,9 @@ $(document).ready(function(){
   $('.main_nav_open').on('click', function(){
     $('.main_nav_box').toggleClass('on');
     $('#nav ul li').removeClass('on');
+
   });
+
 
   $('.jl_floor2_open').on('click', function(){
     $(this).addClass('hide');
@@ -49,7 +51,7 @@ $(document).ready(function(){
     }
   });
 
-  $(".dt_img_inner").mCustomScrollbar({theme:"inset-dark"});
+  // $(".dt_img_inner").mCustomScrollbar({theme:"inset-dark"});
 
   $(document).on('mouseup', function(e){
     var navBox = $('.main_nav_box');
@@ -138,17 +140,17 @@ $(document).ready(function(){
   });
 
 
-  $(document).on('mouseup', function(e){
-    var works_list = $('.works_list');
-    var works_detail = $('.works_detail_tab_list');
-    var detail_tabBox = $('.detail_tabBox');
-    if(detail_tabBox.has(e.target).length === 0){
-      works_list.removeClass('active');
-      works_detail.removeClass('active');
-      $('.works_detail_tab').removeClass('active');
-      $('body').removeClass('fixed');
-    }
-  });
+  // $(document).on('mouseup', function(e){
+  //   var works_list = $('.works_list');
+  //   var works_detail = $('.works_detail_tab_list');
+  //   var detail_tabBox = $('.detail_tabBox');
+  //   if(detail_tabBox.has(e.target).length === 0){
+  //     works_list.removeClass('active');
+  //     works_detail.removeClass('active');
+  //     $('.works_detail_tab').removeClass('active');
+  //     $('body').removeClass('fixed');
+  //   }
+  // });
 
 
   
@@ -172,6 +174,9 @@ $(document).ready(function(){
 
   $('#nav ul li').on('click', function(){
     $(this).addClass('on').siblings().removeClass('on');
+    $('.works_detail_tab').removeClass('active');
+    $('.works_detail_tab_list').removeClass('active');
+    $('body').removeClass('fixed');
   });
 
 var ccCursor = $('#cursor');
@@ -210,6 +215,17 @@ gsap.to(".app_ani_pic", {
   }, 
   y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
   ease: "power1.inOut",
+});
+
+$('.dt_img_inner').each(function(){
+  $(this).on('scroll', function(){
+    if($(this).scrollTop() > 0){
+      $(this).parents('.detail_tabBox').addClass('active');
+    }
+    else{
+      $(this).parents('.detail_tabBox').removeClass('active');
+    }
+  });
 });
 
 });
