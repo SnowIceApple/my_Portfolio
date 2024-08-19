@@ -89,6 +89,9 @@ body{
     padding: 0 10px;
 }
 
+section{
+    position: relative;
+}
 
 /* visual */
 
@@ -879,6 +882,7 @@ body{
     width: 100%;
     padding: 60px 0;
     background: #f7f9fc;
+    position: relative;
 
 }
 
@@ -893,6 +897,7 @@ body{
 }
 
 .job_introImg_box{
+    position: sticky;
     height: 450px;
     overflow: hidden;
 }
@@ -905,30 +910,51 @@ body{
 }
 
 .job_intro_advt{
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
-    background: #fff;
+    height: 100%;
     box-sizing: border-box;
 }
 
 .job_intro_advt a{
     display: block;
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
-    padding: 35px 25px;
+    padding: 25px 15px;
+    font-family: "Playfair Display", serif;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
-.job_intro_advt a > span{
-    display: block;
-    font-size: 15px;
-    letter-spacing: -0.3px;
-    margin-bottom: 15px;
+.job_intro_advt a strong span{
+    display: inline-block;
+}
+
+.job_intro_advt a strong span:first-child{
+    position: absolute;
+    left: 25px;
+    top: 0px;
+    background: linear-gradient(to top, rgb(255, 255, 255) 0% 35%, rgb(0, 0, 0) 35% 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1.2;
+}
+
+.job_intro_advt a strong span:last-child{
+    text-align: right;
+    position: absolute;
+    right: 25px;
+    bottom: 30px;
+    color: #fff;
 }
 
 .job_intro_advt a > strong{
-    font-size: 40px;
+    font-size: 72px;
     font-weight: 900;
-    line-height: 1.2;
+    letter-spacing: -1px;
 }
 
 .job_intro_advt_arrow{
@@ -938,7 +964,7 @@ body{
 .job_list{
     width: calc(100% - 550px);
     box-sizing: border-box;
-    padding: 60px 0px 0px 50px;
+    padding: 0px 0px 0px 50px;
     cursor: default;
     user-select: none;
 }
@@ -955,6 +981,7 @@ body{
     box-sizing: border-box;
     border-left: 10px solid #0044c9;
 }
+
 
 .job_list .jl_floor1 > li{
     width: 100%;
@@ -1187,7 +1214,7 @@ body{
 /* works */
 
 .section_header{
-    margin-bottom: 35px;
+    margin-bottom: 40px;
     padding-bottom: 10px;
     text-align: center;
     background: #fff;
@@ -1195,39 +1222,47 @@ body{
 }
 
 .section_header *{
+    font-family: "Cormorant Garamond", serif;
 }
 
 .section_header h2{
-    font-size: 72px;
-    font-weight: 900;
+    font-size: 94px;
+    font-weight: 700;
     text-align: center;
     cursor: default;
     user-select: none;
-    display: inline-block;
-    text-transform: uppercase;
     padding: 5px 20px;
     color: #000;
-    letter-spacing: -8px;
+    letter-spacing: -2px;
 }
 
 .section_header h2 span{
     position: relative;
     opacity: 0;
-    transform: translateY(-30%) skewX(20deg);
-    transition: all .1s ease;
+    transform: translateY(-30%);
+    transition: all .5s ease;
+    transition-delay: 0.5s;
     display: inline-block;
 }
 
 .view .section_header h2 span{
     opacity: 1;
-    transform: translateY(0%) skewX(0deg);
+    transform: translateY(0%);
     transition-delay: var(--delay);
 }
 
+.section_header h3{
+    font-size: 42px;
+    margin-top: 6px;
+    letter-spacing: -1px;
+    font-weight: 100;
+    color: #999;
+}
+/* 
 .view .section_header h2 span:last-child{
     animation: dotPulse 2.3s alternate ease infinite;
     animation-delay: var(--delay);
-}
+} */
 
 @keyframes dotPulse{
     0%{
@@ -1246,10 +1281,13 @@ body{
 
 .works_list_box{
     width: 100%;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 15px;
+    grid-gap: 15px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .works_list{
@@ -1262,16 +1300,30 @@ body{
     transition: all .1s ease;
 }
 
+
+.works_list_divide{
+    width: calc(50% - 10px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
 .works_list.basic{
+    width: calc(50% - 10px);
     height: 23vw;
+    margin-bottom: 20px;
     order: 1;
 }
 
 .works_list.wide{
-    order: -1;
+    /* order: -1;
     grid-row: 1 / 3;
-    grid-column: 1 / 3;
+    grid-column: 1 / 3; */
+    width: 100%;
+    height: 100%;
 }
+
 
 .works_list.wide::before{
     display: block;
@@ -1373,13 +1425,13 @@ body{
     height: 100%;
     object-fit: cover;
     object-position: top;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
     mix-blend-mode: multiply;
     opacity: 0.8;
 }
 
 .works_list:hover .works_list_img img{
-    transform: scale(1.03);
+    transform: scale(1.1);
     transform-origin: center;
 }
 

@@ -19,8 +19,7 @@
 }
 
 @media all and (max-width: 1330px){
-    .clone_coding_article{
-    }
+
 }
 
 @media all and (max-width: 1280px){
@@ -61,8 +60,6 @@
         height: 18vw;
     }
 
-    .app_txt{
-    }
 
     .app_txt ul li{
         width: 50%;
@@ -74,8 +71,6 @@
         border-right: 0px !important;
     }
 
-    .app_txt ul li.at_list_img a{
-    }
 
     .app_txt ul li.at_list_img a span{
         transform: translateY(0);
@@ -146,8 +141,50 @@
         width: calc(33.3333% - 15px);
     }
 
+    .works_list.basic{
+        width: calc(50% - 7.5px);
+        margin-bottom: 15px;
+    }
+
     .works_list.wide p{
         word-break: break-all;
+    }
+
+    .works_list .works_list_img::after{
+        opacity: 0;
+    }
+
+    .works_list.green .works_list_img{
+        background: #2e946e;
+    }
+    
+    .works_list.navy .works_list_img{
+        background: #1a2842;
+    }
+    
+    .works_list.skyblue .works_list_img{
+        background: #1b86c0;
+    }
+    
+    .works_list.violet .works_list_img{
+        background: #4441ce;
+    }
+
+    .works_list.wide h3{
+        color: #2a2a2a !important;
+    }
+
+    .works_list.wide .works_list_txt p{
+        color: #2a2a2a;
+    }
+
+    .works_list.basic .works_list_txt h3{
+        color: #fff;
+        border-bottom-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .works_list .works_list_txt p{
+        color: rgba(255, 255, 255, 0.8);
     }
 
     .clone_coding_list::after{
@@ -179,27 +216,11 @@
         width: 100%;
     }
 
-    .works_list_txt h3{
-    }
 
     .works_list.wide .works_list_txt h3{
         word-break: keep-all;
     }
 
-    .detail_tabBox{
-    }
-
-    .dt_img{
-    }
-
-    .dt_tit{
-    }
-
-    .dt_tit h3{
-    }
-
-    .dt_desc p{
-    }
 
     .clone_coding_article{
         width: calc(50% - 16px);
@@ -231,8 +252,6 @@
         padding: 10vw 0 0 0 !important; 
     }
 
-    .visual_swiper .swiper-slide{
-    }
 
     .vss_txt{
         height: auto;
@@ -380,7 +399,6 @@
     }
 
     .job_intro_advt a strong{
-        font-size: 24px;
     }
 
     .job_list h2{
@@ -397,22 +415,22 @@
     }
 
     .works_list_box{
-        grid-template-columns: 50% calc(50% - 15px);
-        grid-gap: 15px;
+
     }
 
-    .works_list.wide{
-        height: 50vw;
-        grid-column: 1 / 3;
+    .works_list_divide{
+        width: 100%;
+    }
+
+    .works_list_max_box{
+        height: 400px;
+        margin-bottom: 20px;
     }
 
     .works_list.basic{
         height: 38vw;
     }
 
-    .works_list{
-
-    }
 
     .go_top{
         transform: scale(0.85);
@@ -439,21 +457,25 @@
 
 @media all and (max-width: 768px){
 
-    .vis_txt_box{
-        
-    }
 
     .section_header{
         margin-bottom: 25px;
     }
 
     .section_header h2{
-        font-size: 32px;
+        font-size: 40px;
+        letter-spacing: -1px;
     }
+
+    .section_header h3{
+        font-size: 30px;
+    }
+
 
     .skillset_list ul li{
         width: 50%;
     }
+
 
     .ssl_circle{
         width: 140px;
@@ -462,16 +484,18 @@
     }
 
     .works_list.wide{
-        grid-column: 1 / 3;
-        height: 350px;
     }
 
     .works_list_txt{
         padding: 4.5vw 3vw;
+    } 
+
+    .works_list.basic{
+        width: 100%;
     }
 
     .works_list.wide .works_list_txt{
-        padding: 100px 25px 40px 25px;
+        padding: 35px 20px;
     }
 
     .wks_btn{
@@ -487,6 +511,18 @@
         width: calc(100% - 25px);
     }
 
+    .works_list.basic .works_list_txt{
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .works_list.basic .works_list_txt h3{
+        font-size: 5.8vw;
+        line-height: 1.2;
+        word-break: keep-all;
+    }
+
     .cc_article_desc h2{
         font-size: 22px;
         margin-bottom: 15px;
@@ -495,9 +531,6 @@
     .clone_coding_list{
         grid-template-columns: calc(50% - 15px) calc(50% - 15px);
         justify-content: space-between;
-    }
-    
-    .clone_coding_article{
     }
 
     .clone_coding_article.wide{
@@ -552,8 +585,25 @@
         display: none;
     }
 
+
     .app_txt ul li span{
         font-size: 15px;
+    }
+
+    .job_introImg_box{
+        height: 250px;
+    }
+
+    .job_intro_advt a > strong{
+        font-size: 60px;
+    }
+
+    .job_intro_advt a strong span:first-child{
+    }
+
+    .job_intro_advt a strong span:last-child{
+        box-sizing: border-box;
+        padding-left: 20px;
     }
 
     .job_list{
@@ -586,11 +636,6 @@
         max-height: 9999px;
     }
 
-    .works_detail{
-    }
-
-    .detail_tabBox{
-    }
 
     .dt_tit h3{
         font-size: 26px;
@@ -625,7 +670,7 @@
     }
 
     .app_ad{
-        height: 110vw !important;
+        height: 120vw !important;
     }
 
     .job_list .jl_floor1 > li h3{
@@ -636,12 +681,25 @@
         width: 55%;
     }
 
-    .works_list{
-        grid-column: 1 / 3;
+
+    .works_list_max_box{
+        height: 450px;
+    }
+
+    .works_list.wide .works_list_txt{
+        text-align: center;
+    }
+
+    .works_list.wide h3{
+        font-size: 8.5vw;
     }
 
     .works_list.basic{
         height: 55vw;
+    }
+
+    .works_list.basic .works_list_txt h3{
+        font-size: 8vw;
     }
 
     .dt_tit{
@@ -686,9 +744,6 @@
         height: 120px;
     }
 
-    .app_txt{
-    }
-
     .app_txt ul li{
         height: 220px;
         padding: 10px 6px 6px 10px;
@@ -702,12 +757,17 @@
         line-height: 1.3;
     }
 
+    .job_intro_advt a > strong{
+        font-size: 42px;
+    }
+
+    .job_intro_advt a strong span:first-child{
+        color: #fff;
+    }
+
     .ssl_circle{
         width: 110px;
         height: 110px;
-    }
-
-    .detail_tabBox{
     }
 
     .dt_tit h3{
