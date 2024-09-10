@@ -1182,18 +1182,21 @@ section{
     height: 180px;
     box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
     border-radius: 50%;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 600;
     animation: borderPulse 3s infinite;
     animation-delay: var(--delay);
     transition: all .25s ease;
+    font-size: 22px;
+    background: #fff;
+    color: #000;
+    letter-spacing: -0.8px;
 }
 
 @keyframes borderPulse{
     0%{
-        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.4);
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.8);
     }
 
     70%{
@@ -1587,7 +1590,6 @@ section{
     height: 100%;
     box-sizing: border-box;
     opacity: 0;
-    transform: translateY(50px);
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
@@ -1598,8 +1600,7 @@ section{
     opacity: 1;
     margin-top: 0px;
     transition-delay: 0.5s;
-    transition: all 0.8s ease;
-    transform: translateY(0px);
+    transition: all 0.5s ease;
 }
 
 .dt_close{
@@ -1801,43 +1802,85 @@ section{
 .dt_link{
     position: absolute;
     left: 50%;
-    bottom: 20px;
+    bottom: -40px;
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
     z-index: 5;
 }
 
+.works_detail_tab_list.active .dt_link{
+    bottom: 20px;
+    transition: all .4s ease;
+    transition-delay: 0.4s;
+}
+
 .dt_link a{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10px 0 28px;
-    height: 55px;
+    overflow: hidden;
+    padding: 0 10px;
+    height: 60px;
     background: rgba(70, 70, 69, 0.7);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    color: #fff;
     font-weight: 600;
     font-size: 17px;
-    border-radius: 27.5px;
+    border-radius: 30px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
 .detail_tabBox.active .dt_link a{
-    background: rgba(255, 255, 255, 0.9);
+    padding: 0 10px 0 28px;
+}
+
+.dtl_txt_ani_cont{
+    position: relative;
+    width: 0px;
+    height: 100%;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.dtl_txt_ani_cont span{
+    position: absolute;
+    left: 108px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 107px;
+    transition: all .5s ease;
+    opacity: 0;
+    will-change: transform;
+    color: #fff;
+}
+
+.detail_tabBox.active .dtl_txt_ani_cont{
+    width: 107px;
+}
+
+.detail_tabBox.active .dtl_txt_ani_cont span{
+    left: 0;
+    opacity: 1;
     color: #000;
 }
 
+.detail_tabBox.active .dt_link a{
+    background: rgba(255, 255, 255, 0.9);
+}
+
 .dt_link_icon{
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: #00E676;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 13px;
+}
+
+.detail_tabBox.active .dt_link_icon{
+    margin-left: 15px;
 }
 
 .dt_link_icon span{
