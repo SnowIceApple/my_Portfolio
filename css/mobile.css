@@ -507,6 +507,11 @@
         font-size: 22px;
     }
 
+    .dt_close{
+        right: 20px;
+        top: 15px;
+    }
+
     .dt_tit{
         width: calc(100% - 25px);
     }

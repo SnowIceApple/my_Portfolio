@@ -1184,7 +1184,7 @@ section{
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
     animation: borderPulse 3s infinite;
     animation-delay: var(--delay);
     transition: all .25s ease;
@@ -1951,6 +1951,11 @@ section{
     transform: scaleX(1);
     opacity: 1;
     transition-delay: 0.5s;
+}
+
+.clone_coding_list::after {
+    content: "";
+    flex: auto;
 }
 
 .clone_coding_article article{
