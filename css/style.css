@@ -155,13 +155,16 @@ section{
     transition-delay: 0.65s;
 }
 
-.vis_video_bg video{
+.vis_video_bg video,
+.vis_video_bg img
+{
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
     pointer-events: none;
 }
+
 
 .vis_txt_box{
     position: relative;
@@ -187,12 +190,19 @@ section{
 }
 
 .vis_txt_box h1{
-    font-family: "Source Code Pro", monospace;
-    font-weight: 400;
-    font-size: 3.8vw;
-    line-height: 1.2;
+    position: relative;
+    font-weight: 900;
+    font-size: 4.5vw;
+    line-height: 1.4;
     letter-spacing: 0.2vw;
     text-transform: uppercase;
+    transform: translateY(15%);
+}
+
+.swiper-slide-active .vis_txt_box h1{
+    transform: translateY(0);
+    transition: all 1s ease;
+    transition-delay: 1.5s;
 }
 
 .vis_effect{
@@ -451,8 +461,9 @@ section{
 .main_nav_box{
     position: fixed;
     /* left: calc((100vw - 1440px) / 2); */
-    left: 5vw;
-    bottom: 15px;
+    left: 50%;
+    bottom: calc(100% - 80px);
+    transform: translateX(-50%);
     z-index: 9999;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
@@ -823,11 +834,12 @@ section{
 .app_txt h2{
     font-size: 5vw;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.25;
     text-align: center;
     background: #fff;
     display: inline-block;
     padding: 13px 25px;
+    word-break: keep-all;
 }
 
 .app_ani_pic{
@@ -881,7 +893,7 @@ section{
 .job_area{
     width: 100%;
     padding: 60px 0;
-    background: #f7f9fc;
+    background: #f0f5fc;
     position: relative;
 
 }
@@ -979,16 +991,19 @@ section{
     padding: 10px 10px 10px 20px;
     line-height: 1.3;
     box-sizing: border-box;
-    border-left: 10px solid #0044c9;
 }
 
 
 .job_list .jl_floor1 > li{
     width: 100%;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    border-radius: 15px;
+    background-color: #fff;
 }
 
 .job_list .jl_floor1 > li:first-child{
-    margin-bottom: 60px;
+    margin-bottom: 25px;
 }
 
 .job_list .jl_floor1 > li h3{
@@ -996,7 +1011,7 @@ section{
     font-size: 48px;
     font-weight: 900;
     letter-spacing: -1px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     color: #333;
     line-height: 1.5;
 }
@@ -1017,7 +1032,7 @@ section{
     letter-spacing: -0.5px;
     box-sizing: border-box;
     padding-right: 20px;
-    color: rgba(9, 0, 0, 0.5);
+    color: rgba(9, 0, 0, 0.4);
 }
 
 .job_list .jl_floor2_box{
@@ -1076,7 +1091,7 @@ section{
 .skill_set{
     position: relative;
     width: 100%;
-    padding: 7vw 0;
+    padding: 100px 0;
 }
 
 .skillset_bg{
@@ -1087,7 +1102,6 @@ section{
     opacity: 0;
     width: 100%;
     height: 100%;
-    background: #1d1f22;
     transition: all 1s cubic-bezier(.455,.03,.515,.955);
     transform-origin: left;
     z-index: -1;
@@ -1106,7 +1120,7 @@ section{
 }
 
 .view .skillset_bg img{
-    opacity: 1;
+    opacity: 0.5;
     transition-delay: 1s;
 }
 
@@ -1119,8 +1133,8 @@ section{
     width: 100%;
     position: relative;
     transform: translateY(-20%);
-    text-align: right;
-    margin-bottom: max(4vw, 30px);
+    text-align: center;
+    margin-bottom: max(5vw, 30px);
     opacity: 0;
     transition: all .5s cubic-bezier(.25,.46,.45,.94);
 }
@@ -1132,75 +1146,125 @@ section{
 }
 
 .skillset_tit h2{
-    font-size: max(3.5vw, 22px);
-    color: #fff;
+    font-size: max(5.5vw, 28px);
+    background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #527AF2, #5F49F2);
     font-weight: 800;
     text-transform: uppercase;
+    letter-spacing: -1px;
 }
 
 .skillset_list{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54vw;
 }
 
 .skillset_list ul{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
 }
 
 .skillset_list ul li{
     position: relative;
-    transform: translateX(-30%);
+    transform: translateY(-10%);
     opacity: 0;
-    width: 18%;
-    margin-right: 2.5%;
+    width: 16vw;
+    height: 16vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2vw;
+    box-sizing: border-box;
+    padding: 2px;
 }
 
 .view .skillset_list ul li{
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
     transition: all .8s ease;
     transition-delay: var(--delay);
+    box-sizing: border-box;
 }
 
-.skillset_list ul li:nth-child(5n){
-    margin-right: 0px;
+.skillset_list ul li:first-child{
 }
 
-.skillset_list ul li:last-child{
-    margin-bottom: 0px;
+.skillset_list ul li:nth-child(2){
 }
 
-.ssl_circle{
+.skillset_list ul li:nth-child(3){
+    margin-bottom: 32vw;
+}
+
+.skillset_list ul li:nth-child(4){
+    margin-bottom: 32vw;
+}
+
+.skillset_list ul li:nth-child(5){
+    margin-top: 16vw;
+}
+
+.ssl_inner{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 180px;
-    height: 180px;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    text-transform: uppercase;
-    font-weight: 500;
-    animation: borderPulse 3s infinite;
     animation-delay: var(--delay);
     transition: all .25s ease;
-    font-size: 22px;
+    overflow: hidden;
     background: #fff;
-    color: #000;
+}
+
+.ssl_inner > span{
+    color: #fff;
     letter-spacing: -0.8px;
+    font-size: max(2.2vw, 16px);
+    text-transform: uppercase;
+    font-weight: 300;
+    display: inline-block;
+    padding: 8px 10px;
+}
+
+.skillset_list ul li:nth-child(1) .ssl_inner span{
+    background-color: #ff5733;
+}
+
+.skillset_list ul li:nth-child(2) .ssl_inner span{
+    background-color: #264de4;
+}
+
+.skillset_list ul li:nth-child(3) .ssl_inner span{
+    background-color: #0769ad;
+}
+
+.skillset_list ul li:nth-child(4) .ssl_inner span{
+    background-color: #f0db4f;
+}
+
+.skillset_list ul li:nth-child(5) .ssl_inner span{
+    background-color: #0b2631;
+}
+
+.skillset_list ul li:nth-child(6) .ssl_inner span{
+    background-color: #3c240c;
 }
 
 @keyframes borderPulse{
     0%{
-        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.5);
     }
 
     70%{
-        box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0);
+        box-shadow: 0px 0px 0px 7px rgba(255, 255, 255, 0);
     }
 
     100%{
@@ -1208,8 +1272,8 @@ section{
     }
 }
 
-.ssl_circle:active,
-.ssl_circle:hover{
+.ssl_inner:active,
+.ssl_inner:hover{
     background: #fff;
     color: #1d1f22;
 }
@@ -1217,7 +1281,7 @@ section{
 /* works */
 
 .section_header{
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     padding-bottom: 10px;
     text-align: center;
     background: #fff;
@@ -1225,18 +1289,17 @@ section{
 }
 
 .section_header *{
-    font-family: "Cormorant Garamond", serif;
 }
 
 .section_header h2{
     font-size: 94px;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
     cursor: default;
     user-select: none;
     padding: 5px 20px;
     color: #000;
-    letter-spacing: -2px;
+    letter-spacing: -4px;
 }
 
 .section_header h2 span{
@@ -1255,10 +1318,10 @@ section{
 }
 
 .section_header h3{
-    font-size: 42px;
-    margin-top: 6px;
+    font-size: 28px;
+    margin-top: 15px;
     letter-spacing: -1px;
-    font-weight: 100;
+    font-weight: 400;
     color: #999;
 }
 /* 
@@ -1831,6 +1894,11 @@ section{
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
+.detail_tabBox:not(.active) .dt_link a{
+    animation: borderPulse 1.8s linear infinite;
+    animation-delay: 0.5s;
+}
+
 .detail_tabBox.active .dt_link a{
     padding: 0 10px 0 28px;
 }
@@ -2036,7 +2104,7 @@ section{
 .cc_article_desc h2{
     display: inline;
     font-size: 32px;
-    font-weight: 900;
+    font-weight: 600;
     letter-spacing: -1px;
     border-bottom: 1px solid transparent;
     transition: all .3s ease;

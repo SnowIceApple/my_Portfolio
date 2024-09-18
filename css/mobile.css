@@ -14,7 +14,6 @@
     }
 
     .main_nav_box{
-        left: 10px;
     }
 }
 
@@ -86,7 +85,6 @@
 
     .job_list{
         width: calc(100% - 450px);
-        padding-top: 40px;
     }
 
     .job_list h2{
@@ -111,13 +109,10 @@
     }
 
     .skillset_list ul li{
-        width: 33.3333%;
         margin-right: 0px;
-        margin-bottom: max(3vw, 30px);
     }
 
     .skillset_list ul li:last-child{
-        margin-bottom: max(3vw, 30px);
     }
 
     .job_desc ul li{
@@ -197,8 +192,6 @@
     }
 
     .section_header h2{
-        font-size: 54px;
-        letter-spacing: -4px;
     }
 }
 
@@ -214,6 +207,7 @@
 
     .job_list{
         width: 100%;
+        padding: 30px 0 0 0;
     }
 
 
