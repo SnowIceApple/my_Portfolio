@@ -42,19 +42,20 @@
     <div id="wrap">
         <div class="main_nav_box">
             <div class="main_nav_button_box">
-                <button class="main_nav_open">
+                <!-- <button class="main_nav_open">
                     <span></span>
                     <span></span>
                     <span></span>
-                </button>
+                </button> -->
                 <!-- <button class="main_nav_notice">
 
                 </button> -->
             </div>
             <div class="main_nav">
                 <nav id="nav">
+                    <div class="main_nav_list_deco"></div>
                     <ul>
-                        <li style="--delay: 0.15s"><a href="#visual">Main</a></li>
+                        <li style="--delay: 0.15s" class="on"><a href="#visual">Main</a></li>
                         <li style="--delay: 0.3s"><a href="#appeal">Appeal</a></li>
                         <li style="--delay: 0.45s"><a href="#intro">Introduce</a></li>
                         <li style="--delay: 0.6s"><a href="#works">Works</a></li>
@@ -76,14 +77,13 @@
                                 <h1>
                                     역량에 열정을 플러스,
                                     <br>
-                                    일할 준비가 된 웹퍼블리셔 입니다!
+                                    준비된 웹퍼블리셔 입니다!
                                 </h1>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="vis_video_bg">
-                                <!-- <video src="./img/mist.mp4" playsinline autoplay muted loop></video> -->
-                                 <img src="./img/gate_1.jpg" alt="">
+                                <video src="./img/waterfall.mp4" playsinline autoplay muted loop></video>
                             </div>
                             <div class="vis_effect"></div>
                             <div class="vis_txt_box">
@@ -98,7 +98,7 @@
                     <div class="main-swiper-pagination"></div>
                     <div class="scroll_down">
                         <a href="#appeal">
-                            <span>scroll down</span>
+                            <span class="hidden_text">scroll down</span>
                             <div class="scroll_down_arrow">
                                 <span style="--delay: 0.3s"></span>
                                 <span style="--delay: 0.6s"></span>
@@ -172,7 +172,7 @@
             <div class="intro">
                 <div class="section_header">
                     <div class="container">
-                        <h2>
+                        <h2 data-aos="fade-up" data-aos-duration="1000">
                             <!-- <span style="--delay: 0.1s">i</span>
                             <span style="--delay: 0.2s">n</span>
                             <span style="--delay: 0.3s">t</span>
@@ -185,7 +185,7 @@
                             <span style="--delay: 1s; color: #05C7F2;">.</span> -->
                             <span>Introduce</span>
                         </h2>
-                        <h3>
+                        <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                             <span>Who I am?</span>
                         </h3>
                     </div>
@@ -267,14 +267,15 @@
                 </div>
             </div>
         </section>
-        <section id="skill_set">
+        <div id="skill_set">
             <div class="skill_set">
                 <div class="skillset_bg">
                     <img src="./img/desk_bg.jpg" alt="">
                 </div>
                 <div class="container">
                     <div class="skillset_tit">
-                        <h2>What I can speak</h2>
+                        <h2 data-aos="fade-up" data-aos-duration="1000">What I can speak</h2>
+                        <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">How I communicate</span>
                     </div>
                     <div class="skillset_list">
                         <ul>
@@ -312,12 +313,12 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
         <section id="works">
             <div class="works">
                 <div class="section_header">
                     <div class="container">
-                        <h2>
+                        <h2 data-aos="fade-up" data-aos-duration="1000">
                             <!-- <span style="--delay: 0.1s">w</span>
                             <span style="--delay: 0.2s">o</span>
                             <span style="--delay: 0.3s">r</span>
@@ -327,7 +328,7 @@
                             <span>Works</span>
                             <br>
                         </h2>
-                        <h3>
+                        <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                             <span>What I've done.</span>
                         </h3>
                     </div>
@@ -618,9 +619,9 @@ close
         </section> -->
         <section id="clone_coding">
             <div class="clone_coding">
-                <div class="section_header">
+                <div class="section_header"  data-aos="fade-up" data-aos-duration="1000">
                     <div class="container">
-                        <h2>
+                        <h2 data-aos="fade-up" data-aos-duration="1000">
                             <!-- <span style="--delay: 0.1s">c</span>
                             <span style="--delay: 0.2s">l</span>
                             <span style="--delay: 0.3s">o</span>
@@ -636,7 +637,7 @@ close
                             <span style="--delay: 1.2s; color: #6B7FF2;">.</span> -->
                             <span>Clone coding</span>
                         </h2>
-                        <h3>
+                        <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                             <span>How I practiced!</span>
                         </h3>
                     </div>

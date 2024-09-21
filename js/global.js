@@ -7,6 +7,43 @@ $(document).ready(function(){
   
   gsap.registerPlugin(ScrollTrigger);
 
+  var navIdx = -1;
+
+
+  // $('#nav ul li').each(function(){
+  //   var tg = $(this);
+  //   var idx = tg.index();
+  //   var idxPos = idx * 130;
+  //   var navDeco = $('.main_nav_list_deco');
+
+  //   $(this).on('click', function(){
+  //     $(this).addClass('on').siblings().removeClass('on');
+  //   navDeco.css('left', idxPos + 'px');
+  //     // console.log(idx, idxPos);
+  //     $('.works_detail_tab').removeClass('active');
+  //     $('.works_detail_tab_list').removeClass('active');
+  //     $('body').removeClass('fixed');
+  //   });
+
+  // });
+
+  // $(window).on('scroll', function(){
+  //   $('#nav ul li').each(function(index){
+  //     var navIdx = -1;
+
+  //     if($(this).hasClass('on')){
+
+  //       navIdx = index;
+  //       console.log(index);
+  //       var idxPos = navIdx * 130;
+  //       var navDeco = $('.main_nav_list_deco');
+  //       navDeco.css('left', idxPos + 'px');
+  //     }
+  //   });
+  // });
+
+
+
     const swiper1 = new Swiper('.visual_swiper', {
     direction: 'horizontal',
       loop: true,
@@ -53,15 +90,16 @@ $(document).ready(function(){
 
   // $(".dt_img_inner").mCustomScrollbar({theme:"inset-dark"});
 
-  $(document).on('mouseup', function(e){
-    var navBox = $('.main_nav_box');
-    if(navBox.has(e.target).length === 0){
-      navBox.removeClass('on');
-      $('#nav ul li').removeClass('on');
-    }
-  });
+  // $(document).on('mouseup', function(e){
+  //   var navBox = $('.main_nav_box');
+  //   if(navBox.has(e.target).length === 0){
+  //     navBox.removeClass('on');
+  //     $('#nav ul li').removeClass('on');
+  //   }
+  // });
 
   const sections = document.querySelectorAll('section');
+  const navList = document.querySelectorAll('#nav ul li');
 
   let observer1 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -104,6 +142,44 @@ $(document).ready(function(){
     }
   );
 
+  // let navTrFs = false;
+
+  let observerNav = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const idx = Array.from(sections).indexOf(entry.target);
+      var idxPos = idx * 130;
+      var navDeco = $('.main_nav_list_deco');
+
+      console.log(idx);
+
+      if (idx!== -1 && entry.isIntersecting && entry.intersectionRatio > 0.2) {
+        $(entry.target).addClass('view').siblings().removeClass('view');
+          $(navList[idx]).addClass('on').siblings().removeClass('on');
+          navDeco.css('left', idxPos + 'px');
+      }
+
+      
+
+    });
+  },
+  {
+    threshold: [0, 0.2]
+  }
+
+  );
+
+  // $(navList).on('click', function(){
+  //   navTrFs = true;
+  //   var idx = $(this).index();
+  //   var sectionPos = sections[idx].offsetTop;
+  //   var idxPos = idx * 130;
+  //   var navDeco = $('.main_nav_list_deco');
+
+  //   $(this).addClass('on').siblings().removeClass('on');
+
+  //   navDeco.css('left', idxPos + 'px');
+  // });
+
   // sections.forEach((view, index) => {
   //   if(index == 3){
   //     observer4.observe(view);
@@ -120,8 +196,10 @@ $(document).ready(function(){
   // });
 
   sections.forEach((view, index) => {
-    observer4.observe(view);
+    observerNav.observe(view);
   });
+
+
 
   $('.works_list a').on('click', function(e){
     e.preventDefault();
@@ -172,12 +250,7 @@ $(document).ready(function(){
   // .addTo(controller);
 
 
-  $('#nav ul li').on('click', function(){
-    $(this).addClass('on').siblings().removeClass('on');
-    $('.works_detail_tab').removeClass('active');
-    $('.works_detail_tab_list').removeClass('active');
-    $('body').removeClass('fixed');
-  });
+
 
 var ccCursor = $('#cursor');
 

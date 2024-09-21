@@ -462,10 +462,9 @@ section{
     position: fixed;
     /* left: calc((100vw - 1440px) / 2); */
     left: 50%;
-    bottom: calc(100% - 80px);
+    bottom: calc(100% - 100px);
     transform: translateX(-50%);
     z-index: 9999;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
 }
 
@@ -555,16 +554,19 @@ section{
 
 
 .main_nav{
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
+    position: relative;
     left: 0;
-    bottom: calc(100% + 20px);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    width: 255px;
+    width: auto;
     z-index: 2;
-    background: #fff;
+    padding: 0 35px;
+    border-radius: 42.5px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .main_nav_box.on .main_nav{
     opacity: 1;
@@ -573,25 +575,38 @@ section{
 }
 
 #nav{
-    width: 100%;
-    padding: 20px 25px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
     box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 85px;
+}
+
+.main_nav_list_deco{
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 130px;
+    height: 47px;
+    background-color: #000;
+    pointer-events: none;
+    border-radius: 23.5px;
+    transition: all .5s ease;
 }
 
 #nav ul{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     gap: 5px 0;
 }
 
 #nav ul li{
     position: relative;
-    transform: translateY(30px);
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0;
+    visibility: hidden; */
 }
 
 .main_nav_box.on #nav ul li{
@@ -606,18 +621,22 @@ section{
     position: relative;
     display: block;
     width: 100%;
-    font-size: 14px;
-    padding: 8px 0px 8px 16px;
+    font-size: 17px;
+    padding: 15px 0;
+    width: 130px;
+    text-align: center;
     color: #1a1a1a;
-    transition: all .3s ease;
+    transition: all .5s ease;
+    box-sizing: border-box;
+    font-weight: 300;
+    letter-spacing: -0.6px;
 }
 
-#nav ul li.on a,
-#nav ul li a:hover{
-    color: #0044c9;
+#nav ul li.on a{
+    color: #fff;
 }
 
-
+/* 
 #nav ul li a::before{
     display: block;
     content: "";
@@ -628,7 +647,7 @@ section{
     width: 4px;
     height: 4px;
     background: #0B59BF;
-}
+} */
 
 /* top */
 
@@ -697,6 +716,7 @@ section{
     position: relative;
     width: 100%;
     height: 100vh;
+    padding-bottom: 40px;
 }
 
 .appeal{
@@ -1092,14 +1112,14 @@ section{
     position: relative;
     width: 100%;
     padding: 100px 0;
+    background: #f0f5fc
 }
 
 .skillset_bg{
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
-    transform: scaleX(0);
-    opacity: 0;
     width: 100%;
     height: 100%;
     transition: all 1s cubic-bezier(.455,.03,.515,.955);
@@ -1115,7 +1135,7 @@ section{
     height: 100%;
     object-fit: cover;
     mix-blend-mode: multiply;
-    opacity: 0;
+    opacity: 1;
     transition: all .5s ease;
 }
 
@@ -1132,28 +1152,30 @@ section{
 .skillset_tit{
     width: 100%;
     position: relative;
-    transform: translateY(-20%);
     text-align: center;
     margin-bottom: max(5vw, 30px);
-    opacity: 0;
     transition: all .5s cubic-bezier(.25,.46,.45,.94);
 }
 
-.view .skillset_tit{
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 1s;
-}
-
 .skillset_tit h2{
-    font-size: max(5.5vw, 28px);
+    position: relative;
+    font-size: max(5.6vw, 28px);
     background-clip: text;
 -webkit-background-clip: text;
 color: transparent;
 background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #527AF2, #5F49F2);
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: -1px;
+    letter-spacing: -1.4px;
+}
+
+.skillset_tit span{
+    font-size: 20px;
+    display: block;
+    margin-top: 20px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    color: #333;
 }
 
 .skillset_list{
@@ -1161,7 +1183,7 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 54vw;
+    height: 32vw;
 }
 
 .skillset_list ul{
@@ -1170,28 +1192,18 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     flex-direction: column;
     align-items: center;
     height: 100%;
+    gap: 20px;
 }
 
 .skillset_list ul li{
     position: relative;
-    transform: translateY(-10%);
-    opacity: 0;
-    width: 16vw;
-    height: 16vw;
+    width: 18vw;
+    height: 14vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
-    padding: 2px;
 }
 
-.view .skillset_list ul li{
-    transform: translateY(0);
-    opacity: 1;
-    transition: all .8s ease;
-    transition-delay: var(--delay);
-    box-sizing: border-box;
-}
 
 .skillset_list ul li:first-child{
 }
@@ -1199,16 +1211,15 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
 .skillset_list ul li:nth-child(2){
 }
 
-.skillset_list ul li:nth-child(3){
-    margin-bottom: 32vw;
+/* .skillset_list ul li:nth-child(3){
+    margin-bottom: 14vw;
 }
 
 .skillset_list ul li:nth-child(4){
-    margin-bottom: 32vw;
-}
+    margin-bottom: 14vw;
+} */
 
 .skillset_list ul li:nth-child(5){
-    margin-top: 16vw;
 }
 
 .ssl_inner{
@@ -1222,12 +1233,13 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     transition: all .25s ease;
     overflow: hidden;
     background: #fff;
+    border-radius: 15px;
 }
 
 .ssl_inner > span{
     color: #fff;
     letter-spacing: -0.8px;
-    font-size: max(2.2vw, 16px);
+    font-size: max(1.9vw, 16px);
     text-transform: uppercase;
     font-weight: 300;
     display: inline-block;
@@ -1304,21 +1316,15 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
 
 .section_header h2 span{
     position: relative;
-    opacity: 0;
-    transform: translateY(-30%);
-    transition: all .5s ease;
-    transition-delay: 0.5s;
     display: inline-block;
 }
 
 .view .section_header h2 span{
-    opacity: 1;
-    transform: translateY(0%);
-    transition-delay: var(--delay);
+
 }
 
 .section_header h3{
-    font-size: 28px;
+    font-size: 22px;
     margin-top: 15px;
     letter-spacing: -1px;
     font-weight: 400;
