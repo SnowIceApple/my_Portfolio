@@ -1907,6 +1907,11 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     animation-delay: 0.5s;
 }
 
+.detail_tabBox:not(.active) .dt_link a:hover{
+    animation: none;
+}
+
+.detail_tabBox .dt_link a:hover,
 .detail_tabBox.active .dt_link a{
     padding: 0 10px 0 28px;
 }
@@ -1931,8 +1936,14 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     color: #fff;
 }
 
+.detail_tabBox .dt_link a:hover .dtl_txt_ani_cont,
 .detail_tabBox.active .dtl_txt_ani_cont{
     width: 107px;
+}
+
+.detail_tabBox:not(.active) .dt_link a:hover .dtl_txt_ani_cont span{
+    left: 0;
+    opacity: 1;
 }
 
 .detail_tabBox.active .dtl_txt_ani_cont span{
@@ -1955,6 +1966,7 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     justify-content: center;
 }
 
+.detail_tabBox .dt_link a:hover .dt_link_icon,
 .detail_tabBox.active .dt_link_icon{
     margin-left: 15px;
 }
@@ -2289,7 +2301,7 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
 }
 
 .footer{
-    border-top: 1px solid #d7d7d7;
+    border-top: 1px solid #1a1a1a;
     padding: 30px 0;
 }
 
@@ -2297,7 +2309,9 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     font-size: 5.5vw;
     color: #000;
     text-align: center;
-    font-weight: 900;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: -0.4vw;
 }
 
 #cursor{
