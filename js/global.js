@@ -7,9 +7,6 @@ $(document).ready(function(){
   
   gsap.registerPlugin(ScrollTrigger);
 
-  var navIdx = -1;
-
-
   // $('#nav ul li').each(function(){
   //   var tg = $(this);
   //   var idx = tg.index();
@@ -71,6 +68,7 @@ $(document).ready(function(){
 
   $('.main_nav_open').on('click', function(){
     $('.main_nav_box').toggleClass('on');
+    $('body').toggleClass('fixed');
     $('#nav ul li').removeClass('on');
 
   });
@@ -152,13 +150,11 @@ $(document).ready(function(){
 
       console.log(idx);
 
-      if (idx!== -1 && entry.isIntersecting && entry.intersectionRatio > 0.2) {
+      if (entry.isIntersecting && entry.intersectionRatio > 0.2) {
         $(entry.target).addClass('view').siblings().removeClass('view');
           $(navList[idx]).addClass('on').siblings().removeClass('on');
           navDeco.css('left', idxPos + 'px');
       }
-
-      
 
     });
   },
@@ -199,7 +195,21 @@ $(document).ready(function(){
     observerNav.observe(view);
   });
 
+  if($(window).outerWidth() < 768){
+    $('#nav ul li').on('click', function(){
+      $('.main_nav_box').removeClass('on');
+      $('body').removeClass('fixed');
+    });
+  }
 
+  $(window).on('resize', function(){
+    if($(window).outerWidth() < 768){
+      $('#nav ul li').on('click', function(){
+        $('.main_nav_box').removeClass('on');
+        $('body').removeClass('fixed');
+      });
+    }
+  });
 
   $('.works_list a').on('click', function(e){
     e.preventDefault();
