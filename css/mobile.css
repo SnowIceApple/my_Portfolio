@@ -13,8 +13,6 @@
         padding: 0 10px;
     }
 
-    .main_nav_box{
-    }
 }
 
 @media all and (max-width: 1330px){
@@ -108,10 +106,19 @@
     }
 
     .skillset_list ul li{
-        margin-right: 0px;
+        height: 18vw;
     }
 
-    .skillset_list ul li:last-child{
+    .ssl_txt span{
+        padding: 0;
+    }
+
+    .ssl_img.rounded{
+        border-radius: 9vw 0 0 9vw;
+    }
+
+    .ssl_ico img{
+        width: 50px;
     }
 
     .job_desc ul li{
@@ -190,8 +197,6 @@
         opacity: 1;
     }
 
-    .section_header h2{
-    }
 }
 
 @media all and (max-width: 1024px){
@@ -391,9 +396,6 @@
         padding: 25px 15px;
     }
 
-    .job_intro_advt a strong{
-    }
-
     .job_list h2{
         font-size: 32px;
     }
@@ -407,8 +409,12 @@
         margin-bottom: 30px;
     }
 
-    .works_list_box{
+    .ssl_txt{
+        padding: 20px 25px 15px 15px;
+    }
 
+    .ssl_ico img{
+        width: 40px;
     }
 
     .works_list_divide{
@@ -471,7 +477,9 @@
         top: -10px;
         width: 100vw;
         height: 100vh;
-        background: rgba(255, 255, 255, 0.98);
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
         box-sizing: border-box;
         padding: 90px 35px;
         border-radius: 0;
@@ -536,25 +544,12 @@
     
     .skillset_list ul{
         width: 100%; 
-        justify-content: space-between;  
-        flex-direction: row;
-        gap: 13px;
     }
-
-
-    .skillset_list ul li{
-        width: 31%;
-    }
-
-
 
     .ssl_circle{
         width: 140px;
         height: 140px;
         font-size: 15px;
-    }
-
-    .works_list.wide{
     }
 
     .works_list_txt{
@@ -674,15 +669,9 @@
         font-size: 60px;
     }
 
-    .job_intro_advt a strong span:first-child{
-    }
-
     .job_intro_advt a strong span:last-child{
         box-sizing: border-box;
         padding-left: 20px;
-    }
-
-    .job_list{
     }
 
     .jl_floor2_open{
@@ -711,6 +700,17 @@
         max-height: 9999px;
     }
 
+    .job_area{
+        padding: 60px 0 0 0;
+    }
+
+    .skillset_list ul li{
+        height: 22vw;
+    }
+
+    .ssl_img.rounded{
+        border-radius: 11vw 0 0 11vw;
+    }
 
     .dt_tit h3{
         font-size: 26px;
@@ -758,6 +758,28 @@
 
     .aab_box div{
         width: 55%;
+    }
+
+    .skillset_list ul li{
+        width: 100%;
+        height: 22vw;
+    }
+
+    .ssl_txt{
+        width: 50%;
+        padding: 13px 20px 13px 10px;
+    }
+
+    .ssl_ico img{
+        width: 33px;
+    }
+
+    .ssl_img{
+        width: 50%;
+    }
+
+    .ssl_img.rounded{
+        border-radius: 11vw 0 0 11vw;
     }
 
 
@@ -851,20 +873,14 @@
         height: 110px;
     }
 
-    .skillset_list{
-        height: auto;
-    }
-
     .skillset_list ul li{
-        width: calc(50% - 6.5px);
-        height: auto;
+        height: 28vw;
     }
 
-    .ssl_inner{
-        border-radius: 5px;
-        height: auto;
-        padding: 25px 0;
+    .ssl_img.rounded{
+        border-radius: 14vw 0 0 14vw;
     }
+
 
     .dt_tit h3{
         font-size: 22px;

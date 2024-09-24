@@ -19,6 +19,12 @@ body{
     --vote_bg-: linear-gradient(45deg, #754b92, #48b8c2);
     --hs_bg-: #93000e;
     --ddm_bg-: #75c392;
+    --color_html: #ff5733;
+    --color_css: #264de4;
+    --color_jq: #0769ad;
+    --color_js: #f0db4f;
+    --color_ps: #0b2631;
+    --color_il: #3c240c;
 }
 
 .material-symbols-outlined {
@@ -1185,25 +1191,23 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 32vw;
 }
 
 .skillset_list ul{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     align-items: center;
-    height: 100%;
-    gap: 20px;
+    width: 100%;
+    gap: 5px;
 }
 
 .skillset_list ul li{
     position: relative;
-    width: 18vw;
-    height: 14vw;
+    width: calc(50% - 2.5px);
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 14vw;
 }
 
 
@@ -1226,8 +1230,6 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
 
 .ssl_inner{
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -1235,41 +1237,71 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     transition: all .25s ease;
     overflow: hidden;
     background: #fff;
-    border-radius: 15px;
 }
 
-.ssl_inner > span{
-    color: #fff;
-    letter-spacing: -0.8px;
-    font-size: max(1.9vw, 16px);
+.ssl_img{
+    width: 45%;
+    overflow: hidden;
+}
+
+.ssl_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.ssl_img.rounded{
+    border-radius: 7vw 0 0 7vw;
+}
+
+.ssl_txt{
+    width: 55%;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 20px 45px 20px 15px;
+}
+
+.ssl_txt span{
+    width: 100%;
+    color: #1a1a1a;
+    font-size: max(1.9vw, 17px);
     text-transform: uppercase;
-    font-weight: 300;
-    display: inline-block;
+    font-weight: 200;
+    display: block;
     padding: 8px 10px;
+    letter-spacing: -0.1vw;
+}
+
+.ssl_ico{
+    width: 100%;
+    text-align: right;
+}
+
+.ssl_ico img{
+    display: inline-block;
+    width: 60px;
+    opacity: 0.2;
 }
 
 .skillset_list ul li:nth-child(1) .ssl_inner span{
-    background-color: #ff5733;
 }
 
 .skillset_list ul li:nth-child(2) .ssl_inner span{
-    background-color: #264de4;
 }
 
 .skillset_list ul li:nth-child(3) .ssl_inner span{
-    background-color: #0769ad;
 }
 
 .skillset_list ul li:nth-child(4) .ssl_inner span{
-    background-color: #f0db4f;
 }
 
 .skillset_list ul li:nth-child(5) .ssl_inner span{
-    background-color: #0b2631;
 }
 
 .skillset_list ul li:nth-child(6) .ssl_inner span{
-    background-color: #3c240c;
 }
 
 @keyframes borderPulse{
