@@ -68,16 +68,12 @@
         border-right: 0px !important;
     }
 
-
     .app_txt ul li.at_list_img a span{
         transform: translateY(0);
         opacity: 1;
         transition-delay: 0.3s;
         transition: all .3s ease;
         background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .job_introImg{
     }
 
     .job_list{
@@ -704,9 +700,6 @@
 
     .jl_floor2.active{
         max-height: 9999px;
-    }
-
-    .job_area{
     }
 
     .skillset_list ul li{

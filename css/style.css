@@ -516,9 +516,6 @@ section{
     transform-origin: center;
 }
 
-.main_nav_open span:first-child{
-}
-
 .main_nav_box.on .main_nav_open span:first-child{
     transform-origin: center;
     animation: mobNavTrans1 0.4s linear forwards;
@@ -533,9 +530,6 @@ section{
     opacity: 0;
     transform-origin: center;
     transition: all .4s ease;
-}
-
-.main_nav_open span:last-child{
 }
 
 .main_nav_box.on .main_nav_open span:last-child{
@@ -1029,10 +1023,6 @@ section{
     letter-spacing: -1px;
 }
 
-.job_intro_advt_arrow{
-
-}
-
 .job_introTxt{
     position: absolute;
     right: 55px;
@@ -1261,24 +1251,6 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     height: 14vw;
 }
 
-
-.skillset_list ul li:first-child{
-}
-
-.skillset_list ul li:nth-child(2){
-}
-
-/* .skillset_list ul li:nth-child(3){
-    margin-bottom: 14vw;
-}
-
-.skillset_list ul li:nth-child(4){
-    margin-bottom: 14vw;
-} */
-
-.skillset_list ul li:nth-child(5){
-}
-
 .ssl_inner{
     display: flex;
     width: 100%;
@@ -1337,24 +1309,6 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     opacity: 0.2;
 }
 
-.skillset_list ul li:nth-child(1) .ssl_inner span{
-}
-
-.skillset_list ul li:nth-child(2) .ssl_inner span{
-}
-
-.skillset_list ul li:nth-child(3) .ssl_inner span{
-}
-
-.skillset_list ul li:nth-child(4) .ssl_inner span{
-}
-
-.skillset_list ul li:nth-child(5) .ssl_inner span{
-}
-
-.skillset_list ul li:nth-child(6) .ssl_inner span{
-}
-
 @keyframes borderPulse{
     0%{
         box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.5);
@@ -1385,9 +1339,6 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     z-index: 100;
 }
 
-.section_header *{
-}
-
 .section_header h2{
     font-size: 94px;
     font-weight: 600;
@@ -1402,10 +1353,6 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
 .section_header h2 span{
     position: relative;
     display: inline-block;
-}
-
-.view .section_header h2 span{
-
 }
 
 .section_header h3{
@@ -1665,10 +1612,6 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     border-color: #3b221d;
 }
 
-.works_list.basic:hover .works_list_txt h3{
-
-}
-
 .works_list.wide h3{
     font-size: max(4.5vw, 22px);
     font-weight: 900;
@@ -1879,9 +1822,6 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     height: 60px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%,rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 1) 100%);
     pointer-events: none;
-}
-
-.detail_tabBox.active .dt_img::after{
 }
 
 .dt_img img{
