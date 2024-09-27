@@ -145,8 +145,8 @@ $(document).ready(function(){
   let observerNav = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       const idx = Array.from(sections).indexOf(entry.target);
-      var idxPos = idx * 130;
-      var navDeco = $('.main_nav_list_deco');
+      let idxPos = idx * 130;
+      let navDeco = $('.main_nav_list_deco');
 
       console.log(idx);
 
@@ -213,8 +213,8 @@ $(document).ready(function(){
 
   $('.works_list a').on('click', function(e){
     e.preventDefault();
-    var tg = $(this).parent();
-    var idx = tg.index();
+    let tg = $(this).parent();
+    let idx = tg.index();
     console.log(idx);
     $('.works_detail_tab_list').eq(idx).addClass('active').siblings().removeClass('active');
     $('.works_detail_tab').addClass('active');
@@ -262,7 +262,7 @@ $(document).ready(function(){
 
 
 
-var ccCursor = $('#cursor');
+let ccCursor = $('#cursor');
 
 $(document).on('mousemove', function(e){
 
