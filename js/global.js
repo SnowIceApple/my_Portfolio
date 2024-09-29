@@ -99,17 +99,13 @@ $(document).ready(function(){
   //   }
   // }
 
-  $(window).on('resize', function(){
-
-    if($(window).outerWidth() > 680){
-      $('.jl_floor2_open').removeClass('hide');
-      $('.jl_floor2_cont').removeClass('active');
-      // $('.jl_floor2_cont').css('max-height', 9999 + 'px');
-    }
-
-  });
-
     $(window).on('resize', function(){
+
+      if($(window).outerWidth() > 680){
+        $('.jl_floor2_open').removeClass('hide');
+        $('.jl_floor2_cont').removeClass('active');
+      }
+
       $('.jl_floor2_cont').each(function(){
         let tg = $(this);
         let floor2OuterHeight = tg.children('.jl_floor2').outerHeight();
