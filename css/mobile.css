@@ -693,13 +693,16 @@
         flex-direction: column-reverse;
     }
 
-    .job_list .jl_floor2{
-        max-height: 0px;
+    .job_list .jl_floor2_cont{
         overflow: hidden;
+        max-height: 0px;
     }
 
-    .jl_floor2.active{
-        max-height: 9999px;
+    .jl_floor2_cont.active{
+        transition: all 1s ease;
+    }
+
+    .job_list .jl_floor2{
     }
 
     .skillset_list ul li{

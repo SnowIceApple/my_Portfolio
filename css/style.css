@@ -1214,7 +1214,6 @@ section{
 color: transparent;
 background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #527AF2, #5F49F2);
     font-weight: 800;
-    text-transform: uppercase;
     letter-spacing: -1.4px;
 }
 
@@ -1345,7 +1344,6 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     text-align: center;
     cursor: default;
     user-select: none;
-    padding: 5px 20px;
     color: #000;
     letter-spacing: -4px;
 }
