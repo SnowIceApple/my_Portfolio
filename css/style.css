@@ -1108,6 +1108,7 @@ section{
 }
 
 .jl_floor2_open{
+    overflow: hidden;
     display: none;
     width: 100%;
 }
@@ -1119,13 +1120,16 @@ section{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background: #fff;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    background: #333;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
 }
 
-.jl_floor2_open button ion-icon{
-    color: #333;
-    font-size: 28px;
+.jl_floor2_open button .material-symbols-outlined{
+    color: #fff;
+    font-size: 38px;
 }
 
 .job_list .jl_floor2{

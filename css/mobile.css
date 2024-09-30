@@ -531,8 +531,8 @@
     }
 
     .section_header h2{
-        font-size: 54px;
-        letter-spacing: -1px;
+        font-size: 44px;
+        letter-spacing: -2px;
     }
 
     .section_header h3{
@@ -681,7 +681,39 @@
     }
 
     .jl_floor2_open.hide{
-        display: none;
+        /* display: none; */
+        animation: BlocktoNone 1.8s linear forwards, JlFloor2HeightZero 0.3s linear 1s forwards;
+    }
+
+    @keyframes BlocktoNone{
+        0%{
+            display: block;
+        }
+        100%{
+            display: none;
+        }
+    }
+
+    @keyframes JlFloor2HeightZero{
+        0%{
+            max-height: 50px;
+        }
+        100%{
+            max-height: 0px;
+        }
+    }
+
+    .jl_floor2_open button{
+        transition: all .5s ease;
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 1s;
+    }
+
+    .jl_floor2_open.hide button{
+        visibility: hidden;
+        opacity: 0;
+        animation: BlocktoNone 1.4s linear forwards;
     }
 
     .job_list .jl_floor2_box{
