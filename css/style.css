@@ -148,6 +148,7 @@ section{
     transition: all 0.4s ease-in-out;
     will-change: transfrom;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     transition-delay: 0.65s;
     pointer-events: none;
     user-select: none;
@@ -159,6 +160,7 @@ section{
     transform-origin: center;
     will-change: transform;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     transition-delay: 0.65s;
 }
 
@@ -532,8 +534,6 @@ section{
     animation: mobNavTrans2 0.4s linear forwards;
 }
 
-
-
 .main_nav{
     position: relative;
     left: 0;
@@ -724,8 +724,6 @@ section{
     animation: adBounce1 10s ease-in-out infinite;
 }
 
-
-
 .app_deco.ad2{
     left: 35%;
     bottom: 100px;
@@ -837,7 +835,7 @@ section{
 .app_ani_pic.type1{
     left: 0;
     top: 22%;
-    width: 22w;
+    width: 28vw;
     height: 20vw;
 } 
 
