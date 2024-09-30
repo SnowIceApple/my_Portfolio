@@ -21,6 +21,10 @@
 
 @media all and (max-width: 1280px){
 
+    .section_header h2{
+        font-size: 72px;
+    }
+
     .vis_txt_box{
         padding: 150px 5vw;
     }
@@ -137,6 +141,10 @@
         width: calc(33.3333% - 15px);
     }
 
+    .cc_article_desc h2{
+        font-size: 28px;
+    }
+
     .works_list.basic{
         width: calc(50% - 7.5px);
         margin-bottom: 15px;
@@ -187,9 +195,10 @@
         display: none;
     }
 
-    .clone_coding_article a{
+    .clone_coding_article article > a{
         transform: translateX(0);
         opacity: 1;
+        cursor: pointer;
     }
 
     #cursor{
@@ -246,7 +255,7 @@
 
     section:not(#visual, #skill_set),
     footer{
-        padding: 60px 0 0 0 !important; 
+        padding: 80px 0 0 0 !important; 
     }
 
 
