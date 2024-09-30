@@ -192,6 +192,10 @@
         opacity: 1;
     }
 
+    #cursor{
+        display: none;
+    }
+
 }
 
 @media all and (max-width: 1024px){
