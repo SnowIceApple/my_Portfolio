@@ -229,7 +229,7 @@ section{
 .swiper-slide-active .vis_effect{
     transform: scaleX(0) translateZ(0);
     transition: all 1s ease;
-    transition-delay: 0.65s;
+    transition-delay: 0.5s;
     will-change: transform;
 }
 
