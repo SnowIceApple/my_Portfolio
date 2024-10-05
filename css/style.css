@@ -1331,6 +1331,10 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     transition: all .1s ease;
 }
 
+.works_list_min_box .works_list:nth-last-child(-n+2){
+    margin-bottom: 0px;
+}
+
 
 .works_list_divide{
     width: calc(50% - 10px);
