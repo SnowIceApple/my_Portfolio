@@ -130,7 +130,19 @@
 
     .dt_tit{
         left: 50%;
+        bottom: 11%;
         transform: translate(-50%, 0);
+    }
+    
+    .dt_link{
+        opacity: 0;
+        bottom: 43%;
+        transform: translate(-50%, 50%) !important;
+    }
+
+    .works_detail_tab_list.active .dt_link{
+        opacity: 1;
+        bottom: 50%;
     }
 
     .clone_coding_list{
@@ -234,16 +246,6 @@
         color: rgba(255, 255, 255, 0.8);
     }
 
-    .dt_link{
-        opacity: 0;
-        bottom: 43%;
-        transform: translate(-50%, 50%) !important;
-    }
-
-    .works_detail_tab_list.active .dt_link{
-        opacity: 1;
-        bottom: 50%;
-    }
 
     .clone_coding_list::after{
         display: none;
