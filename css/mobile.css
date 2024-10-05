@@ -234,6 +234,15 @@
         color: rgba(255, 255, 255, 0.8);
     }
 
+    .dt_link{
+        bottom: 50%;
+        transform: translate(-50%, 50%) !important;
+    }
+
+    .works_detail_tab_list.active .dt_link{
+        bottom: 50%;
+    }
+
     .clone_coding_list::after{
         display: none;
     }
