@@ -235,11 +235,13 @@
     }
 
     .dt_link{
-        bottom: 50%;
+        opacity: 0;
+        bottom: 43%;
         transform: translate(-50%, 50%) !important;
     }
 
     .works_detail_tab_list.active .dt_link{
+        opacity: 1;
         bottom: 50%;
     }
 
