@@ -318,7 +318,28 @@ $('.clone_coding_article article > a').on('mouseleave', function(){
   ccCursor.removeClass('clonecoding_cursor');
 });
 
-gsap.to('.app_ani_pic', {
+gsap.from('.job_introImg_box', {
+  scale: 0.45,
+  opacity: 0,
+  borderRadius: "20vw",
+  scrollTrigger: {
+      trigger: ".job_introImg",
+			start: "top bottom", 
+			end: "center 75%", 
+			scrub: 1.7
+  }
+});
+
+gsap.to('.job_introImg_box', {
+  scale: 1,
+  opacity: 1,
+  borderRadius: "0",
+  scrollTrigger: {
+      trigger: ".job_introImg",
+			start: "top bottom", 
+			end: "center 75%", 
+			scrub: 1.7
+  }
 });
 
 // ScrollTrigger.defaults({
@@ -327,7 +348,7 @@ gsap.to('.app_ani_pic', {
 
 gsap.to(".app_ani_pic", {
   scrollTrigger: {
-    scrub: 1,
+    scrub: 3,
     trigger: '.appeal',
     start: 'top 100%',
     end: 'bottom',
@@ -344,6 +365,21 @@ $('.dt_img_inner').each(function(){
     }
     else{
       $(this).parents('.detail_tabBox').removeClass('active');
+    }
+  });
+});
+
+$('.clone_coding_article').each(function(){
+  $(this).on('click', function(){
+    $(this).addClass('noti_off');
+  });
+});
+
+$(window).on('resize', function(){
+
+  $('.clone_coding_article').each(function(){
+    if($(window).outerWidth() > 1280 && $(this).not('.noti_off')){
+      $('.clone_coding_article').removeClass('noti_off');
     }
   });
 });
