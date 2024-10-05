@@ -574,7 +574,7 @@ section{
     background-color: #000;
     pointer-events: none;
     border-radius: 23.5px;
-    transition: all .5s ease;
+    transition: all .3s ease;
 }
 
 #nav ul{
