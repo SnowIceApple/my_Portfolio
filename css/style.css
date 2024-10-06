@@ -1760,8 +1760,12 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     bottom: 0;
     width: calc(100% - 7px);
     height: 60px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%,rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%,rgba(255, 255, 255, 0.9) 60%, rgba(255, 255, 255, 1) 100%);
     pointer-events: none;
+}
+
+.detail_tabBox.active .dt_img::after{
+    z-index: 3;
 }
 
 .dt_img img{
