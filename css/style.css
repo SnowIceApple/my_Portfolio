@@ -6,12 +6,12 @@ body{
     scroll-behavior: smooth;
     font-family: 'Pretendard', sans-serif;
     overflow-x: hidden;
-    -ms-overflow-style: none;
+    /* -ms-overflow-style: none; */
 }
 
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     display: none;
-}
+} */
 
 :root{
     --pb_bg-: #6dcbeb;
@@ -697,7 +697,6 @@ section{
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 .appeal > div:not(.app_deco){
@@ -1201,9 +1200,12 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     align-items: center;
     justify-content: center;
     height: 14vw;
+    overflow: hidden;
 }
 
+
 .ssl_inner{
+    position: relative;
     display: flex;
     width: 100%;
     height: 100%;
@@ -1240,14 +1242,22 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
 }
 
 .ssl_txt span{
-    width: 100%;
     color: #1a1a1a;
     font-size: max(1.9vw, 17px);
     text-transform: uppercase;
-    font-weight: 200;
+    font-weight: 100;
     display: block;
     padding: 8px 10px;
     letter-spacing: -0.1vw;
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: all .7s ease;
+    background-image: linear-gradient(#222, #222);
+}
+
+.ssl_txt span.hl{
+    background-size: 100% 100%;
+    color: #fff;
 }
 
 .ssl_ico{
@@ -1738,7 +1748,7 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
 }
 
 .detail_tabBox.active .dt_img::before{
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.05);
     transition: all .3s ease;
 }
 
@@ -1988,10 +1998,9 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     transition: all 1s ease;
 }
 
-.view .clone_coding_article::before{
+.clone_coding_article.line_on::before{
     transform: scaleX(1);
     opacity: 1;
-    transition-delay: 0.5s;
 }
 
 .clone_coding_list::after {

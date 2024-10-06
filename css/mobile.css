@@ -154,7 +154,7 @@
     }
 
     .cc_article_inner::after{
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         content: "Click!";
@@ -172,6 +172,10 @@
 
     .noti_off .cc_article_inner::after{
         display: none;
+    }
+
+    .noti_view .cc_article_inner::after{
+        display: flex;
     }
 
     .cc_article_desc h2{

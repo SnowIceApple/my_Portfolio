@@ -384,6 +384,36 @@ $(window).on('resize', function(){
   });
 });
 
+let cloneArticle = $('.clone_coding_article');
+
+cloneArticle.each(function(index, ca){
+  ScrollTrigger.create({
+    trigger: ca,
+    start: "top 85%",
+    onEnter: function(){
+      $(ca).addClass('on noti_view line_on');
+    },
+    onLeaveBack: function(){
+      $(ca).removeClass('noti_view line_on');
+    }
+  });
+});
+
+let highLight = $('.ssl_txt span');
+
+highLight.each(function(index, hl){
+  ScrollTrigger.create({
+    trigger: hl,
+    start: "top 86%",
+    onEnter: function(){
+      $(hl).addClass('hl');
+    },
+    onLeaveBack: function(){
+      $(hl).removeClass('hl');
+    }
+  });
+});
+
 });
 
 $(window).on('load', function(){
