@@ -371,14 +371,16 @@ $('.dt_img_inner').each(function(){
 
 $('.clone_coding_article').each(function(){
   $(this).on('click', function(){
-    $(this).addClass('noti_off');
+    if($(window).outerWidth() <= 1280){
+      $(this).addClass('noti_off');
+    }
   });
 });
 
 $(window).on('resize', function(){
 
   $('.clone_coding_article').each(function(){
-    if($(window).outerWidth() > 1280 && $(this).not('.noti_off')){
+    if($(window).outerWidth() >= 1280 && $(this).not('.noti_off')){
       $('.clone_coding_article').removeClass('noti_off');
     }
   });
@@ -389,7 +391,7 @@ let cloneArticle = $('.clone_coding_article');
 cloneArticle.each(function(index, ca){
   ScrollTrigger.create({
     trigger: ca,
-    start: "top 85%",
+    start: "top 86%",
     onEnter: function(){
       $(ca).addClass('on noti_view line_on');
     },

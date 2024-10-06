@@ -171,7 +171,7 @@
     }
 
     .noti_off .cc_article_inner::after{
-        display: none;
+        display: none !important;
     }
 
     .noti_view .cc_article_inner::after{
