@@ -358,6 +358,7 @@ gsap.to(".app_ani_pic", {
   ease: "power1.inOut",
 });
 
+
 $('.dt_img_inner').each(function(){
   $(this).on('scroll', function(){
     if($(this).scrollTop() > 0){
@@ -415,6 +416,8 @@ highLight.each(function(index, hl){
     }
   });
 });
+
+
 
 });
 
