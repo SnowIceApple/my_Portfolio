@@ -154,11 +154,12 @@
     }
 
     .cc_article_inner::after{
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
         content: "Click!";
         position: absolute;
+        transform: scale(0);
         right: 10px;
         top: 26px;
         width: 60px;
@@ -168,14 +169,18 @@
         background-color: rgb(255, 69, 28);
         font-size: 16px;
         font-weight: 300;
+        opacity: 0;
     }
 
     .noti_off .cc_article_inner::after{
-        display: none !important;
+        opacity: 0;
     }
 
     .noti_view .cc_article_inner::after{
-        display: flex;
+        opacity: 1;
+        transform: scale(1);
+        transition: all .3s ease;
+
     }
 
     .cc_article_desc h2{
@@ -306,7 +311,9 @@
     }
 
     .cc_ori_site a{
-        font-size: 16px;
+        font-size: 15px;
+        padding: 15px 29px;
+        border-radius: 22.5px;
     }
 
 }
