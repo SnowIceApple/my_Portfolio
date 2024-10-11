@@ -1283,7 +1283,6 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     margin-bottom: 50px;
     padding-bottom: 10px;
     text-align: center;
-    background: #fff;
     z-index: 100;
 }
 
@@ -1955,6 +1954,7 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
 #clone_coding{
     width: 100%;
     padding: 140px 0;
+    margin-top: 80px;
 }
 
 .clone_coding{
@@ -2069,6 +2069,10 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     transform-origin: center;
 }
 
+.cc_article_img.type_logo:not(.toi){
+    background: #fff;
+}
+
 .cc_article_img.type_logo img{
     max-width: 90%;
     max-height: 200px;
@@ -2123,7 +2127,7 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     position: relative;
     z-index: 3;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     box-sizing: border-box;
     color: #222;
     display: inline-block;
@@ -2229,6 +2233,42 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     max-height: 300px;
 }
 
+/* clone_coding dark */
+
+#clone_coding.dark{
+    background: #1d1f22;
+}
+
+#clone_coding.dark .clone_coding_article::before{
+    background: #fff;
+}
+
+#clone_coding.dark .cc_ori_site{
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+#clone_coding.dark .cc_ori_site a{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#clone_coding.dark .cc_ori_site a::after{
+    background: rgba(184, 149, 53, 0.5);
+}
+
+#clone_coding.dark .cc_ori_site a:hover{
+    color: #fff;
+    transition-delay: 0.7s;
+}
+
+#clone_coding.dark .cc_ori_site a:hover::after{
+    animation: LinkCircleToBtnDark alternate forwards 0.8s;
+}
+
+#clone_coding.dark .section_header h2,
+#clone_coding.dark .cc_article_desc h2{
+    color: #fff;
+}
+
 /* footer */
 
 #footer{
@@ -2252,7 +2292,7 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
 
 #cursor{
     position: fixed;
-    background: #222;
+    background: #333;
     transform: translate(-50%, -50%) scale(0);
     z-index: 9999;
     pointer-events: none;
@@ -2271,6 +2311,7 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     font-weight: 200;
     text-transform: capitalize;
     letter-spacing: -1.5px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 #cursor.clonecoding_cursor{

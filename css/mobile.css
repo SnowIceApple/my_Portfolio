@@ -196,6 +196,10 @@
         font-size: 16px;
     }
 
+    #clone_coding.dark .cc_ori_site a{
+        color: #fff;
+    }
+
     .cc_ori_site a::after{
         width: 100%;
         height: 100%;
@@ -206,6 +210,10 @@
     }
 
     .cc_ori_site a:hover::after{
+        animation: none;
+    }
+
+    #clone_coding.dark .cc_ori_site a:hover::after{
         animation: none;
     }
 
@@ -320,8 +328,7 @@
 
 @media all and (max-width: 864px){
 
-    section:not(#visual, #skill_set),
-    footer{
+    section:not(#visual, #skill_set){
         padding: 100px 0 0 0 !important; 
     }
 
