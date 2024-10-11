@@ -101,6 +101,7 @@ $(document).ready(function(){
 
     $(window).on('resize', function(){
 
+
       if($(window).outerWidth() > 680){
         $('.jl_floor2_open').removeClass('hide');
         $('.jl_floor2_cont').removeClass('active');
@@ -121,7 +122,7 @@ $(document).ready(function(){
         }
 
       });
-    })
+    });
 
   // $(".dt_img_inner").mCustomScrollbar({theme:"inset-dark"});
 

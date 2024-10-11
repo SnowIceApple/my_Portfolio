@@ -42,7 +42,6 @@ body{
 #wrap{
     position: relative;
     width: 100%;
-    overflow-x: hidden;
 }
 
 .eb{

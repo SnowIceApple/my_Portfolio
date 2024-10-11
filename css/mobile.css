@@ -173,7 +173,7 @@
     }
 
     .noti_off .cc_article_inner::after{
-        opacity: 0;
+        opacity: 0 !important;
     }
 
     .noti_view .cc_article_inner::after{
