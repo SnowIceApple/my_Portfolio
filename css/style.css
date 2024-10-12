@@ -742,7 +742,6 @@ section{
     display: flex;
     flex-wrap: wrap;
     width: 80%;
-    height: 80%;
 }
 
 .apk_box ul{
@@ -751,6 +750,7 @@ section{
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
+    gap: 2px 0;
 }
 
 .apk_box ul li{

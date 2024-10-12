@@ -101,8 +101,9 @@ $(document).ready(function(){
 
     $(window).on('resize', function(){
 
+      let outerWidth = $(window).outerWidth();
 
-      if($(window).outerWidth() > 680){
+      if(outerWidth > 680){
         $('.jl_floor2_open').removeClass('hide');
         $('.jl_floor2_cont').removeClass('active');
       }
@@ -111,13 +112,13 @@ $(document).ready(function(){
         let tg = $(this);
         let floor2OuterHeight = tg.children('.jl_floor2').outerHeight();
 
-        if($(window).outerWidth() > 680 && $(this).not('.active')){
+        if(outerWidth > 680 && $(this).not('.active')){
           tg.css('max-height', 9999 + 'px');
         }
-        if($(window).outerWidth() < 680 && $(this).not('.active')){
+        if(outerWidth < 680 && $(this).not('.active')){
           tg.css('max-height', 0 + 'px');
         }
-        if($(window).outerWidth() < 680 && tg.hasClass('active')){
+        if(outerWidth < 680 && tg.hasClass('active')){
           tg.css('max-height', floor2OuterHeight + 'px');
         }
 
