@@ -7,40 +7,6 @@ $(document).ready(function(){
   
   gsap.registerPlugin(ScrollTrigger);
 
-  // $('#nav ul li').each(function(){
-  //   var tg = $(this);
-  //   var idx = tg.index();
-  //   var idxPos = idx * 130;
-  //   var navDeco = $('.main_nav_list_deco');
-
-  //   $(this).on('click', function(){
-  //     $(this).addClass('on').siblings().removeClass('on');
-  //   navDeco.css('left', idxPos + 'px');
-  //     // console.log(idx, idxPos);
-  //     $('.works_detail_tab').removeClass('active');
-  //     $('.works_detail_tab_list').removeClass('active');
-  //     $('body').removeClass('fixed');
-  //   });
-
-  // });
-
-  // $(window).on('scroll', function(){
-  //   $('#nav ul li').each(function(index){
-  //     var navIdx = -1;
-
-  //     if($(this).hasClass('on')){
-
-  //       navIdx = index;
-  //       console.log(index);
-  //       var idxPos = navIdx * 130;
-  //       var navDeco = $('.main_nav_list_deco');
-  //       navDeco.css('left', idxPos + 'px');
-  //     }
-  //   });
-  // });
-
-
-
     const swiper1 = new Swiper('.visual_swiper', {
     direction: 'horizontal',
       loop: true,
@@ -265,40 +231,6 @@ $(document).ready(function(){
     $('.works_detail_tab_list').removeClass('active');
     $('body').removeClass('fixed');
   });
-
-
-  // $(document).on('mouseup', function(e){
-  //   var works_list = $('.works_list');
-  //   var works_detail = $('.works_detail_tab_list');
-  //   var detail_tabBox = $('.detail_tabBox');
-  //   if(detail_tabBox.has(e.target).length === 0){
-  //     works_list.removeClass('active');
-  //     works_detail.removeClass('active');
-  //     $('.works_detail_tab').removeClass('active');
-  //     $('body').removeClass('fixed');
-  //   }
-  // });
-
-
-  
-  // var controller = new ScrollMagic.Controller();
-
-  // var tween1 = TweenMax.to('#visual', 1, {
-  //   opacity: 0,
-  //   ease: "power2.out",
-  // });
-
-  // var scene = new ScrollMagic.Scene({
-  //   triggerElement: ".trigger1",
-  //   triggerHook: 0.5,
-  //   duration: "50%",
-  // })
-
-  // .setTween(tween1)
-  // // .addIndicators({name: "visualOpacity"})
-  // .addTo(controller);
-
-
 
 
 let ccCursor = $('#cursor');
