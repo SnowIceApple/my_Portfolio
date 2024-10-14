@@ -2006,10 +2006,10 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     opacity: 1;
 }
 
-.clone_coding_list::after {
+/* .clone_coding_list::after {
     content: "";
     flex: auto;
-}
+} */
 
 .clone_coding_article article{
     width: 100%;
