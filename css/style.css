@@ -1066,15 +1066,14 @@ section{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background: #333;
+    background: #f5f5f7;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
-    border-radius: 5px;
     visibility: hidden;
     opacity: 0;
 }
 
 .jl_floor2_open button .material-symbols-outlined{
-    color: #fff;
+    color: #444;
     font-size: 38px;
 }
 
