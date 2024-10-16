@@ -43,10 +43,10 @@ $(document).ready(function(){
   $('.jl_floor2_open').on('click', function(){
     $(this).addClass('hide');
     $(this).siblings('.jl_floor2_cont').addClass('active');
-    let tg = $(this);
-    let ClsjlFloor2 = tg.siblings().children('.jl_floor2');
-    let ClsjlFloor2Cont = ClsjlFloor2.parent('.jl_floor2_cont');
-    let ClsjlFloor2Height = ClsjlFloor2.outerHeight();
+    var tg = $(this);
+    var ClsjlFloor2 = tg.siblings().children('.jl_floor2');
+    var ClsjlFloor2Cont = ClsjlFloor2.parent('.jl_floor2_cont');
+    var ClsjlFloor2Height = ClsjlFloor2.outerHeight();
 
     ClsjlFloor2Cont.css('max-height', ClsjlFloor2Height + 'px');
   });
@@ -67,7 +67,7 @@ $(document).ready(function(){
 
     $(window).on('resize', function(){
 
-      let outerWidth = $(window).outerWidth();
+      var outerWidth = $(window).outerWidth();
 
       if(outerWidth > 680){
         $('.jl_floor2_open').removeClass('hide');
@@ -75,8 +75,8 @@ $(document).ready(function(){
       }
 
       $('.jl_floor2_cont').each(function(){
-        let tg = $(this);
-        let floor2OuterHeight = tg.children('.jl_floor2').outerHeight();
+        var tg = $(this);
+        var floor2OuterHeight = tg.children('.jl_floor2').outerHeight();
 
         if(outerWidth > 680 && $(this).not('.active')){
           tg.css('max-height', 9999 + 'px');
@@ -104,7 +104,7 @@ $(document).ready(function(){
   const sections = document.querySelectorAll('section');
   const navList = document.querySelectorAll('#nav ul li');
 
-  let observer1 = new IntersectionObserver((entries) => {
+  var observer1 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       entry.target.classList.toggle('view', entry.isIntersecting);
     });
@@ -115,7 +115,7 @@ $(document).ready(function(){
   );
 
 
-  let observer2 = new IntersectionObserver((entries) => {
+  var observer2 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       entry.target.classList.toggle('view', entry.isIntersecting);
     });
@@ -125,7 +125,7 @@ $(document).ready(function(){
     }
   );
 
-  let observer3 = new IntersectionObserver((entries) => {
+  var observer3 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       entry.target.classList.toggle('view', entry.isIntersecting);
     });
@@ -135,7 +135,7 @@ $(document).ready(function(){
     }
   );
 
-  let observer4 = new IntersectionObserver((entries) => {
+  var observer4 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       entry.target.classList.toggle('view', entry.isIntersecting);
     });
@@ -147,11 +147,11 @@ $(document).ready(function(){
 
   // let navTrFs = false;
 
-  let observerNav = new IntersectionObserver((entries) => {
+  var observerNav = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       const idx = Array.from(sections).indexOf(entry.target);
-      let idxPos = idx * 130;
-      let navDeco = $('.main_nav_list_deco');
+      var idxPos = idx * 130;
+      var navDeco = $('.main_nav_list_deco');
 
       console.log(idx);
 
@@ -218,8 +218,8 @@ $(document).ready(function(){
 
   $('.works_list a').on('click', function(e){
     e.preventDefault();
-    let tg = $(this).parent();
-    let idx = tg.index();
+    var tg = $(this).parent();
+    var idx = tg.index();
     console.log(idx);
     $('.works_detail_tab_list').eq(idx).addClass('active').siblings().removeClass('active');
     $('.works_detail_tab').addClass('active');
@@ -233,7 +233,7 @@ $(document).ready(function(){
   });
 
 
-let ccCursor = $('#cursor');
+var ccCursor = $('#cursor');
 
 $(document).on('mousemove', function(e){
 
@@ -321,7 +321,7 @@ $(window).on('resize', function(){
   });
 });
 
-let cloneArticle = $('.clone_coding_article');
+var cloneArticle = $('.clone_coding_article');
 
 cloneArticle.each(function(index, ca){
   ScrollTrigger.create({
@@ -336,7 +336,7 @@ cloneArticle.each(function(index, ca){
   });
 });
 
-let highLight = $('.ssl_txt span');
+var highLight = $('.ssl_txt span');
 
 highLight.each(function(index, hl){
   ScrollTrigger.create({
