@@ -158,3 +158,46 @@
     }
 }
 
+@keyframes FtLtR{
+    0%{
+        right: calc(100% + 3.5vw);
+    }
+
+    10%{
+        right: calc(100% + 3.5vw);
+    }
+
+    40%{
+        right: calc(0% - 9.5vw);
+    }
+
+    60%{
+        right: calc(0% - 9.5vw);
+    }
+
+    100%{
+        right: calc(100% + 3.5vw);
+    }
+}
+
+@keyframes FtRtL{
+    0%{
+        left: calc(100% + 3.5vw);
+    }
+
+    10%{
+        left: calc(100% + 3.5vw);
+    }
+
+    40%{
+        left: calc(0% - 9.5vw);
+    }
+
+    60%{
+        left: calc(0% - 9.5vw);
+    }
+
+    100%{
+        left: calc(100% + 3.5vw);
+    }
+}

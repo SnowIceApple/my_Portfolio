@@ -961,9 +961,7 @@
     .cc_article_img{
         height: 270px;
     }
-
 }
-
 
 @media all and (max-width: 480px){
 
@@ -1010,13 +1008,17 @@
         border-radius: 14vw 0 0 14vw;
     }
 
-
     .dt_tit h3{
         font-size: 22px;
     }
 
     .intro_tit h2{
         font-size: 20vw;
+    }
+
+    .footer h2::before,
+    .footer h2::after{
+        border-width: 2px;
     }
 
 }
