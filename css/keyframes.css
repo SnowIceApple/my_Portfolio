@@ -1,3 +1,13 @@
+@keyframes listMarquee{
+    0%{
+        transform: translateX(-30%);
+    }
+
+    100%{
+        transform: translateX(-150%);
+    }
+}
+
 @keyframes dotPulse{
     0%{
         opacity: 0;

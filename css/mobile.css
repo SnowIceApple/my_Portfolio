@@ -1,3 +1,7 @@
+@media all and (min-width: 768px){
+
+}
+
 @media all and (max-width: 1680px){
 
     .skill_desc_box{
@@ -21,16 +25,57 @@
 
 @media all and (max-width: 1280px){
 
+    #visual{
+        height: auto;
+        aspect-ratio: 5 / 4;
+    }
+
+    .msb:hover{
+        width: 125px;
+    }
+
+    .msb .ico,
+    .msb .ico:hover{
+        background: #000;
+    }
+
+    .dark .msb .ico,
+    .dark .msb .ico:hover{
+        background: #fff;
+    }
+
+    .msb .ico{
+        width: 60px;
+        height: 60px;
+    }
+
+    .msb .ico .material-symbols-outlined{
+        font-size: 34px;
+    }
+
+    .msb .ico .material-symbols-outlined,
+    .msb .ico:hover .material-symbols-outlined{
+        color: #fff;
+    }
+
+    .dark .msb .ico .material-symbols-outlined,
+    .dark .msb .ico:hover .material-symbols-outlined{
+        color: #000;
+    }
+
+    .msb:hover .ico_txt span,
+    .msb .ico_txt span{
+        letter-spacing: 3px;
+        text-indent: 3px;
+        font-size: 13px;
+    }
+
     .section_header h2{
         font-size: 48px;
     }
 
-    .vis_txt_box{
-        padding: 150px 5vw;
-    }
-
     #appeal{
-        height: 60vw;
+        height: 70vw;
     }
 
     .app_diagram{
@@ -331,10 +376,21 @@
 
 @media all and (max-width: 864px){
 
-    section:not(#visual, #skill_set){
+    #nav ul li{
+        width: 120px;
+    }
+
+    #nav ul li a{
+        font-size: 15px;
+    }
+
+    section:not(#appeal, #visual, #skill_set){
         padding: 100px 0 0 0 !important; 
     }
 
+    #visual{
+        margin-bottom: 100px;
+    }
 
     .vss_txt{
         height: auto;
@@ -545,52 +601,10 @@
 
 @media all and (max-width: 768px){
 
-    .main_nav_box{
-        right: 10px;
-        bottom: calc(100% - 80px);
-        transform: translateX(0);
-    }
-
     .main_nav_box.on .main_nav_open{
         box-shadow: none;
     }
 
-    .main_nav_button_box{
-        display: flex;
-    }
-
-
-    .main_nav{
-        position: fixed;
-        left: calc(-100vw + 80px);
-        top: -10px;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(255, 255, 255, 0.97);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        box-sizing: border-box;
-        padding: 90px 35px;
-        border-radius: 0;
-        z-index: 1;
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    .main_nav_list_deco{
-        display: none;
-    }
-
-    #nav{
-        width: 100%;
-        height: 100%;
-        align-items: flex-start;
-    }
-
-    #nav ul{
-        width: 100%;
-        flex-direction: column;
-    }
 
     #nav ul li{
         opacity: 0;
