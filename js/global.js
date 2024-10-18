@@ -216,7 +216,7 @@ gsap.to(".infinite_list .floor1 .rtl", {
 
     $(document).on('mouseup', function(e){
     var navBox = $('.main_nav_box');
-    if(navBox.has(e.target).length === 0){
+    if(navBox.has(e.target).length === 0 && !$('.works_detail_tab').is(e.target) && $('.works_detail_tab').has(e.target).length === 0){
       navBox.removeClass('on');
       $('body').removeClass('fixed');
     }

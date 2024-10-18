@@ -376,14 +376,6 @@
 
 @media all and (max-width: 864px){
 
-    #nav ul li{
-        width: 120px;
-    }
-
-    #nav ul li a{
-        font-size: 15px;
-    }
-
     section:not(#appeal, #visual, #skill_set){
         padding: 100px 0 0 0 !important; 
     }
@@ -605,7 +597,6 @@
         box-shadow: none;
     }
 
-
     #nav ul li{
         opacity: 0;
         transform: translateY(-80%);
@@ -619,15 +610,84 @@
         visibility: visible;
     }
 
-    #nav ul li a{
-        width: 100%;
-        text-align: left;
-        font-size: 13vw;
-        font-weight: 900;
+
+    .msb{
+        top: calc(100% + 1px);
+        width: 50%;
+        height: 60px;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border-bottom: 1px solid #000;
+        flex-direction: row;
     }
 
-    #nav ul li.on a{
-        color: #1a1a1a;
+    .msb::before,
+    .msb::after{
+        display: none;
+    }
+
+    .msb:hover{
+        width: 50%;
+    }
+    
+    .msb .ico{
+        width: 40px;
+        height: 40px;
+    }
+
+    .msb .ico .material-symbols-outlined{
+        font-size: 24px;
+    }
+
+    .msb .ico_txt{
+        margin-top: 0px;
+    }
+
+    .sbn{
+        border-left: 0px;
+    }
+
+    .sbn .ico{
+        order: 2;
+    }
+
+    .sbn .ico_txt{
+        order: 1;
+    }
+
+    #visual{
+    }
+
+    .visual{
+        padding-bottom: 60px;
+    }
+
+    .vis_txt_box{
+        width: calc(100% - 50px);
+    }
+
+    .vis_txt_box .vt_floor, .vis_txt_box .vt_floor *{
+        font-size: 8.5vw;
+    }
+
+    .vis_txt_box .vt_floor .vtf_vid{
+        width: 18vw;
+        height: 8.5vw;
+        border-radius: 4.25vw;
+    }
+
+    .scroll_down{
+        bottom: 50px;
+    }
+
+    .scroll_down a > span{
+        font-size: 12px;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .scroll_down_arrow span{
+        border-width: 1px;
     }
 
     .section_header{
@@ -874,6 +934,10 @@
 
     .vis_txt_box h1{
         font-size: 7.5vw;
+    }
+
+    .main_nav{
+        width: 100vw;
     }
 
     .apk_box{

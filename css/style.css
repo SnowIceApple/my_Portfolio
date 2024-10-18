@@ -103,7 +103,6 @@ section{
 #visual{
     width: 100%;
     height: 100vh;
-    border-bottom: 1px solid #000;
     background: #fff;
 }
 
@@ -111,7 +110,6 @@ section{
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     cursor: default;
 }
 
@@ -119,6 +117,7 @@ section{
     position: relative;
     width: 100%;
     height: 100%;
+    border-bottom: 1px solid #000;
 }
 
 .visual_swiper .swiper-slide{
@@ -944,8 +943,6 @@ section{
     opacity: 0;
     transform: translateY(-80%);
     margin-bottom: 15px;
-    border: 1px solid #E0E0E0;
-    border-radius: 27.5px;
     overflow: hidden;
 }
 
@@ -962,6 +959,9 @@ section{
     font-family: "Pretendard", sans-serif;
     letter-spacing: 2px;
     text-transform: uppercase;
+    border: 1px solid #E0E0E0;
+    border-radius: 27.5px;
+    overflow: hidden;
 }
 
 .nav_txt_ani{
@@ -973,16 +973,13 @@ section{
     flex-wrap: wrap;
     flex-direction: column;
     transition: all .4s ease;
+    will-change: transform;
 }
 
 #nav ul li a:focus .nav_txt_ani,
 #nav ul li a:active .nav_txt_ani,
 #nav ul li a:hover .nav_txt_ani{
     transform: translateY(-55px);
-}
-
-.nav_txt_ani{
-    width: 100%;
 }
 
 .nav_txt_ani span{
