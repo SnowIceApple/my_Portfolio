@@ -303,7 +303,7 @@ gsap.to('.job_introImg_box', {
 gsap.to('.job_introImg', {
   scrollTrigger: {
     trigger: ".job_introImg",
-    start: "90% bottom", 
+    start: "80% bottom", 
     onEnter: function(){
       $('.job_introImg_box').addClass('on');
     },
