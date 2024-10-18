@@ -812,7 +812,7 @@ section{
     position: fixed;
     right: 10px;
     bottom: calc(100% - 80px);
-    z-index: 9999;
+    z-index: 299;
 }
 
 .main_nav{
