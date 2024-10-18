@@ -143,6 +143,7 @@ gsap.to(".infinite_list .floor1 .rtl", {
   });
 
   $('.main_nav_open').on('click', function(){
+    $(this).toggleClass('on');
     $('.main_nav_box').toggleClass('on');
     $('body').toggleClass('fixed');
     $('#nav ul li').removeClass('on');
@@ -213,6 +214,14 @@ gsap.to(".infinite_list .floor1 .rtl", {
 
   // let navTrFs = false;
 
+    $(document).on('mouseup', function(e){
+    var navBox = $('.main_nav_box');
+    if(navBox.has(e.target).length === 0){
+      navBox.removeClass('on');
+      $('body').removeClass('fixed');
+    }
+  });
+
 
   var sections = $('section');
   var navList = $('#nav ul li');
@@ -249,14 +258,11 @@ gsap.to(".infinite_list .floor1 .rtl", {
     });
   }
 
-  $(window).on('resize', function(){
-    if($(window).outerWidth() < 768){
-      $('#nav ul li').on('click', function(){
-        $('.main_nav_box').removeClass('on');
-        $('body').removeClass('fixed');
-      });
-    }
+  $('#nav ul li').on('click', function(){
+    $('.main_nav_box').removeClass('on');
+    $('body').removeClass('fixed');
   });
+
 
   $('.works_list a').on('click', function(e){
     e.preventDefault();

@@ -822,16 +822,31 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    width: 100vw;
+    width: 400px;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     box-sizing: border-box;
     z-index: 1;
     opacity: 0;
     visibility: hidden;
     transition: all .2s ease;
+}
+
+.nav_bg{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: all .2s ease;
+}
+
+.fixed .nav_bg{
+    opacity: 1;
+    visibility: visible;
 }
 
 .main_nav_box.on .main_nav{
@@ -905,7 +920,7 @@ section{
     display: flex;
     position: relative;
     transform: translateX(100%);
-    width: 400px;
+    width: 100%;
     height: 100%;
     align-items: flex-start;
     background: #fff;
@@ -928,21 +943,62 @@ section{
     width: 100%;
     opacity: 0;
     transform: translateY(-80%);
+    margin-bottom: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 27.5px;
+    overflow: hidden;
 }
 
 #nav ul li a{
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
     width: 100%;
-    font-size: 32px;
-    padding: 15px 0;
-    color: #1a1a1a;
+    font-size: 15px;
+    height: 55px;
     transition: all .5s ease;
     box-sizing: border-box;
-    font-weight: 400;
+    font-weight: 700;
     font-family: "Pretendard", sans-serif;
-    letter-spacing: -0.9px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+.nav_txt_ani{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    transition: all .4s ease;
+}
+
+#nav ul li a:focus .nav_txt_ani,
+#nav ul li a:active .nav_txt_ani,
+#nav ul li a:hover .nav_txt_ani{
+    transform: translateY(-55px);
+}
+
+.nav_txt_ani{
+    width: 100%;
+}
+
+.nav_txt_ani span{
+    display: block;
+    padding: 0 35px;
+    line-height: 55px;
+}
+
+.nav_txt_ani span:first-child{
+    background: #f5f6f7;
+    color: #1a1a1a;
+}
+
+.nav_txt_ani span:last-child{
+    background: #1a1a1a;
+    color: #f5f6f7;
 }
 
 .main_nav_box.on #nav ul li{
