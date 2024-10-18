@@ -104,6 +104,7 @@ section{
     width: 100%;
     height: 100vh;
     background: #fff;
+    will-change: opacity;
 }
 
 .visual{
@@ -186,6 +187,7 @@ section{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    will-change: transform;
 }
 
 .vis_txt_box .vt_floor{
@@ -1221,6 +1223,7 @@ section{
 .app_ani_pic{
     position: absolute;
     overflow: hidden;
+    will-change: transform;
 }
 
 .app_ani_pic img{
@@ -1290,7 +1293,7 @@ section{
 }
 
 .job_introImg_box{
-    height: 40vw;
+    height: 35vw;
     overflow: hidden;
     background: url('../img/cat-7210553_1920.jpg');
     background-position: center;
@@ -1300,6 +1303,7 @@ section{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    will-change: transform;
 }
 
 .job_introImg_box::after{
@@ -1310,7 +1314,8 @@ section{
     top: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1));
+    background-image: linear-gradient(120deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5), rgba(1, 43, 93, 1));
+    mix-blend-mode: multiply;
 }
 
 /* 
@@ -1371,22 +1376,71 @@ section{
 
 .job_introTxt{
     position: absolute;
-    right: 55px;
-    bottom: 40px;
-    width: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     z-index: 2;
     color: #fff;
 }
 
-.job_introTxt strong{
-    text-align: right;
-    font-size: max(4.2vw, 32px);
-    font-weight: 600;
-    letter-spacing: -1px;
-    line-height: 1.3;
-    font-family: "neue-hass-grotesk-display", sans-serif;
-    display: inline-block;
+.job_introTxt .ji_ani{
+    overflow: hidden;
 }
+
+.job_introTxt .ji_ani strong{
+    position: relative;
+    text-align: center;
+    display: block;
+    transition: transform 1.3s, opacity 1.3s;
+    transition-delay: 0.9s;
+    opacity: 0;
+}
+
+.job_introTxt .ji_ani:first-of-type strong{
+    transform: translateY(100%);
+}
+
+.job_introTxt .ji_ani:last-of-type strong{
+    transform: translateY(-100%);
+}
+
+.job_introImg_box.on .ji_ani strong{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.job_introTxt .ji_ani:first-of-type strong{
+    font-weight: 500;
+    font-size: max(4.4vw, 22px);
+    letter-spacing: -0.2vw;
+}
+
+.job_introTxt .ji_ani:last-of-type strong{
+    font-size: max(2.2vw, 14px);
+    font-weight: 200;
+    letter-spacing: -0.1vw;
+}
+
+.job_introTxt span{
+    display: block;
+    width: 100%;
+    height: 1px;
+    transform: scale(0);
+    background: #fff;
+    margin: max(0.8vw, 8px) 0 max(0.8vw, 8px) 0;
+    transition: all 1s ease;
+    transform-origin: center;
+}
+
+.job_introImg_box.on .job_introTxt span{
+    transform: scale(1);
+}
+
+
 
 .job_list{
     box-sizing: border-box;
@@ -1680,7 +1734,6 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
 
 .section_header{
     margin-bottom: 50px;
-    padding-bottom: 10px;
     text-align: center;
     z-index: 100;
 }

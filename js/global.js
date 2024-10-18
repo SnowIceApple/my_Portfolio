@@ -222,34 +222,9 @@ gsap.to(".infinite_list .floor1 .rtl", {
     }
   });
 
-
-  var sections = $('section');
-  var navList = $('#nav ul li');
+  var job_introImg = $('.job_introImg_box');
 
 
-
-  var observerOptions = {
-    threshold: [0.05, 0.2]
-  };
-  
-  var callback = (entries, observer) => {
-    entries.forEach(entry => {
-      let idx = sections.index(entry.target);
-      console.log(idx);
-      if(idx === 1 && entry.intersectionRatio > 0.2){
-        $(navList[idx]).addClass('on').siblings().removeClass('on');
-      }
-      if(idx !== 1 && entry.intersectionRatio > 0.2){
-        $(navList[idx]).addClass('on').siblings().removeClass('on');
-      }
-    });
-  };
-  
-  var observer = new IntersectionObserver(callback, observerOptions);
-  
-  sections.each(function(index, section) {
-    observer.observe(section);
-  });
 
   if($(window).outerWidth() < 768){
     $('#nav ul li').on('click', function(){
@@ -320,8 +295,22 @@ gsap.to('.job_introImg_box', {
       trigger: ".job_introImg",
 			start: "top bottom", 
 			end: "center 75%", 
-			scrub: 1.7
-  }
+			scrub: 1.7,
+
+  },
+});
+
+gsap.to('.job_introImg', {
+  scrollTrigger: {
+    trigger: ".job_introImg",
+    start: "100% bottom", 
+    onEnter: function(){
+      $('.job_introImg_box').addClass('on');
+    },
+    onLeaveBack: function(){
+      $('.job_introImg_box').removeClass('on');
+    },  
+},
 });
 
 // ScrollTrigger.defaults({
