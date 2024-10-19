@@ -811,9 +811,10 @@ section{
 
 .main_nav_box{
     position: fixed;
-    right: 10px;
-    bottom: calc(100% - 80px);
+    right: 0px;
+    top: 0px;
     z-index: 299;
+    padding: 10px 10px 0 0;
 }
 
 .main_nav{
