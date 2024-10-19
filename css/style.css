@@ -2598,7 +2598,6 @@ background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #52
     padding: 20px 40px;
     margin-top: 15px;
     border-radius: 29px;
-    transition: all .2s ease;
     transition-delay: 0s;
 }
 
