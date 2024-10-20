@@ -1619,16 +1619,17 @@ section{
 
 .skillset_tit h2{
     position: relative;
-    font-size: max(4.3vw, 28px);
+    font-size: max(4.3vw, 32px);
     background-clip: text;
 -webkit-background-clip: text;
 color: transparent;
-background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #527AF2, #5F49F2);
+/* background-image: linear-gradient(30deg, #ff0000, #F2220F, #F28907, #F2B807, #527AF2, #5F49F2); */
+background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79,147,249,1) 77.3% );
     font-weight: 800;
 }
 
 .skillset_tit span{
-    font-size: 20px;
+    font-size: 18px;
     display: block;
     margin-top: 20px;
     font-weight: 400;

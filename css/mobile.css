@@ -696,7 +696,6 @@
 
     .section_header h2{
         font-size: 32px;
-        letter-spacing: -1.5px;
     }
 
     .section_header h3{
@@ -952,7 +951,7 @@
     }
 
     .job_list .jl_floor1 > li h3{
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .aab_box div{
