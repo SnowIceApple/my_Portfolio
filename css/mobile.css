@@ -447,7 +447,7 @@
 
     .app_ad{
         padding: 0px;
-        height: 60vw !important;
+        height: 80vh !important;
     }
 
     .apd_box{
@@ -515,7 +515,7 @@
     }
 
     .app_ani_pic.type1{
-        top: 46%;
+        top: 36%;
         width: 52vw;
         height: 43vw;
     }
@@ -531,9 +531,10 @@
     }
 
     .app_ani_pic.type4{
-        width: 45vw;
-        height: 55vw;
-        top: 40%;
+        width: 37vw;
+        height: 45vw;
+        right: 21%;
+        top: 65%;
     }
 
     .job_intro_advt a{
