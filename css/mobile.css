@@ -514,15 +514,26 @@
         font-size: max(7.5vw, 25px);
     }
 
+    .app_ani_pic.type1{
+        top: 46%;
+        width: 52vw;
+        height: 43vw;
+    }
+
     .app_ani_pic.type2{
         width: 40vw;
         height: 28vw;
+        top: 95%;
+    }
+
+    .app_ani_pic.type3{
+        top: 20%;
     }
 
     .app_ani_pic.type4{
         width: 45vw;
         height: 55vw;
-        top: 29%;
+        top: 40%;
     }
 
     .job_intro_advt a{
@@ -926,8 +937,34 @@
 
 @media all and (max-width: 568px){
 
-    .vis_txt_box h1{
-        font-size: 7.5vw;
+    #visual{
+        height: 80vh;
+        aspect-ratio: unset;
+    }
+
+    .vis_txt_box .vt_floor, .vis_txt_box .vt_floor *{
+        font-size: 12vw;
+    }
+
+    .vis_txt_box .vt_floor .vtf_vid{
+        width: 30vw;
+        height: 10.5vw;
+        border-radius: 5.25vw;
+    }
+
+    .infinite_list .floor2 > li.txt{
+        height: auto;
+        font-size: 20vw;
+        line-height: normal;
+    }
+
+    .infinite_list .floor2 > li.img{
+        width: 30vw;
+        height: 20vw;
+    }
+
+    .scroll_down{
+        bottom: 60px;
     }
 
     .main_nav{

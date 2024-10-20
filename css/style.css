@@ -124,6 +124,9 @@ section{
 .visual_swiper .swiper-slide{
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* .swiper-slide::after{
@@ -176,10 +179,6 @@ section{
 }
 
 .vis_txt_box{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     width: calc(100% - 320px);
     height: auto;
     box-sizing: border-box;
@@ -221,9 +220,6 @@ section{
 
 .vis_txt_box .vt_floor.vtf2 strong:nth-of-type(2){
     margin-left: 1.5vw;
-}
-
-.vis_txt_box .vt_floor .vt_ani{
 }
 
 .vis_txt_box .vt_floor .vt_ani span{
