@@ -179,7 +179,7 @@ section{
 }
 
 .vis_txt_box{
-    width: calc(100% - 320px);
+    width: calc(100% - 300px);
     height: auto;
     box-sizing: border-box;
     z-index: 3;
@@ -207,9 +207,9 @@ section{
 .vis_txt_box .vt_floor,
 .vis_txt_box .vt_floor *{
     font-weight: 900;
-    font-size: 6vw;
+    font-size: 5.7vw;
     line-height: 1.2;
-    letter-spacing: -0.1vw;
+    letter-spacing: -0.2vw;
 }
 
 .vis_txt_box .vt_floor strong{
