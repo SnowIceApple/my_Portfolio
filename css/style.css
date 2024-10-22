@@ -1725,6 +1725,11 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     max-height: 0px;
     transition: all 0.5s ease;
     overflow: hidden;
+    visibility: hidden;
+}
+
+.skillset_list ul li.hidden.hidden_view{
+    visibility: visible;
 }
 
 .card_hidden_box{
