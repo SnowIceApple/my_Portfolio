@@ -1724,7 +1724,6 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
 .skillset_list ul li.hidden{
     max-height: 0px;
     transition: all 0.5s ease;
-    overflow: hidden;
 }
 
 .card_hidden_box{
@@ -1756,11 +1755,13 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     left: 0;
     top: 0;
     opacity: 0;
+    box-shadow: 0px 10px 30px #1B3FD800;
 }
 
 .hidden.active .ssl_inner{
-    transition: all .5s ease;
+    transition: opacity .5s 0s ease, box-shadow .5s .3s ease;
     opacity: 1;
+    box-shadow: 0px 10px 30px #1B3FD822;
 }
 
 .ssl_img{
