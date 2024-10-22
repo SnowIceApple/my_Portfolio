@@ -267,11 +267,11 @@ section{
 }
 
 .vis_txt_box .vt_floor:nth-of-type(2) .vt_ani span{
-    color: #FF9938;
+    color: #05F2AF;
 }
 
 .vis_txt_box .vt_floor:nth-of-type(3) .vt_ani span{
-    color: #00E676;
+    color: #2929FF;
 }
 
 .vis_txt_box .vt_floor .vt_ani::after{
