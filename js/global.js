@@ -244,22 +244,35 @@ gsap.to(".infinite_list .floor1 .rtl", {
     $('body').removeClass('fixed');
   });
 
+  $('.works_list a').each(function(){
+    $(this).on('click', function(e){
+      e.preventDefault();
+      var tg = $(this).parent();
+      var idx = tg.attr('data-num');
+      console.log(idx);
+      $('.works_detail_tab_list').eq(idx).addClass('active').siblings().removeClass('active');
+      setTimeout(() => {
+        $('.works_detail_tab_list').eq(idx).children().find('.dt_link a').focus();
+      }, 901);
+      $('.works_detail_tab').addClass('active');
+      $('body').addClass('fixed');
+    });
+  })
 
-  $('.works_list a').on('click', function(e){
-    e.preventDefault();
-    var tg = $(this).parent();
-    var idx = tg.index();
-    console.log(idx);
-    $('.works_detail_tab_list').eq(idx).addClass('active').siblings().removeClass('active');
-    $('.works_detail_tab').addClass('active');
-    $('body').addClass('fixed');
-  });
 
-  $('.dt_close').on('click', function(){
-    $('.works_detail_tab').removeClass('active');
-    $('.works_detail_tab_list').removeClass('active');
-    $('body').removeClass('fixed');
-  });
+  $('.dt_close').each(function(){
+    $(this).on('click', function(){
+      var idx = $(this).parent().parent().parent().index();
+      console.log(idx);
+      setTimeout(() => {
+        $('.works_list').eq(idx).children('a').focus();
+      }, 501);
+      $('.works_detail_tab').removeClass('active');
+      $('.works_detail_tab_list').removeClass('active');
+      $('body').removeClass('fixed');
+    });
+  })
+
 
 
 var ccCursor = $('#cursor');
