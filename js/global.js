@@ -239,13 +239,13 @@ gsap.to(".infinite_list .floor1 .rtl", {
 
     $(window).on('resize', function(){
       var cardHeight = $('.card:first-child').height();
-      $('.hidden').css(
-        // {
-        //   'max-height': cardHeight,
-        //   'height': cardHeight,
-        //   'overflow': 'visible',
-        // }
-      );
+      // $('.hidden').css(
+      //   {
+      //     'max-height': cardHeight,
+      //     'height': cardHeight,
+      //     'overflow': 'visible',
+      //   }
+      // );
       $(cardHiddenBox, cardInner).css({
         'height': cardHeight
       });
