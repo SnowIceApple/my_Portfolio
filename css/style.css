@@ -886,7 +886,7 @@ section{
     z-index: 2;
 }
 
-.main_nav_open span{
+.main_nav_open span.line{
     position: relative;
     display: block;
     width: 100%;
@@ -895,23 +895,23 @@ section{
     transform-origin: center;
 }
 
-.main_nav_box.on .main_nav_open span:first-child{
+.main_nav_box.on .main_nav_open span.line:first-child{
     transform-origin: center;
     animation: mobNavTrans1 0.4s linear forwards;
 }
 
-.main_nav_open span:nth-child(2){
+.main_nav_open span.line:nth-child(2){
     transition-duration: 0.5s;
     transition: none;
 }
 
-.main_nav_box.on .main_nav_open span:nth-child(2){
+.main_nav_box.on .main_nav_open span.line:nth-child(2){
     opacity: 0;
     transform-origin: center;
     transition: all .4s ease;
 }
 
-.main_nav_box.on .main_nav_open span:last-child{
+.main_nav_box.on .main_nav_open span.line:nth-child(3){
     transform-origin: center;
     animation: mobNavTrans2 0.4s linear forwards;
 }

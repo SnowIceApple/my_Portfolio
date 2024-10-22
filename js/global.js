@@ -147,6 +147,12 @@ gsap.to(".infinite_list .floor1 .rtl", {
     $('.main_nav_box').toggleClass('on');
     $('body').toggleClass('fixed');
     $('#nav ul li').removeClass('on');
+    if($(this).hasClass('on')){
+      $(this).children('.hidden_text').text('전체메뉴 닫기');
+    }
+    else{
+      $(this).children('.hidden_text').text('전체메뉴 열기');
+    }
 
   });
 
