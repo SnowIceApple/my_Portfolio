@@ -7,6 +7,7 @@ $(document).ready(function(){
   
   gsap.registerPlugin(ScrollTrigger);
 
+
     var swiper1 = new Swiper('.visual_swiper', {
     direction: 'horizontal',
       loop: true,
