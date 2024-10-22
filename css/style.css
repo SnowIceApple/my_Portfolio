@@ -1465,9 +1465,10 @@ section{
 .job_list .jl_floor1 > li{
     width: 100%;
     box-sizing: border-box;
-    padding: 20px 30px;
+    padding: 25px 40px;
     border-radius: 15px;
     background-color: #fff;
+    box-shadow: 0px 8px 25px #1B3FD815;
 }
 
 .job_list .jl_floor1 > li:first-child{
@@ -1610,8 +1611,8 @@ section{
     transition: all .5s cubic-bezier(.25,.46,.45,.94);
 }
 
-.skillset_tit *{
-    font-family: "neue-haas-grotesk-display", "Pretendard", sans-serif;
+.skillset_tit h2{
+    font-family: "neue-haas-grotesk-display", sans-serif;
 }
 
 .skillset_tit h2{
@@ -1643,87 +1644,169 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
 .skillset_list ul{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: space-between;
     width: 100%;
     gap: 5px;
 }
 
 .skillset_list ul li{
     position: relative;
-    width: calc(50% - 2.5px);
+    width: calc(25% - 20px);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 14vw;
+    box-shadow: 0px 10px 30px #1B3FD822;
+    background: #fff;
+    border-radius: 15px;
     overflow: hidden;
+    border: 1px solid #eceff2;
+    box-sizing: border-box;
 }
 
 
 .ssl_inner{
     position: relative;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    animation-delay: var(--delay);
     transition: all .25s ease;
     overflow: hidden;
-    background: #fff;
+    box-sizing: border-box;
+    padding: 35px 24px 25px 24px;
 }
 
 .ssl_img{
-    width: 45%;
-    overflow: hidden;
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: 0px auto;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+
+.ssl_img::before{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+.skillset_list ul li:nth-child(1) .ssl_img::before{
+    box-shadow: 0px 0px 30px rgba(94, 204, 160, 0.4);
+}
+
+.skillset_list ul li:nth-child(2) .ssl_img::before{
+    box-shadow: 0px 0px 30px rgba(10, 10, 10, 0.3);
+}
+
+.skillset_list ul li:nth-child(3) .ssl_img::before{
+    box-shadow: 0px 0px 30px rgba(203, 155, 250, 0.6);
+}
+
+.skillset_list ul li:nth-child(4) .ssl_img::before{
+    box-shadow: 0px 0px 30px rgba(248, 253, 145, 0.6);
 }
 
 .ssl_img img{
+    display: inline-block;
+    border-radius: 50%;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
 
+
 .ssl_img.rounded{
     border-radius: 7vw 0 0 7vw;
 }
 
 .ssl_txt{
-    width: 55%;
+    width: 100%;
     display: flex;
     align-content: space-between;
     flex-wrap: wrap;
+    flex-direction: column;
     box-sizing: border-box;
-    padding: 20px 45px 20px 15px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
 }
 
 .ssl_txt span{
-    color: #1a1a1a;
-    font-size: max(1.9vw, 17px);
-    text-transform: uppercase;
-    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    font-size: 12px;
+    height: 22px;
+    border-radius: 11px;
+    width: max-content;
+    margin-bottom: 12px;
+}
+
+.skillset_list ul li:nth-child(1) .ssl_txt span{
+    background: rgba(94, 204, 160, 1);
+}
+
+.skillset_list ul li:nth-child(2) .ssl_txt span{
+    background: rgba(10, 10, 10, 1);
+    color: #fff;
+}
+
+.skillset_list ul li:nth-child(3) .ssl_txt span{
+    background: rgba(203, 155, 250, 1);
+}
+
+.skillset_list ul li:nth-child(4) .ssl_txt span{
+    background: rgba(248, 253, 145, 1);
+}
+
+.ssl_txt em{
+    color: #333;
+    font-size: 28px;
+    text-transform: capitalize;
+    font-weight: 600;
     display: block;
-    padding: 8px 10px;
-    letter-spacing: -0.1vw;
+    letter-spacing: -0.5px;
     background-repeat: no-repeat;
     background-size: 0 100%;
     transition: all .7s ease;
     background-image: linear-gradient(#222, #222);
+    font-family: "neue-haas-grotesk-display", "Pretendard", sans-serif;
 }
 
-.ssl_txt span.hl{
+/* .ssl_txt span.hl{
     background-size: 100% 100%;
     color: #fff;
-}
+} */
 
 .ssl_ico{
-    width: 100%;
-    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f2f4f9;
+    margin-left: calc(100% - 55px);
+    margin-top: 10px;
 }
 
 .ssl_ico img{
     display: inline-block;
-    width: 60px;
-    opacity: 0.2;
+    width: 24px;
+    opacity: 0.6;
 }
 
 .ssl_inner:active,
