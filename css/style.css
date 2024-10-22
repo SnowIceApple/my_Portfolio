@@ -2577,10 +2577,10 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     opacity: 1;
 }
 
-.clone_coding_list::after {
+/* .clone_coding_list::after {
     content: "";
     flex: auto;
-}
+} */
 
 .clone_coding_article article{
     width: 100%;
