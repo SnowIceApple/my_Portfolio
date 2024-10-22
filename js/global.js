@@ -102,6 +102,8 @@ gsap.to(".vis_txt_box", {
 var stopMarquee = $('.infinite_list .floor1 > li');
 var stopMarqueeTrigger = $('#visual');
 
+
+
 stopMarquee.each(function(index, smt){
   ScrollTrigger.create({
     trigger: smt,
@@ -206,6 +208,44 @@ gsap.to(".infinite_list .floor1 .rtl", {
           tg.css('max-height', floor2OuterHeight + 'px');
         }
 
+      });
+    });
+
+    var cardHeight = $('.card:first-child').height();
+    var cardHiddenBox = $('.card_hidden_box');
+    var cardInner = $('.hidden .ssl_inner');
+
+    $('.view_etc button').on('click', function(){
+      $(this).parent().hide();
+      console.log(cardHeight);
+      $('.hidden').addClass('active').css(
+        {
+          'max-height': cardHeight,
+          'height': cardHeight,
+        }
+      );
+      setTimeout(() => {
+        $('.hidden').css('overflow', 'visible')
+      }, 500);
+      $(cardHiddenBox).css({
+        'overflow': 'visible'
+      });
+      $(cardHiddenBox, cardInner).css({
+        'height': cardHeight,
+      });
+    });
+
+    $(window).on('resize', function(){
+      var cardHeight = $('.card:first-child').height();
+      $('.hidden').css(
+        {
+          'max-height': cardHeight,
+          'height': cardHeight,
+          'overflow': 'visible',
+        }
+      );
+      $(cardHiddenBox, cardInner).css({
+        'height': cardHeight
       });
     });
 

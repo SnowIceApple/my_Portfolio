@@ -98,7 +98,7 @@ section{
     position: relative;
 }
 
-.flex_spbt_2::after {
+.flex_spbt_less::after {
     content: "";
     flex: auto;
 }
@@ -1678,23 +1678,60 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    gap: 5px;
 }
 
-.skillset_list ul li{
+.skillset_list ul li.card{
     position: relative;
     width: calc(25% - 20px);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 10px 30px #1B3FD822;
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1px solid #eceff2;
     box-sizing: border-box;
 }
 
+.skillset_list ul li.card:nth-of-type(n+5){
+    margin-top: 20px;
+}
+
+.skillset_list ul li.spbt_less{
+    margin-left: 25px;
+}
+
+.skillset_list ul li.view_etc{
+    width: 100%;
+    margin: 30px 0 10px 0;
+    overflow: hidden;
+}
+
+.skillset_list ul li.view_etc button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #f2f4f9;
+    box-shadow: 0px 0px 10px #00000011;
+}
+
+.skillset_list ul li.view_etc button span{
+    font-size: 50px;
+    color: #555;
+}
+
+.skillset_list ul li.hidden{
+    max-height: 0px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+
+.card_hidden_box{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
 
 .ssl_inner{
     position: relative;
@@ -1707,7 +1744,23 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     transition: all .25s ease;
     overflow: hidden;
     box-sizing: border-box;
-    padding: 35px 24px 25px 24px;
+    padding: 45px 24px 20px 24px;
+    border: 1px solid #eceff2;
+    box-shadow: 0px 10px 30px #1B3FD822;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.hidden .ssl_inner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.hidden.active .ssl_inner{
+    transition: all .5s ease;
+    opacity: 1;
 }
 
 .ssl_img{
@@ -1749,6 +1802,14 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     box-shadow: 0px 0px 30px rgba(248, 253, 145, 0.6);
 }
 
+.skillset_list ul li:nth-child(6) .ssl_img::before{
+    box-shadow: 0px 0px 30px #4FCCFE60;
+}
+
+.skillset_list ul li:nth-child(7) .ssl_img::before{
+    box-shadow: 0px 0px 30px #f8a82960;
+}
+
 .ssl_img img{
     display: inline-block;
     border-radius: 50%;
@@ -1784,7 +1845,7 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     height: 22px;
     border-radius: 11px;
     width: max-content;
-    margin-bottom: 12px;
+    margin-bottom: 9px;
 }
 
 .skillset_list ul li:nth-child(1) .ssl_txt span{
@@ -1802,6 +1863,14 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
 
 .skillset_list ul li:nth-child(4) .ssl_txt span{
     background: rgba(248, 253, 145, 1);
+}
+
+.skillset_list ul li:nth-child(6) .ssl_txt span{
+    background: #4FCCFE;
+}
+
+.skillset_list ul li:nth-child(7) .ssl_txt span{
+    background: #f8a829;
 }
 
 .ssl_txt em{
