@@ -224,9 +224,9 @@ gsap.to(".infinite_list .floor1 .rtl", {
           'height': cardHeight,
         }
       );
-      // setTimeout(() => {
-      //   $('.hidden').css('overflow', 'visible')
-      // }, 500);
+      setTimeout(() => {
+        $('.hidden').css('overflow', 'visible')
+      }, 500);
       $(cardHiddenBox).css({
         'overflow': 'visible'
       });
@@ -241,7 +241,7 @@ gsap.to(".infinite_list .floor1 .rtl", {
         {
           'max-height': cardHeight,
           'height': cardHeight,
-          // 'overflow': 'visible',
+          'overflow': 'visible',
         }
       );
       $(cardHiddenBox, cardInner).css({
