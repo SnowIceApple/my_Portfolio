@@ -22,6 +22,10 @@ $(document).ready(function(){
         el: '.main-swiper-pagination',
         clickable: true,
       },
+      a11y: {
+        prevSlideMessage: '이전 슬라이드로 이동',
+        nextSlideMessage: '다음 슬라이드로 이동',
+    },
       keyboard: {
         enabled: true,
         onlyInViewport: true
