@@ -1800,7 +1800,6 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     border-radius: 50%;
     background: #f2f4f9;
     margin-left: calc(100% - 55px);
-    margin-top: 10px;
 }
 
 .ssl_ico img{
