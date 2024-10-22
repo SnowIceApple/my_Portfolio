@@ -150,19 +150,15 @@
     }
 
     .skillset_list ul li{
-        height: 18vw;
     }
 
     .ssl_txt span{
-        padding: 5px;
     }
 
     .ssl_img.rounded{
-        border-radius: 9vw 0 0 9vw;
     }
 
     .ssl_ico img{
-        width: 50px;
     }
 
     .job_desc ul li{
@@ -1111,11 +1107,9 @@
     }
 
     .skillset_list ul li{
-        height: 28vw;
     }
 
     .ssl_img.rounded{
-        border-radius: 14vw 0 0 14vw;
     }
 
     .dt_tit h3{
