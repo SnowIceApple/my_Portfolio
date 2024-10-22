@@ -15,6 +15,7 @@ $(document).ready(function(){
       fadeEffect: {
         crossFade: true
       },
+      touchRatio: 0,
       duration: 700,
       slidesPerView: 1,
       pagination: {
