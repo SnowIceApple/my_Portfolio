@@ -582,7 +582,7 @@ section{
 
 .infinite_list .floor1 > li{
     display: flex;
-    flex-wrap: wrap;
+    white-space: nowrap;
 }
 
 .infinite_list .floor2{
@@ -590,7 +590,8 @@ section{
     align-items: center;
     white-space: nowrap;
     will-change: transform;
-    animation: listMarquee 400s linear infinite;
+    animation: listMarquee 100s linear infinite;
+    margin: 0 1vw;
 }
 
 .infinite_list .stop_ani .floor2{
