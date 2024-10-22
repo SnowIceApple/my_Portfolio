@@ -225,6 +225,8 @@ gsap.to(".infinite_list .floor1 .rtl", {
     if(navBox.has(e.target).length === 0 && !$('.works_detail_tab').is(e.target) && $('.works_detail_tab').has(e.target).length === 0){
       navBox.removeClass('on');
       $('body').removeClass('fixed');
+      $('.main_nav_open').removeClass('on');
+      $('.main_nav_open').children('.hidden_text').text('전체메뉴 열기');
     }
   });
 
