@@ -89,7 +89,7 @@ input[type="search"]{
 
 .hidden_text{
 	position: absolute;
-	font-size: 1px;
+	font-size: 1px !important;
 	margin: -1px;
 	padding: 0px;
 	clip: rect(0, 0, 0, 0);
