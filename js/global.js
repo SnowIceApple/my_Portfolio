@@ -217,6 +217,7 @@ gsap.to(".infinite_list .floor1 .rtl", {
 
     $('.view_etc button').on('click', function(){
       $(this).parent().hide();
+      $('.hidden').addClass('hidden_view');
       
       $('.hidden').addClass('active').css(
         {
@@ -238,11 +239,11 @@ gsap.to(".infinite_list .floor1 .rtl", {
     $(window).on('resize', function(){
       var cardHeight = $('.card:first-child').height();
       $('.hidden').css(
-        {
-          'max-height': cardHeight,
-          'height': cardHeight,
-          'overflow': 'visible',
-        }
+        // {
+        //   'max-height': cardHeight,
+        //   'height': cardHeight,
+        //   'overflow': 'visible',
+        // }
       );
       $(cardHiddenBox, cardInner).css({
         'height': cardHeight
