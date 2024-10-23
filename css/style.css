@@ -1826,11 +1826,11 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     box-shadow: 0px 0px 30px rgba(248, 253, 145, 0.6);
 }
 
-.skillset_list ul li:nth-child(6) .ssl_img::before{
+.skillset_list.etc ul li:nth-child(1) .ssl_img::before{
     box-shadow: 0px 0px 30px #4FCCFE60;
 }
 
-.skillset_list ul li:nth-child(7) .ssl_img::before{
+.skillset_list.etc ul li:nth-child(2) .ssl_img::before{
     box-shadow: 0px 0px 30px #f8a82960;
 }
 
@@ -1889,11 +1889,11 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     background: rgba(248, 253, 145, 1);
 }
 
-.skillset_list ul li:nth-child(6) .ssl_txt span{
+.skillset_list.etc ul li:nth-child(1) .ssl_txt span{
     background: #4FCCFE;
 }
 
-.skillset_list ul li:nth-child(7) .ssl_txt span{
+.skillset_list.etc ul li:nth-child(2) .ssl_txt span{
     background: #f8a829;
 }
 
