@@ -222,7 +222,7 @@ gsap.to(".infinite_list .floor1 .rtl", {
     var cardInner = $('.card_hidden_box .ssl_inner');
 
     $('.view_etc button').on('click', function(){
-      cardHeight = $('.card:first-child').height();
+      cardHeight = $('.card:first-child').innerHeight();
       console.log(cardHeight);
       $(this).parent().addClass('active').hide();
       cardHidden.addClass('hidden_view');
@@ -241,7 +241,7 @@ gsap.to(".infinite_list .floor1 .rtl", {
     });
 
     $(window).on('resize', function(){
-      cardHeight = $('.card:first-child').height();
+      cardHeight = $('.card:first-child').innerHeight();
       if($('.view_etc').hasClass('active')){
         setTimeout(() => {
           cardHidden.css('overflow', 'visible')
