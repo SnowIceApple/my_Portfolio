@@ -224,19 +224,19 @@ gsap.to(".infinite_list .floor1 .rtl", {
     $('.view_etc button').on('click', function(){
       cardHeight = $('.card:first-child').height();
       console.log(cardHeight);
-      $(this).parent().hide();
-      $('.hidden').addClass('hidden_view');
+      $(this).parent().addClass('active').hide();
+      cardHidden.addClass('hidden_view');
       
-      $('.hidden').addClass('active').css(
+      cardHidden.addClass('active').css(
         {
           'max-height': cardHeight,
           'height': cardHeight,
         }
       );
       setTimeout(() => {
-        $('.hidden').css('overflow', 'visible')
+        cardHidden.css('overflow', 'visible')
       }, 500);
-      $(cardHiddenBox).css({
+      cardHiddenBox.css({
         'overflow': 'visible'
       });
     });
@@ -244,10 +244,21 @@ gsap.to(".infinite_list .floor1 .rtl", {
     $(window).on('resize', function(){
       cardHeight = $('.card:first-child').height();
 
-      $(cardHidden, cardHiddenBox, cardInner).css({
-        'height': cardHeight,
-        'max-height': cardHeight
-      });
+      if($('.view_etc button').hasClass('.active')){
+                setTimeout(() => {
+          cardHidden.css('overflow', 'visible')
+        }, 500);
+        $(cardHidden, cardHiddenBox, cardInner).css({
+          'height': cardHeight,
+          'max-height': cardHeight
+        });
+      }
+      else{
+        $(cardHidden, cardHiddenBox, cardInner).css({
+          'height': 0,
+          'max-height': 0
+        });
+      }
     });
 
   // $(".dt_img_inner").mCustomScrollbar({theme:"inset-dark"});
