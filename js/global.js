@@ -219,14 +219,13 @@ gsap.to(".infinite_list .floor1 .rtl", {
     var cardHeight = 0;
     var cardHidden = $('.hidden');
     var cardHiddenBox = $('.card_hidden_box');
-    var cardInner = $('.hidden .ssl_inner');
+    var cardInner = $('.card_hidden_box .ssl_inner');
 
     $('.view_etc button').on('click', function(){
       cardHeight = $('.card:first-child').height();
       console.log(cardHeight);
       $(this).parent().addClass('active').hide();
       cardHidden.addClass('hidden_view');
-      
       cardHidden.addClass('active').css(
         {
           'max-height': cardHeight,
@@ -236,25 +235,24 @@ gsap.to(".infinite_list .floor1 .rtl", {
       setTimeout(() => {
         cardHidden.css('overflow', 'visible')
       }, 500);
-      cardHiddenBox.css({
+        cardHiddenBox.css({
         'overflow': 'visible'
       });
     });
 
     $(window).on('resize', function(){
       cardHeight = $('.card:first-child').height();
-
       if($('.view_etc').hasClass('active')){
         setTimeout(() => {
           cardHidden.css('overflow', 'visible')
         }, 500);
-        $(cardHidden, cardHiddenBox, cardInner).css({
+        $('.hidden, .card_hidden_box, .card_hidden_box .ssl_inner').css({
           'height': cardHeight,
           'max-height': cardHeight
         });
       }
       else{
-        $(cardHidden, cardHiddenBox, cardInner).css({
+        $('.hidden, .card_hidden_box, .card_hidden_box .ssl_inner').css({
           'height': 0,
           'max-height': 0
         });
