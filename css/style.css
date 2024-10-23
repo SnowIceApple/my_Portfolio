@@ -1727,6 +1727,7 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     overflow: hidden;
     visibility: hidden;
     transition: all 0.7s ease;
+    margin-bottom: 0px;
 }
 
 .skillset_list.etc.view_hidden{
