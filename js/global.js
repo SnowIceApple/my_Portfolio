@@ -244,8 +244,8 @@ gsap.to(".infinite_list .floor1 .rtl", {
     $(window).on('resize', function(){
       cardHeight = $('.card:first-child').height();
 
-      if($('.view_etc button').hasClass('.active')){
-                setTimeout(() => {
+      if($('.view_etc').hasClass('active')){
+        setTimeout(() => {
           cardHidden.css('overflow', 'visible')
         }, 500);
         $(cardHidden, cardHiddenBox, cardInner).css({
@@ -258,6 +258,7 @@ gsap.to(".infinite_list .floor1 .rtl", {
           'height': 0,
           'max-height': 0
         });
+        cardHidden.css('overflow', 'hidden');
       }
     });
 
