@@ -2624,7 +2624,7 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     overflow: hidden;
     transition: all .3s ease;
     align-self: stretch;
-    width: calc(33.3333% - 40px);
+    width: calc(33.3333% - 30px);
     margin-bottom: 40px;
 }
 
