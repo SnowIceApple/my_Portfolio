@@ -216,47 +216,58 @@ gsap.to(".infinite_list .floor1 .rtl", {
       });
     });
 
-    var cardHeight = 0;
-    var cardHidden = $('.hidden');
-    var cardHiddenBox = $('.card_hidden_box');
-    var cardInner = $('.card_hidden_box .ssl_inner');
+    // var cardHeight = 0;
+    // var cardHidden = $('.hidden');
+    // var cardHiddenBox = $('.card_hidden_box');
+    // var cardInner = $('.card_hidden_box .ssl_inner');
 
     $('.view_etc button').on('click', function(){
-      cardHeight = $('.card:first-child').innerHeight();
-      console.log(cardHeight);
-      $(this).parent().addClass('active').hide();
-      cardHidden.addClass('hidden_view');
-      cardHidden.addClass('active').css(
-        {
-          'max-height': cardHeight,
-          'height': cardHeight,
-        }
-      );
-      setTimeout(() => {
-        cardHidden.css('overflow', 'visible')
-      }, 500);
-        cardHiddenBox.css({
-        'overflow': 'visible'
-      });
+      // cardHeight = $('.card:first-child').innerHeight();
+      // console.log(cardHeight);
+      // $(this).parent().addClass('active').hide();
+      // cardHidden.addClass('hidden_view');
+      // cardHidden.addClass('active').css(
+      //   {
+      //     'max-height': cardHeight,
+      //     'height': cardHeight,
+      //   }
+      // );
+      // setTimeout(() => {
+      //   cardHidden.css('overflow', 'visible')
+      // }, 500);
+      //   cardHiddenBox.css({
+      //   'overflow': 'visible'
+      // });
+      $('.skillset_list.etc').addClass('view_hidden');
+      $(this).parent().addClass('active');
+      var cardHeight = $('.skillset_list.etc ul').outerHeight();
+      $('.skillset_list.etc').css('max-height', cardHeight + 'px');
     });
 
     $(window).on('resize', function(){
-      cardHeight = $('.card:first-child').innerHeight();
+      // cardHeight = $('.card:first-child').innerHeight();
+      // if($('.view_etc').hasClass('active')){
+      //   setTimeout(() => {
+      //     cardHidden.css('overflow', 'visible')
+      //   }, 500);
+      //   $('.hidden, .card_hidden_box, .card_hidden_box .ssl_inner').css({
+      //     'height': cardHeight,
+      //     'max-height': cardHeight
+      //   });
+      // }
+      // else{
+      //   $('.hidden, .card_hidden_box, .card_hidden_box .ssl_inner').css({
+      //     'height': 0,
+      //     'max-height': 0
+      //   });
+      //   cardHidden.css('overflow', 'hidden');
+      // }
       if($('.view_etc').hasClass('active')){
-        setTimeout(() => {
-          cardHidden.css('overflow', 'visible')
-        }, 500);
-        $('.hidden, .card_hidden_box, .card_hidden_box .ssl_inner').css({
-          'height': cardHeight,
-          'max-height': cardHeight
-        });
+        var cardHeight = $('.skillset_list.etc ul').outerHeight();
+        $('.skillset_list.etc').css('max-height', cardHeight + 'px');
       }
       else{
-        $('.hidden, .card_hidden_box, .card_hidden_box .ssl_inner').css({
-          'height': 0,
-          'max-height': 0
-        });
-        cardHidden.css('overflow', 'hidden');
+        $('.skillset_list.etc').css('max-height', 0 + 'px');
       }
     });
 

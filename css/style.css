@@ -1671,6 +1671,7 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .skillset_list ul{
@@ -1694,12 +1695,13 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     margin-left: 25px;
 }
 
-.skillset_list ul li.view_etc{
+.view_etc{
     width: 100%;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
-.skillset_list ul li.view_etc button{
+.view_etc button{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1712,19 +1714,31 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
     box-shadow: 0px 0px 10px #00000011;
 }
 
-.skillset_list ul li.view_etc button span{
+.view_etc button span{
     font-size: 50px;
     color: #555;
 }
 
-.skillset_list ul li.hidden{
+.view_etc.active{
+    display: none;
+}
+
+.skillset_list.etc{
     max-height: 0px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.skillset_list.etc.view_hidden{
+}
+
+.skillset_list.etc ul li{
     transition: all 0.5s ease;
     overflow: hidden;
     visibility: hidden;
 }
 
-.skillset_list ul li.hidden.hidden_view{
+.skillset_list.etc ul li{
     visibility: visible;
 }
 
@@ -1753,8 +1767,6 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
 }
 
 .hidden .ssl_inner{
-    left: 0;
-    opacity: 0;
     box-shadow: 0px 10px 30px #1B3FD800;
 }
 
