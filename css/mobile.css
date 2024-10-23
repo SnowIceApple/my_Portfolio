@@ -149,7 +149,25 @@
         box-sizing: border-box;
     }
 
-    .skillset_list ul li{
+    .skillset_list ul li.card{
+        width: calc(25% - 12px);
+    }
+
+    .skillset_list ul li.spbt_less{
+        margin-left: 18px;
+    }
+
+    .ssl_inner{
+        padding: 45px 15px 20px 15px;
+    }
+
+    .ssl_txt em{
+        font-size: 22px;
+    }
+
+    .ssl_img{
+        width: 100px;
+        height: 100px;
     }
 
     .ssl_txt span{
@@ -550,16 +568,36 @@
         margin-bottom: 30px;
     }
 
+    .skill_set{
+        padding: 40px 0 100px 0;
+    }
+
+    .ssl_img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .ssl_img::before{
+        border-width: 3px;
+    }
+    
+    /* .skill_set .flex_spbt_less::after{
+        display: none;
+    }
+
+    .skillset_list ul li.card{
+        width: calc((100% / 2) - 20px);
+    }
+
+    .skillset_list ul li.spbt_less{
+        margin-left: 0px;
+    } */
+
     .ssl_txt{
-        padding: 15px 13px;
     }
 
     .ssl_ico img{
-        width: 40px;
-    }
-
-    .skill_set{
-        padding: 40px 0 100px 0;
+        width: 25px;
     }
 
     .works_list_divide{
@@ -717,6 +755,27 @@
     
     .skillset_list ul{
         width: 100%; 
+    }
+
+    .skill_set .flex_spbt_less::after{
+        display: none;
+    }
+
+    .skillset_list ul li.card{
+        width: calc(50% - 10px);
+    }
+
+    .skillset_list ul li.spbt_less{
+        margin-left: 0px;
+    }
+
+    .ssl_img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .ssl_txt em{
+        font-size: 19px;
     }
 
     .ssl_circle{
@@ -899,13 +958,6 @@
         transition: all 1s ease;
     }
 
-    .job_list .jl_floor2{
-    }
-
-    .skillset_list ul li{
-        height: 22vw;
-    }
-
     .ssl_img.rounded{
         border-radius: 11vw 0 0 11vw;
     }
@@ -992,28 +1044,21 @@
         width: 55%;
     }
 
-    .skillset_list ul li{
+    .skillset_list ul li.card{
         width: 100%;
-        height: 22vw;
     }
 
-    .ssl_txt{
-        width: 50%;
-        padding: 13px 20px 13px 10px;
+    .ssl_txt span{
     }
 
-    .ssl_ico img{
-        width: 33px;
-    }
-
-    .ssl_img{
-        width: 50%;
+    .ssl_txt em{
+        width: 100%;
+        text-align: center;
     }
 
     .ssl_img.rounded{
         border-radius: 11vw 0 0 11vw;
     }
-
 
     .works_list_max_box{
         height: 450px;
@@ -1129,7 +1174,6 @@
 
 @media all and (max-width: 360px){
     .skillset_list ul li{
-        height: 35vw;
     }
 
     .ssl_img.rounded{
@@ -1137,6 +1181,6 @@
     }
 
     .ssl_ico img{
-        width: 26px;
+        width: 22px;
     }
 }

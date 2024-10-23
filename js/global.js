@@ -217,10 +217,12 @@ gsap.to(".infinite_list .floor1 .rtl", {
     });
 
     var cardHeight = $('.card:first-child').height();
+    var cardHidden = $('.hidden');
     var cardHiddenBox = $('.card_hidden_box');
     var cardInner = $('.hidden .ssl_inner');
 
     $('.view_etc button').on('click', function(){
+      console.log(cardHeight);
       $(this).parent().hide();
       $('.hidden').addClass('hidden_view');
       
@@ -242,7 +244,8 @@ gsap.to(".infinite_list .floor1 .rtl", {
     });
 
     $(window).on('resize', function(){
-      var cardHeight = $('.card:first-child').height();
+      var cardHeight2 = $('.card:first-child').height();
+      console.log(cardHeight2);
       // $('.hidden').css(
       //   {
       //     'max-height': cardHeight,
@@ -250,8 +253,9 @@ gsap.to(".infinite_list .floor1 .rtl", {
       //     'overflow': 'visible',
       //   }
       // );
-      $(cardHiddenBox, cardInner).css({
-        'height': cardHeight
+      $(cardHidden, cardHiddenBox, cardInner).css({
+        'height': cardHeight2,
+        'max-height': cardHeight2
       });
     });
 
