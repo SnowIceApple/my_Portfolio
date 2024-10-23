@@ -1052,8 +1052,7 @@
     }
 
     .ssl_txt em{
-        width: 100%;
-        text-align: center;
+        width: max-content;
     }
 
     .ssl_img.rounded{
