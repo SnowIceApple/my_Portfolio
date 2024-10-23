@@ -240,6 +240,9 @@ gsap.to(".infinite_list .floor1 .rtl", {
       // });
       $('.skillset_list.etc').addClass('view_hidden');
       $(this).parent().addClass('active');
+      setTimeout(() => {
+        $('.skillset_list.etc').css('overflow', 'visible')
+      }, 700);
       var cardHeight = $('.skillset_list.etc ul').outerHeight();
       $('.skillset_list.etc').css('max-height', cardHeight + 'px');
     });

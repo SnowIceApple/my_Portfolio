@@ -1726,26 +1726,31 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
 .skillset_list.etc{
     max-height: 0px;
     overflow: hidden;
-    transition: all 1s ease;
+    visibility: hidden;
+    transition: all 0.7s ease;
 }
 
 .skillset_list.etc.view_hidden{
+    visibility: visible;
 }
 
 .skillset_list.etc ul li{
     transition: all 0.5s ease;
     overflow: hidden;
-    visibility: hidden;
 }
 
 .skillset_list.etc ul li{
-    visibility: visible;
+    overflow: visible;
 }
 
 .card_hidden_box{
     position: relative;
     width: 100%;
     overflow: hidden;
+}
+
+.skillset_list.etc .card_hidden_box{
+    overflow: visible;
 }
 
 .ssl_inner{
@@ -1768,6 +1773,12 @@ background-image: linear-gradient(to right, rgba(226,66,249,0.94) 10.2%, rgba(79
 
 .hidden .ssl_inner{
     box-shadow: 0px 10px 30px #1B3FD800;
+    transition: box-shadow .5s ease;
+    transition-delay: 0.7s;
+}
+
+.view_hidden .hidden .ssl_inner{
+    box-shadow: 0px 10px 30px #1B3FD822;
 }
 
 .hidden.active .ssl_inner{
