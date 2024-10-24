@@ -317,7 +317,7 @@
         color: #2a2a2a;
     }
 
-    .works_list.basic .works_list_txt h3{
+    .works_list.basic .works_list_txt h4{
         color: #fff;
         border-bottom-color: rgba(255, 255, 255, 0.5);
     }
@@ -354,7 +354,7 @@
     }
 
 
-    .works_list.wide .works_list_txt h3{
+    .works_list.wide .works_list_txt h4{
         word-break: keep-all;
     }
 
@@ -824,7 +824,7 @@
         transform: translateY(-50%);
     }
 
-    .works_list.basic .works_list_txt h3{
+    .works_list.basic .works_list_txt h4{
         font-size: 5.8vw;
         line-height: 1.2;
         word-break: keep-all;
@@ -1076,7 +1076,7 @@
     }
 
 
-    .works_list.basic .works_list_txt h3{
+    .works_list.basic .works_list_txt h4{
         font-size: 8vw;
     }
 
