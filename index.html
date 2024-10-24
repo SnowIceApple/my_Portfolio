@@ -217,7 +217,7 @@
                     <!-- <div class="main-swiper-pagination"></div> -->
                     <button class="sbp msb">
                         <span class="ico">
-                            <span class="material-symbols-outlined">
+                            <span class="material-symbols-outlined" aria-hidden="true">
                                 arrow_back
                                 </span>
                         </span>
@@ -227,7 +227,7 @@
                     </button>
                     <button class="sbn msb">
                         <span class="ico">
-                            <span class="material-symbols-outlined">
+                            <span class="material-symbols-outlined" aria-hidden="true">
                                 arrow_forward
                                 </span>
                         </span>
@@ -289,8 +289,8 @@
                     </div>
                 </div>
                 <div class="app_ad">
-                    <div class="app_txt">
-                        <h2 tabindex="0">
+                    <div class="app_txt" tabindex="0">
+                        <h2>
                             웹퍼블리셔를 소개합니다!
                         </h2>
                     </div>
@@ -372,8 +372,11 @@
                                             <div class="jl_floor2_open">
                                                 <button>
                                                     <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
-                                                    <span class="material-symbols-outlined">
+                                                    <span class="material-symbols-outlined" aria-hidden="true">
                                                         keyboard_arrow_down
+                                                        </span>
+                                                        <span class="hidden_text">
+                                                            상세 이력 리스트를 펼칩니다
                                                         </span>
                                                 </button>
                                             </div>
@@ -394,9 +397,10 @@
                                             <div class="jl_floor2_open">
                                                 <button>
                                                     <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
-                                                    <span class="material-symbols-outlined">
+                                                    <span class="material-symbols-outlined" aria-hidden="true">
                                                         keyboard_arrow_down
                                                         </span>
+                                                        <span class="hidden_text">상세 이력 리스트를 펼칩니다</span>
                                                 </button>
                                             </div>
                                             <div class="jl_floor2_cont">
@@ -437,56 +441,56 @@
                             </div>
                             <div class="skillset_list">
                                 <ul>
-                                    <li class="card" style="--delay: 1.5s">
+                                    <li class="card" style="--delay: 1.5s" tabindex="0">
                                         <div class="ssl_inner">
                                             <div class="ssl_img" aria-hidden="true">
                                                 <img src="./img/stone-7439317_640.jpg" alt="이미지1">
                                             </div>
                                             <div class="ssl_txt">
                                                 <span>Markup</span>
-                                                <em tabindex="0">html</em>
+                                                <em>html</em>
                                             </div>
                                             <div class="ssl_ico" aria-hidden="true">
                                                 <img src="./img/ss_1.png" alt="html 아이콘">
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="card" style="--delay: 1.8s">
+                                    <li class="card" style="--delay: 1.8s" tabindex="0">
                                         <div class="ssl_inner">
                                             <div class="ssl_img" aria-hidden="true">
                                                 <img src="./img/tiger-8789372_640.jpg" alt="이미지2">
                                             </div>
                                             <div class="ssl_txt">
                                                 <span>Markup</span>
-                                                <em tabindex="0">css</em>
+                                                <em>css</em>
                                             </div>
                                             <div class="ssl_ico" aria-hidden="true">
                                                 <img src="./img/ss_2.png" alt="css 아이콘">
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="card" style="--delay: 2.1s">
+                                    <li class="card" style="--delay: 2.1s" tabindex="0">
                                         <div class="ssl_inner">
                                             <div class="ssl_img" aria-hidden="true">
                                                 <img src="./img/elephant-8994442_640.jpg" alt="이미지3">
                                             </div>
                                             <div class="ssl_txt">
                                                 <span>Script</span>
-                                                <em tabindex="0">jquery</em>
+                                                <em>jquery</em>
                                             </div>
                                             <div class="ssl_ico" aria-hidden="true">
                                                 <img src="./img/ss_4.png" alt="제이쿼리 아이콘">
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="card" style="--delay: 2.4s">
+                                    <li class="card" style="--delay: 2.4s" tabindex="0">
                                         <div class="ssl_inner">
                                             <div class="ssl_img" aria-hidden="true">
                                                 <img src="./img/cat-8275147_640.jpg" alt="이미지4">
                                             </div>
                                             <div class="ssl_txt">
                                                 <span>Script</span>
-                                                <em tabindex="0">javascript</em>
+                                                <em>javascript</em>
                                             </div>
                                             <div class="ssl_ico" aria-hidden="true">
                                                 <img src="./img/ss_3.png" alt="자바스크립트 아이콘">
@@ -645,7 +649,6 @@
                         <div class="works_detail_tab_list">
                             <div class="works_detail">
                                 <div class="detail_tabBox">
-
                                     <div class="detail_tabBox_inner">
                                         <div class="dt_img">
                                             <div class="dt_img_inner">
@@ -664,10 +667,11 @@
                                     <div class="dt_link">
                                         <a href="https://ecpa.hackers.com/?r=ecpa&c=event&evt_id=23033000&g_id=29" target="_blank">
                                             <div class="dtl_txt_ani_cont">
-                                                <span>사이트 바로가기</span>
+                                                <span class="hidden_text">해커스 경영아카데미 이달의 특강 웹사이트로 바로가기</span>
+                                                <span aria-hidden="true">사이트 바로가기</span>
                                             </div>
                                             <div class="dt_link_icon">
-                                                <span class="material-symbols-outlined">
+                                                <span class="material-symbols-outlined" aria-hidden="true">
                                                     open_in_new
                                                     </span>
                                             </div>
@@ -675,7 +679,8 @@
                                     </div>
                                     <div class="dt_close">
                                         <button>
-                                            <span class="material-symbols-outlined">
+                                            <span class="hidden_text">지금 열려있는 소개 페이지 닫기</span>
+                                            <span class="material-symbols-outlined" aria-hidden="true">
 close
 </span>
                                         </button>
@@ -705,10 +710,11 @@ close
                                     <div class="dt_link">
                                         <a href="https://precision-bio.com/kr/animal/sub/products/product.php?mode=view&idx=8" target="_blank">
                                             <div class="dtl_txt_ani_cont">
-                                                <span>사이트 바로가기</span>
+                                                <span class="hidden_text">프리시젼바이오 Animal 웹사이트로 바로가기</span>
+                                                <span aria-hidden="true">사이트 바로가기</span>
                                             </div>
                                             <div class="dt_link_icon">
-                                                <span class="material-symbols-outlined">
+                                                <span class="material-symbols-outlined" aria-hidden="true">
                                                     open_in_new
                                                     </span>
                                             </div>
@@ -716,7 +722,8 @@ close
                                     </div>
                                     <div class="dt_close">
                                         <button>
-                                            <span class="material-symbols-outlined">
+                                            <span class="hidden_text">지금 열려있는 소개 페이지 닫기</span>
+                                            <span class="material-symbols-outlined" aria-hidden="true">
 close
 </span>
                                         </button>
@@ -745,10 +752,11 @@ close
                                     <div class="dt_link">
                                         <a href="javascript:alert('링크가 변경되었습니다');">
                                             <div class="dtl_txt_ani_cont">
-                                                <span>사이트 바로가기</span>
+                                                <span class="hidden_text">제8회 전국동시지방선거 후보자토론회 다시보기 웹사이트로 이동하기</span>
+                                                <span aria-hidden="true">사이트 바로가기</span>
                                             </div>
                                             <div class="dt_link_icon">
-                                                <span class="material-symbols-outlined">
+                                                <span class="material-symbols-outlined" aria-hidden="true">
                                                     open_in_new
                                                     </span>
                                             </div>
@@ -756,7 +764,8 @@ close
                                     </div>
                                     <div class="dt_close">
                                         <button>
-                                            <span class="material-symbols-outlined">
+                                            <span class="hidden_text">지금 열려있는 소개 페이지 닫기</span>
+                                            <span class="material-symbols-outlined" aria-hidden="true">
 close
 </span>
                                         </button>
@@ -787,10 +796,11 @@ close
                                     <div class="dt_link">
                                         <a href="http://hsol.kr/" target="_blank">
                                             <div class="dtl_txt_ani_cont">
-                                                <span>사이트 바로가기</span>
+                                                <span class="hidden_text">하우솔루션 웹사이트로 이동하기</span>
+                                                <span aria-hidden="true">사이트 바로가기</span>
                                             </div>
                                             <div class="dt_link_icon">
-                                                <span class="material-symbols-outlined">
+                                                <span class="material-symbols-outlined" aria-hidden="true">
                                                     open_in_new
                                                     </span>
                                             </div>
@@ -798,7 +808,8 @@ close
                                     </div>
                                     <div class="dt_close">
                                         <button>
-                                            <span class="material-symbols-outlined">
+                                            <span class="hidden_text">지금 열려있는 소개 페이지 닫기</span>
+                                            <span class="material-symbols-outlined" aria-hidden="true">
 close
 </span>
                                         </button>
@@ -829,10 +840,11 @@ close
                                     <div class="dt_link">
                                         <a href="https://www.ddmccic.or.kr/new/main/" target="_blank">
                                             <div class="dtl_txt_ani_cont">
-                                                <span>사이트 바로가기</span>
+                                                <span class="hidden_text">동대문구 육아종합지원센터 웹사이트로 이동하기</span>
+                                                <span aria-hidden="true">사이트 바로가기</span>
                                             </div>
                                             <div class="dt_link_icon">
-                                                <span class="material-symbols-outlined">
+                                                <span class="material-symbols-outlined" aria-hidden="true">
                                                     open_in_new
                                                     </span>
                                             </div>
@@ -840,7 +852,8 @@ close
                                     </div>
                                     <div class="dt_close">
                                         <button>
-                                            <span class="material-symbols-outlined">
+                                            <span class="hidden_text">지금 열려있는 소개 페이지 닫기</span>
+                                            <span class="material-symbols-outlined" aria-hidden="true">
 close
 </span>
                                         </button>
